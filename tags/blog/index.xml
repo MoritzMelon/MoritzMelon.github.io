@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>blog on Melon</title>
+    <link>https://moritzmelon.github.io/tags/blog/</link>
+    <description>Recent content in blog on Melon</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 26 Apr 2019 20:58:44 +0800</lastBuildDate>
+    
+	<atom:link href="https://moritzmelon.github.io/tags/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Mybug</title>
+      <link>https://moritzmelon.github.io/blog/2019-04/mybug/</link>
+      <pubDate>Fri, 26 Apr 2019 20:58:44 +0800</pubDate>
+      
+      <guid>https://moritzmelon.github.io/blog/2019-04/mybug/</guid>
+      <description>更改\data\series.toml出</description>
+    </item>
+    
+    <item>
+      <title>Building My First Blog</title>
+      <link>https://moritzmelon.github.io/blog/2019-04/building-my-first-blog/</link>
+      <pubDate>Wed, 24 Apr 2019 20:53:44 +0800</pubDate>
+      
+      <guid>https://moritzmelon.github.io/blog/2019-04/building-my-first-blog/</guid>
+      <description>即便我身处果壳之中，仍自以为是无限宇宙之</description>
+    </item>
+    
+  </channel>
+</rss>
