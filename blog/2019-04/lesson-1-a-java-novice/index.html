@@ -7,24 +7,24 @@
   <meta name="MobileOptimized" content="320">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1" />
   <meta name="author" content="Melon">
-  <meta name="description" content="更改\data\series.toml出">
+  <meta name="description" content="You must unlearn what you have learned. &ndash;Master Yoda 配置编译环境 环境变量设">
   
-  <meta property="og:title" content="Mybug" />
-<meta property="og:description" content="更改\data\series.toml出" />
+  <meta property="og:title" content="Lesson 1: A Java Novice" />
+<meta property="og:description" content="You must unlearn what you have learned. &ndash;Master Yoda 配置编译环境 环境变量设" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://moritzmelon.github.io/blog/2019-04/mybug/" />
-<meta property="article:published_time" content="2019-04-26T20:58:44&#43;08:00"/>
-<meta property="article:modified_time" content="2019-04-26T20:58:44&#43;08:00"/>
+<meta property="og:url" content="https://moritzmelon.github.io/blog/2019-04/lesson-1-a-java-novice/" />
+<meta property="article:published_time" content="2019-04-27T10:26:04&#43;08:00"/>
+<meta property="article:modified_time" content="2019-04-27T10:26:04&#43;08:00"/>
 
 
 
   <title>
   
-       Mybug | Melon 
+       Lesson 1: A Java Novice | Melon 
   
   </title>
 
-  <link rel="canonical" href="https://moritzmelon.github.io/blog/2019-04/mybug/">
+  <link rel="canonical" href="https://moritzmelon.github.io/blog/2019-04/lesson-1-a-java-novice/">
 
   
   
@@ -368,21 +368,21 @@
   <ul class="post-meta li-x">
     
       
-        <li><a href="https://moritzmelon.github.io/categories/blog"><i class="fas fa-folder-open pr-1" aria-hidden="true"></i> Blog </a></li>
+        <li><a href="https://moritzmelon.github.io/categories/java"><i class="fas fa-folder-open pr-1" aria-hidden="true"></i> Java </a></li>
       
     
     
       
-        <li><a href="https://moritzmelon.github.io/series/blog-constructing"><i class="fas fa-bookmark pr-1" aria-hidden="true"></i>Blog Constructing</a></li>
+        <li><a href="https://moritzmelon.github.io/series/learning-java"><i class="fas fa-bookmark pr-1" aria-hidden="true"></i>Learning Java</a></li>
       
     
   </ul>
 
-  <div class="px-4 post-heading">Mybug</div>
+  <div class="px-4 post-heading">Lesson 1: A Java Novice</div>
 
   <ul class="post-meta li-x mt-1">
     
-      <li>Apr 26, 2019</li>
+      <li>Apr 27, 2019</li>
     
 
     
@@ -395,47 +395,160 @@
           <div class="post-content markdown">
             
 
-<h2 id="更改-data-series-toml-出现的问题">更改<code>\data\series.toml</code>出现的问题</h2>
+<blockquote>
+<p><center>You must unlearn what you have learned.</center>
+<em><p align="right">&ndash;Master Yoda</p></em></p>
+</blockquote>
 
-<p>按照主题的指引，修改了一下<code>series.toml</code>中的参数来给新的系列添加图片，结果一改便一发不可收拾，即使改回原来的内容也会出现错误提示</p>
+<p><br/></p>
 
-<pre><code class="language-bash">#删除了series.toml文件后成功构建
-XXX@Melon MINGW32 /e/HugoBlog/mysite (master)
-$ hugo
-Building sites … WARN 2019/04/26 20:42:37 Page's .RSSLink is deprecated and will be removed in a future release. Use the Output Format's link, e.g. something like:
-    {{ with .OutputFormats.Get &quot;RSS&quot; }}{{ .RelPermalink }}{{ end }}.
-WARN 2019/04/26 20:42:37 Page's .URL is deprecated and will be removed in a future release. Use .Permalink or .RelPermalink. If what you want is the front matter URL value, use .Params.url.
+<h2 id="配置编译环境">配置编译环境</h2>
 
-                   | EN
-+------------------+-----+
-  Pages            |  29
-  Paginator pages  |   0
-  Non-page files   |   0
-  Static files     | 154
-  Processed images |   0
-  Aliases          |   3
-  Sitemaps         |   1
-  Cleaned          |   0
+<h3 id="环境变量设置">环境变量设置</h3>
 
-Total in 1073 ms
+<p>直接解压软件包是不行的，需要设置环境变量。</p>
 
-</code></pre>
+<ol>
+<li>变量名<code>JAVA_HOME</code>：<code>C:\Program Files (x86)\Java\jdk1.6.0_45</code>，即jdk的具体安装路径</li>
+<li><code>CLASSPATH</code>：<code>.;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar;</code>，开头<code>.</code>的含义是当前目录下</li>
+<li><code>Path</code>最后加上<code>;%JAVA_HOME%\bin</code></li>
+<li>检测：windows运行命令行，输入<code>java -version</code>检测是否配置成功</li>
+</ol>
 
-<p>把<code>series.toml</code>贴回来后</p>
+<p><br/></p>
 
-<pre><code class="language-bash">XXX@Melon MINGW32 /e/HugoBlog/mysite (master)
-$ hugo
-Building sites … WARN 2019/04/26 20:43:09 Page's .RSSLink is deprecated and will be removed in a future release. Use the Output Format's link, e.g. something like:
-    {{ with .OutputFormats.Get &quot;RSS&quot; }}{{ .RelPermalink }}{{ end }}.
-WARN 2019/04/26 20:43:09 Page's .URL is deprecated and will be removed in a future release. Use .Permalink or .RelPermalink. If what you want is the front matter URL value, use .Params.url.
-Total in 1044 ms
-Error: Error building site: failed to render pages: render of &quot;home&quot; failed: execute of template failed: template: index.html:31:11: executing &quot;main&quot; at &lt;partial &quot;sidebar-series.html&quot; .&gt;: error calling partial: &quot;E:\HugoBlog\mysite\themes\AllinOne\layouts\partials\sidebar-series.html:29:26&quot;: execute of template failed: template: partials/sidebar-series.html:29:26: executing &quot;partials/sidebar-series.html&quot; at &lt;where $.Site.Data.series.series &quot;.name&quot; .Name&gt;: error calling where: can't iterate over &lt;nil&gt;
+<h3 id="问题">问题：</h3>
 
-</code></pre>
+<ol>
+<li><code>eclipse no java virtual machine was found after searching the following locations</code></li>
+</ol>
 
-<p><strong><em>unsolved, -2019.4.26</em></strong></p>
+<p>解决：环境变量配置失败，重新配置</p>
+
+<ol>
+<li><code>eclipse failed to load the jni shared library</code></li>
+</ol>
+
+<p>解决：<a href="https://stackoverflow.com/questions/19894100/eclipse-failed-to-load-the-jni-shared-library">参考网址</a>，原因应该是安装了64位的JDK，eclipse是32位的，变量<code>JAVA_HOME</code>的内容改成32位JDK即解决</p>
+
+<p><br/></p>
+
+<h3 id="常用的dos命令">*常用的DOS命令</h3>
+
+<ul>
+<li><code>dir</code>：directory，列出当前目录下的文件以及文件夹</li>
+<li><code>md</code>：Make Directory，创建目录</li>
+<li><code>rd</code>：Remove Directory，删除目录</li>
+<li><code>cd</code>：Change Directory，进入指定目录</li>
+<li><code>cd..</code>：退回到上一级目录</li>
+<li><code>cd\</code>：退回到根目录</li>
+<li><code>del</code>：delete，删除文件</li>
+<li><code>ren</code>：rename，重命名</li>
+<li><code>exit</code>：退出 dos 命令行</li>
+</ul>
+
+<p><br/><br/></p>
 
 <hr />
+
+<h2 id="java特点">Java特点</h2>
+
+<p>与C++对比：舍弃指针（以引用取代）、运算符重载、多重继承等特点，增加垃圾回收功能*(interesting!)*，（JDK 1.5引入）泛型编程（Generic Programming）、类型安全的枚举、不定长参数和自动装/拆箱。</p>
+
+<ul>
+<li>强制面向对象</li>
+<li>分布式：Java语言支持Internet应用的开发，在基本的Java应用编程接口中有一个网络应用编程接口（java net），它提供了用于网络应用编程的类库，包括URL、URLConnection、Socket、ServerSocket等。Java的RMI（远程方法激活）机制也是开发分布式应用的重要手段。<strong><em>目前未能理解该段内容含义。 -2019.4.27</em></strong></li>
+
+<li><p>健壮的！：强类型机制、异常处理、垃圾的自动收集（<code>Garbage Collection</code>，两种核心机制之一，程序运行过程中自动进行，无法被人为精确控制和干预）等</p></li>
+
+<li><p>解释型，跨平台性：字节码格式和Java虚拟机<code>Java Virtual Machine</code>（核心机制之一）</p></li>
+
+<li><p><strong>Java SE(Java Standard Edition)标准版</strong>：支持面向桌面级应用（如Windows下的应用程序）的Java平台</p></li>
+
+<li><p>JDK中包含了JRE，JRE中包含了JVM，JVM运行于操作系统之上，它依赖于操作系统</p></li>
+</ul>
+
+<p><br/><br/></p>
+
+<hr />
+
+<h2 id="helloworld">HelloWorld</h2>
+
+<h3 id="命令行编写并运行java程序">命令行编写并运行Java程序</h3>
+
+<p>新建<code>HelloWorld.java</code>文件，在其中编写如下程序</p>
+
+<pre><code class="language-java">/**
+这是我的第一个Java程序
+@author Melon
+@version v1.0
+*/
+class HelloWorld{//类声明
+    public static void main(String[] args){//main方法，程序的入口，格式固定
+        System.out.println(&quot;Hello world!&quot;+'\t'+&quot;Hello Java!&quot;);//用+连接
+    }
+}
+</code></pre>
+
+<p>一个源文件中，最多之能有一个类声明为<code>public</code>，且类名与原文件名相同</p>
+
+<p>命令行中执行如下指令，将源文件编译为<code>.class</code>字节码文件</p>
+
+<pre><code class="language-powershell">javac HelloWorld.java
+</code></pre>
+
+<p>执行如下命令以运行程序</p>
+
+<pre><code class="language-powershell">java HelloWorld
+</code></pre>
+
+<p>在控制台窗口输出一行&rdquo;Hello world!&rdquo;</p>
+
+<p><br/></p>
+
+<h3 id="特有的文档注释">特有的文档注释</h3>
+
+<p>格式：</p>
+
+<pre><code class="language-java">/**
+*@author  指定java程序的作者
+*@version  指定源文件的版本
+*@param   方法的参数说明信息
+*/
+</code></pre>
+
+<p>注释内容可以被JDK提供的工具<code>javadoc</code> 所解析，生成一套以网页文件形式体现的该程序的说明文档，命令如下</p>
+
+<pre><code class="language-basic">javadoc -d FILENAME -author -version HelloWorld.java
+</code></pre>
+
+<p>在<code>FILENAME</code>文件夹中打开<code>index.html</code>可以更直观查看到程序中使用的类、方法等，在程序更长更复杂的情况下提供一个便捷的审阅方法。</p>
+
+<p><br/></p>
+
+<h3 id="eclipse">eclipse</h3>
+
+<p><em><center>待填 -2019.4.27</center></em></p>
+
+<p><br/><br/></p>
+
+<hr />
+
+<h2 id="尾">尾</h2>
+
+<p><em>Java库常用包<code>package</code>有<code>java.lang</code>,<code>java.io</code>和<code>java.sql</code></em></p>
+
+<p><em>？：当运行—个Java程序时，传递参数的格式是<strong>Java类名参数1+参数2</strong></em></p>
+
+<p><br/><br/></p>
+
+<hr />
+
+<h2 id="appendix">Appendix</h2>
+
+<h3 id="java-7-0-platform">Java 7.0 Platform</h3>
+
+<p><img src="E:HugoBlogmysitestaticimagesblogJava7.0Platform.jpg" alt="Java7.0Platform" /></p>
 
           </div>
 
@@ -449,10 +562,13 @@ Error: Error building site: failed to render pages: render of &quot;home&quot; f
   <li class="pr-0"><a href="https://moritzmelon.github.io/tags/"><i class="fas fa-tags"></i></a></li>
   <div class="tags-sm">
     
-      <li><a href="https://moritzmelon.github.io/tags/blog" role="button">blog </a></li>
+      <li><a href="https://moritzmelon.github.io/tags/study" role="button">study </a></li>
       
     
-      <li><a href="https://moritzmelon.github.io/tags/bug" role="button">bug </a></li>
+      <li><a href="https://moritzmelon.github.io/tags/java" role="button">java </a></li>
+      
+    
+      <li><a href="https://moritzmelon.github.io/tags/newb" role="button">newb </a></li>
       
     
   </div>
@@ -468,23 +584,16 @@ Error: Error building site: failed to render pages: render of &quot;home&quot; f
           <div class="row pt-3">
             <div class="col-md-6">
               
-                <a href=https://moritzmelon.github.io/blog/2019-04/building-my-first-blog/ class="post-meta">Previous
+                <a href=https://moritzmelon.github.io/blog/2019-04/mybug/ class="post-meta">Previous
                   <div class="pt-2 pb-5 d-flex">
                     <i class="fas fa-angle-left text-grey font-weight-bold mr-2 active-color"></i>
-                    <span>Building My First Blog</span>
+                    <span>Mybug</span>
                   </div>
                 </a>
               
             </div>
             
             <div class="col-md-6 text-right" >
-              
-                <a href=https://moritzmelon.github.io/blog/2019-04/lesson-1-a-java-novice/ class="post-meta">Next
-                  <div class="pt-2 pb-5 flex-reverse">
-                    <i class="fas fa-angle-right text-grey font-weight-bold ml-2 active-color"></i>
-                    <span>Lesson 1: A Java Novice</span>
-                  </div>
-                </a>
               
             </div>
           </div>
@@ -530,12 +639,282 @@ Error: Error building site: failed to render pages: render of &quot;home&quot; f
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#%e6%9b%b4%e6%94%b9-data-series-toml-%e5%87%ba%e7%8e%b0%e7%9a%84%e9%97%ae%e9%a2%98">
-												 更改\data\series.toml出现的问题
+						 					<a class="nav-link" href="#%e9%85%8d%e7%bd%ae%e7%bc%96%e8%af%91%e7%8e%af%e5%a2%83">
+												 配置编译环境
 											</a>
 										</li>
 						 
 								
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e7%8e%af%e5%a2%83%e5%8f%98%e9%87%8f%e8%ae%be%e7%bd%ae">
+												 环境变量设置
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e9%97%ae%e9%a2%98">
+												 问题：
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e5%b8%b8%e7%94%a8%e7%9a%84dos%e5%91%bd%e4%bb%a4">
+												 *常用的DOS命令
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#java%e7%89%b9%e7%82%b9">
+												 Java特点
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#helloworld">
+												 HelloWorld
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e5%91%bd%e4%bb%a4%e8%a1%8c%e7%bc%96%e5%86%99%e5%b9%b6%e8%bf%90%e8%a1%8cjava%e7%a8%8b%e5%ba%8f">
+												 命令行编写并运行Java程序
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e7%89%b9%e6%9c%89%e7%9a%84%e6%96%87%e6%a1%a3%e6%b3%a8%e9%87%8a">
+												 特有的文档注释
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#eclipse">
+												 eclipse
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e5%b0%be">
+												 尾
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#appendix">
+												 Appendix
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#java-7-0-platform">
+												 Java 7.0 Platform
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
 								
 									</ul>
 								

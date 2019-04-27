@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Learning Java on Melon</title>
+    <link>https://moritzmelon.github.io/series/learning-java/</link>
+    <description>Recent content in Learning Java on Melon</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 27 Apr 2019 10:26:04 +0800</lastBuildDate>
+    
+	<atom:link href="https://moritzmelon.github.io/series/learning-java/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Lesson 1: A Java Novice</title>
+      <link>https://moritzmelon.github.io/blog/2019-04/lesson-1-a-java-novice/</link>
+      <pubDate>Sat, 27 Apr 2019 10:26:04 +0800</pubDate>
+      
+      <guid>https://moritzmelon.github.io/blog/2019-04/lesson-1-a-java-novice/</guid>
+      <description>You must unlearn what you have learned. &amp;ndash;Master Yoda 配置编译环境 环境变量设</description>
+    </item>
+    
+  </channel>
+</rss>

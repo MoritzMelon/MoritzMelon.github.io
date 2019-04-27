@@ -6,10 +6,19 @@
     <description>Recent content in Series on Melon</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 26 Apr 2019 20:58:44 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 27 Apr 2019 10:26:04 +0800</lastBuildDate>
     
 	<atom:link href="https://moritzmelon.github.io/series/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Learning Java</title>
+      <link>https://moritzmelon.github.io/series/learning-java/</link>
+      <pubDate>Sat, 27 Apr 2019 10:26:04 +0800</pubDate>
+      
+      <guid>https://moritzmelon.github.io/series/learning-java/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Blog Constructing</title>

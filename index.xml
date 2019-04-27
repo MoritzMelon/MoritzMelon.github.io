@@ -6,10 +6,19 @@
     <description>Recent content on Melon</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 26 Apr 2019 20:58:44 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 27 Apr 2019 10:26:04 +0800</lastBuildDate>
     
 	<atom:link href="https://moritzmelon.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Lesson 1: A Java Novice</title>
+      <link>https://moritzmelon.github.io/blog/2019-04/lesson-1-a-java-novice/</link>
+      <pubDate>Sat, 27 Apr 2019 10:26:04 +0800</pubDate>
+      
+      <guid>https://moritzmelon.github.io/blog/2019-04/lesson-1-a-java-novice/</guid>
+      <description>You must unlearn what you have learned. &amp;ndash;Master Yoda 配置编译环境 环境变量设</description>
+    </item>
     
     <item>
       <title>Mybug</title>
