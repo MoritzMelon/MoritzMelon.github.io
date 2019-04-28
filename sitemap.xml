@@ -3,6 +3,47 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://moritzmelon.github.io/</loc>
+    <lastmod>2019-04-28T13:06:32+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://moritzmelon.github.io/series/</loc>
+    <lastmod>2019-04-28T13:06:32+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://moritzmelon.github.io/series/software/</loc>
+    <lastmod>2019-04-28T13:06:32+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://moritzmelon.github.io/tags/</loc>
+    <lastmod>2019-04-28T13:06:32+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://moritzmelon.github.io/tags/vs2010/</loc>
+    <lastmod>2019-04-28T13:06:32+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://moritzmelon.github.io/blog/2019-04/vs2010-setting/</loc>
+    <lastmod>2019-04-28T13:06:32+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://moritzmelon.github.io/tags/fiddle/</loc>
+    <lastmod>2019-04-28T13:06:32+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://moritzmelon.github.io/categories/</loc>
     <lastmod>2019-04-27T10:26:04+08:00</lastmod>
     <priority>0</priority>
@@ -23,24 +64,6 @@
   <url>
     <loc>https://moritzmelon.github.io/blog/2019-04/lesson-1-a-java-novice/</loc>
     <lastmod>2019-04-27T10:26:04+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://moritzmelon.github.io/</loc>
-    <lastmod>2019-04-27T10:26:04+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://moritzmelon.github.io/series/</loc>
-    <lastmod>2019-04-27T10:26:04+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://moritzmelon.github.io/tags/</loc>
-    <lastmod>2019-04-27T10:26:04+08:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -74,7 +97,7 @@
   </url>
   
   <url>
-    <loc>https://moritzmelon.github.io/blog/2019-04/mybug/</loc>
+    <loc>https://moritzmelon.github.io/blog/2019-04/unsolved001-setting-series-in-blog/</loc>
     <lastmod>2019-04-26T20:58:44+08:00</lastmod>
   </url>
   
@@ -86,6 +109,12 @@
   
   <url>
     <loc>https://moritzmelon.github.io/tags/bug/</loc>
+    <lastmod>2019-04-26T20:58:44+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://moritzmelon.github.io/tags/unsolved/</loc>
     <lastmod>2019-04-26T20:58:44+08:00</lastmod>
     <priority>0</priority>
   </url>
