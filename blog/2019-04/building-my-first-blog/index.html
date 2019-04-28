@@ -214,6 +214,25 @@
 
         
         <div class="carousel-item">
+          <div class="view" style="background-image: url('https://moritzmelon.github.io/img/header-slides//raw_1515847341.jpg'); background-repeat: no-repeat; background-size: cover;">
+
+            
+            <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+
+            
+
+            </div>
+            
+
+          </div>
+        </div>
+        
+      
+    
+      
+
+        
+        <div class="carousel-item">
           <div class="view" style="background-image: url('https://moritzmelon.github.io/img/header-slides//v2-13263c01e9f1f9093b423b204e24d90f_r%20-%20%e5%89%af%e6%9c%ac.jpg'); background-repeat: no-repeat; background-size: cover;">
 
             
@@ -335,7 +354,7 @@
     
     
       
-        <li><a href="https://moritzmelon.github.io/series/blog-constructing"><i class="fas fa-bookmark pr-1" aria-hidden="true"></i>Blog Constructing</a></li>
+        <li><a href="https://moritzmelon.github.io/series/blog-bonstructing"><i class="fas fa-bookmark pr-1" aria-hidden="true"></i>Blog Bonstructing</a></li>
       
     
   </ul>
@@ -351,7 +370,7 @@
   </ul>
   
     <div class="view">
-      <img src="https://moritzmelon.github.io/images/blog/2018-08/Blog%20Constructing.jpg" />
+      <img src="https://moritzmelon.github.io/images/blog/2018-08/BlogConstructing.jpg" />
     </div>
   
 
@@ -509,15 +528,7 @@ $ git remote -v
 
 <p><em>该主题下载后<code>\exampleSite</code>有几篇示例文章，需要删除？</em></p>
 
-<p>在<a href="https://github.com/orianna-zzo/AllinOne">AllinOne主题</a>的<code>config.toml</code>中，slidesDir两个图片存放的路径不一致，但两边要同步，否则会出现图片加载不出来的情况，原因未知，<strong><em>unsolved</em></strong></p>
-
-<pre><code class="language-toml"># slides
-  slidesDirPath            = &quot;themes/AllinOne/static/img/header-slides&quot;
-# path to image in local dir (path for hugo)
-  slidesDirPathURL         = &quot;img/header-slides&quot;    
-# path to image in static dir (for static pages)
-
-</code></pre>
+<p><a href="https://github.com/orianna-zzo/AllinOne">AllinOne主题</a><br/><br/></p>
 
 <p>本地调试，即改即看，一直改一直爽，更方便摸索主体设置</p>
 
@@ -760,32 +771,6 @@ $ git remote -v
 </footer>
 
 
-<script
-	async
-	src="//cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
-></script>
-<script type="text/x-mathjax-config">
-	MathJax.Hub.Config({
-	  tex2jax: {
-	    inlineMath: [['$','$'], ['\\(','\\)']],
-	    displayMath: [['$$','$$'], ['\\[','\\]']],
-	    processEscapes: true,
-	    processEnvironments: true,
-	    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
-	    TeX: { equationNumbers: { autoNumber: "AMS" },
-	    extensions: ["AMSmath.js", "AMSsymbols.js"] }
-	  }
-	});
-
-</script>
-<script type="text/x-mathjax-config">
-	// Fix <code> tags after MathJax finishes running. This is a
-	// hack to overcome a shortcoming of Markdown. Discussion at
-	// https://github.com/mojombo/jekyll/issues/199
-	MathJax.Hub.Queue(() => {
-	  MathJax.Hub.getAllJax().map(v => v.SourceElement().parentNode.className += ' has-jax');
-	});
-</script>
     
 
 

@@ -15,12 +15,6 @@
   </url>
   
   <url>
-    <loc>https://moritzmelon.github.io/series/software/</loc>
-    <lastmod>2019-04-28T13:06:32+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://moritzmelon.github.io/tags/</loc>
     <lastmod>2019-04-28T13:06:32+08:00</lastmod>
     <priority>0</priority>
@@ -39,6 +33,12 @@
   
   <url>
     <loc>https://moritzmelon.github.io/tags/fiddle/</loc>
+    <lastmod>2019-04-28T13:06:32+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://moritzmelon.github.io/series/software/</loc>
     <lastmod>2019-04-28T13:06:32+08:00</lastmod>
     <priority>0</priority>
   </url>
@@ -91,7 +91,7 @@
   </url>
   
   <url>
-    <loc>https://moritzmelon.github.io/series/blog-constructing/</loc>
+    <loc>https://moritzmelon.github.io/series/blog-bonstructing/</loc>
     <lastmod>2019-04-26T20:58:44+08:00</lastmod>
     <priority>0</priority>
   </url>

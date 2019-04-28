@@ -214,6 +214,25 @@
 
         
         <div class="carousel-item">
+          <div class="view" style="background-image: url('https://moritzmelon.github.io/img/header-slides//raw_1515847341.jpg'); background-repeat: no-repeat; background-size: cover;">
+
+            
+            <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+
+            
+
+            </div>
+            
+
+          </div>
+        </div>
+        
+      
+    
+      
+
+        
+        <div class="carousel-item">
           <div class="view" style="background-image: url('https://moritzmelon.github.io/img/header-slides//v2-13263c01e9f1f9093b423b204e24d90f_r%20-%20%e5%89%af%e6%9c%ac.jpg'); background-repeat: no-repeat; background-size: cover;">
 
             
@@ -335,7 +354,7 @@
     
     
       
-        <li><a href="https://moritzmelon.github.io/series/blog-constructing"><i class="fas fa-bookmark pr-1" aria-hidden="true"></i>Blog Constructing</a></li>
+        <li><a href="https://moritzmelon.github.io/series/blog-bonstructing"><i class="fas fa-bookmark pr-1" aria-hidden="true"></i>Blog Bonstructing</a></li>
       
     
   </ul>
@@ -392,6 +411,16 @@ Building sites … WARN 2019/04/26 20:43:09 Page's .RSSLink is deprecated and wi
 WARN 2019/04/26 20:43:09 Page's .URL is deprecated and will be removed in a future release. Use .Permalink or .RelPermalink. If what you want is the front matter URL value, use .Params.url.
 Total in 1044 ms
 Error: Error building site: failed to render pages: render of &quot;home&quot; failed: execute of template failed: template: index.html:31:11: executing &quot;main&quot; at &lt;partial &quot;sidebar-series.html&quot; .&gt;: error calling partial: &quot;E:\HugoBlog\mysite\themes\AllinOne\layouts\partials\sidebar-series.html:29:26&quot;: execute of template failed: template: partials/sidebar-series.html:29:26: executing &quot;partials/sidebar-series.html&quot; at &lt;where $.Site.Data.series.series &quot;.name&quot; .Name&gt;: error calling where: can't iterate over &lt;nil&gt;
+
+</code></pre>
+
+<p>重新下载主题也同样报错，不修改该文件可以成功构建</p>
+
+<pre><code class="language-bash">$ hugo server -w
+Building sites … WARN 2019/04/28 16:54:55 Page's .RSSLink is deprecated and will be removed in a future release. Use the Output Format's link, e.g. something like:
+    {{ with .OutputFormats.Get &quot;RSS&quot; }}{{ .RelPermalink }}{{ end }}.
+WARN 2019/04/28 16:54:55 Page's .URL is deprecated and will be removed in a future release. Use .Permalink or .RelPermalink. If what you want is the front matter URL value, use .Params.url.
+WARN 2019/04/28 16:54:55 Data for key 'series' in path 'AllinOne\series.toml' is overridden by higher precedence data already in the data tree
 
 </code></pre>
 
@@ -570,32 +599,6 @@ Error: Error building site: failed to render pages: render of &quot;home&quot; f
 </footer>
 
 
-<script
-	async
-	src="//cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
-></script>
-<script type="text/x-mathjax-config">
-	MathJax.Hub.Config({
-	  tex2jax: {
-	    inlineMath: [['$','$'], ['\\(','\\)']],
-	    displayMath: [['$$','$$'], ['\\[','\\]']],
-	    processEscapes: true,
-	    processEnvironments: true,
-	    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
-	    TeX: { equationNumbers: { autoNumber: "AMS" },
-	    extensions: ["AMSmath.js", "AMSsymbols.js"] }
-	  }
-	});
-
-</script>
-<script type="text/x-mathjax-config">
-	// Fix <code> tags after MathJax finishes running. This is a
-	// hack to overcome a shortcoming of Markdown. Discussion at
-	// https://github.com/mojombo/jekyll/issues/199
-	MathJax.Hub.Queue(() => {
-	  MathJax.Hub.getAllJax().map(v => v.SourceElement().parentNode.className += ' has-jax');
-	});
-</script>
     
 
 
