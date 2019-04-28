@@ -17,7 +17,7 @@
       <pubDate>Sun, 12 Aug 2018 23:03:12 +0800</pubDate>
       
       <guid>https://moritzmelon.github.io/blog/2018-08/hugo-template-primer/</guid>
-      <description>Hugo uses the excellent Go html/template library for its template engine. It is an extremely lightweight engine that provides a very small amount of logic.</description>
+      <description>Hugo uses the excellent Go html/template library for its template engine. It is an extremely lightweight engine that provides a very small amount of logic. In our experience that it is just the right amount of logic to be able to create a good static website. If you have used other template systems from different languages or frameworks you will find a lot of similarities in Go templates.</description>
     </item>
     
   </channel>

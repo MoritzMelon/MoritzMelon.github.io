@@ -3,19 +3,66 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://moritzmelon.github.io/categories/</loc>
+    <lastmod>2019-04-28T18:26:04+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://moritzmelon.github.io/categories/java/</loc>
+    <lastmod>2019-04-28T18:26:04+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://moritzmelon.github.io/series/learning-java/</loc>
+    <lastmod>2019-04-28T18:26:04+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://moritzmelon.github.io/blog/2019-04/lesson-2-java-programming-structure/</loc>
+    <lastmod>2019-04-28T18:26:04+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://moritzmelon.github.io/</loc>
-    <lastmod>2019-04-28T13:06:32+08:00</lastmod>
+    <lastmod>2019-04-28T18:26:04+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://moritzmelon.github.io/series/</loc>
-    <lastmod>2019-04-28T13:06:32+08:00</lastmod>
+    <lastmod>2019-04-28T18:26:04+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://moritzmelon.github.io/tags/</loc>
+    <lastmod>2019-04-28T18:26:04+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://moritzmelon.github.io/tags/java/</loc>
+    <lastmod>2019-04-28T18:26:04+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://moritzmelon.github.io/tags/newb/</loc>
+    <lastmod>2019-04-28T18:26:04+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://moritzmelon.github.io/tags/study/</loc>
+    <lastmod>2019-04-28T18:26:04+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://moritzmelon.github.io/categories/testcategories/</loc>
     <lastmod>2019-04-28T13:06:32+08:00</lastmod>
     <priority>0</priority>
   </url>
@@ -44,44 +91,8 @@
   </url>
   
   <url>
-    <loc>https://moritzmelon.github.io/categories/</loc>
-    <lastmod>2019-04-27T10:26:04+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://moritzmelon.github.io/categories/java/</loc>
-    <lastmod>2019-04-27T10:26:04+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://moritzmelon.github.io/series/learning-java/</loc>
-    <lastmod>2019-04-27T10:26:04+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://moritzmelon.github.io/blog/2019-04/lesson-1-a-java-novice/</loc>
     <lastmod>2019-04-27T10:26:04+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://moritzmelon.github.io/tags/java/</loc>
-    <lastmod>2019-04-27T10:26:04+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://moritzmelon.github.io/tags/newb/</loc>
-    <lastmod>2019-04-27T10:26:04+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://moritzmelon.github.io/tags/study/</loc>
-    <lastmod>2019-04-27T10:26:04+08:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -137,18 +148,6 @@
   <url>
     <loc>https://moritzmelon.github.io/about/</loc>
     <lastmod>2018-08-12T23:03:12+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://moritzmelon.github.io/categories/testcategories/</loc>
-    <lastmod>2018-08-12T23:03:12+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://moritzmelon.github.io/series/testseries/</loc>
-    <lastmod>2018-08-12T23:03:12+08:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>

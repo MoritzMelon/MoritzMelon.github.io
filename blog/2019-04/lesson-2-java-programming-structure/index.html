@@ -7,24 +7,24 @@
   <meta name="MobileOptimized" content="320">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1" />
   <meta name="author" content="Melon">
-  <meta name="description" content="Roll up sleeves then!">
+  <meta name="description" content="Basic Java &hellip;">
   
-  <meta property="og:title" content="Building My First Blog" />
-<meta property="og:description" content="Roll up sleeves then!" />
+  <meta property="og:title" content="Lesson 2: Java Programming Structure" />
+<meta property="og:description" content="Basic Java &hellip;" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://moritzmelon.github.io/blog/2019-04/building-my-first-blog/" />
-<meta property="article:published_time" content="2019-04-24T20:53:44&#43;08:00"/>
-<meta property="article:modified_time" content="2019-04-24T20:53:44&#43;08:00"/>
+<meta property="og:url" content="https://moritzmelon.github.io/blog/2019-04/lesson-2-java-programming-structure/" />
+<meta property="article:published_time" content="2019-04-28T18:26:04&#43;08:00"/>
+<meta property="article:modified_time" content="2019-04-28T18:26:04&#43;08:00"/>
 
 
 
   <title>
   
-       Building My First Blog | Melon 
+       Lesson 2: Java Programming Structure | Melon 
   
   </title>
 
-  <link rel="canonical" href="https://moritzmelon.github.io/blog/2019-04/building-my-first-blog/">
+  <link rel="canonical" href="https://moritzmelon.github.io/blog/2019-04/lesson-2-java-programming-structure/">
 
   
   
@@ -349,29 +349,25 @@
   <ul class="post-meta li-x">
     
       
-        <li><a href="https://moritzmelon.github.io/categories/blog"><i class="fas fa-folder-open pr-1" aria-hidden="true"></i> Blog </a></li>
+        <li><a href="https://moritzmelon.github.io/categories/java"><i class="fas fa-folder-open pr-1" aria-hidden="true"></i> Java </a></li>
       
     
     
       
-        <li><a href="https://moritzmelon.github.io/series/blog-bonstructing"><i class="fas fa-bookmark pr-1" aria-hidden="true"></i>Blog Bonstructing</a></li>
+        <li><a href="https://moritzmelon.github.io/series/learning-java"><i class="fas fa-bookmark pr-1" aria-hidden="true"></i>Learning Java</a></li>
       
     
   </ul>
 
-  <div class="px-4 post-heading">Building My First Blog</div>
+  <div class="px-4 post-heading">Lesson 2: Java Programming Structure</div>
 
   <ul class="post-meta li-x mt-1">
     
-      <li>Apr 24, 2019</li>
+      <li>Apr 28, 2019</li>
     
 
     
   </ul>
-  
-    <div class="view">
-      <img src="https://moritzmelon.github.io/images/blog/2018-08/BlogConstructing.jpg" />
-    </div>
   
 
 </div>
@@ -380,160 +376,149 @@
           <div class="post-content markdown">
             
 
-<p><em><center>即便我身处果壳之中，仍自以为是无限宇宙之王</center></em></p>
-
 <blockquote>
-<p><center>O God, I could be bounded in a nutshell and count myself a king of infinite space,</center><br/><center>were it not that I have bad dreams.</center></p>
+<p><center>I find that a great part of the information I have</center><br/><center>was acquired by looking up something and finding something else on the way.</center></p>
 
-<p><em><p align="right">&ndash;HAMLET, Act 2, Scene 2, 239-241</p></em></p>
+<p align="right">-- Franklin Pierce Adams, <I>Reader's Digest (October 1960)</I></p>
 </blockquote>
 
-<p>折腾了三四天的博客，从一开始的<code>hexo</code>转到<code>hugo</code>，基本搭建终于告一段落。转到<code>hugo</code>的原因主要是在设置支持$\LaTeX $语法的路上迷失了，转用<code>hugo</code>后折腾主题折腾了很久，尝试把现有主题修改成支持分类和目录，怀着不畏艰险、折腾不息的精神，以及坚决不做完全伸手党的决心，在路上意外发现了一个功能齐全、界面优美的主题，遂迷。</p>
+<p><br/></p>
 
-<p>按照手把手教程、极度依赖Google解决问题的搭建博客方式实在差强人意，在这个过程中学到的大概只有git的基本操作（Google搜索<del>伸手</del>熟练度up up），踩了很多坑，但在背景知识不完备的情况下，踩坑并无多大意义。</p>
+<h2 id="2-1-关键字">2.1 关键字</h2>
 
-<p>希望日后能自己写出一个满意的主题来。</p>
+<h3 id="2-1-1-关键字">2.1.1 关键字</h3>
 
-<h2 id="latex-支持">$\LaTeX $支持</h2>
-
-<p><a href="https://github.com/orianna-zzo/AllinOne">主题</a>支持$\LaTeX $，但测试后发现不支持单个<code>$</code>包裹的语句</p>
-
-<p>惯例首推<a href="https://gohugo.io/content-management/formats/">官网文档</a>，无果，参考<a href="https://blog.lizebang.top/2017/12/hugo-support-latex/">另一处</a>后设置成功，在<code>themes\AllinOne\layouts\partials\footer.html</code>末尾加入下列代码即可。</p>
-
-<pre><code class="language-php+HTML">&lt;script
-	async
-	src=&quot;//cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML&quot;
-&gt;&lt;/script&gt;
-&lt;script type=&quot;text/x-mathjax-config&quot;&gt;
-	MathJax.Hub.Config({
-	  tex2jax: {
-	    inlineMath: [['$','$'], ['\\(','\\)']],
-	    displayMath: [['$$','$$'], ['\\[','\\]']],
-	    processEscapes: true,
-	    processEnvironments: true,
-	    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
-	    TeX: { equationNumbers: { autoNumber: &quot;AMS&quot; },
-	    extensions: [&quot;AMSmath.js&quot;, &quot;AMSsymbols.js&quot;] }
-	  }
-	});
-&lt;/script&gt;
-&lt;script type=&quot;text/x-mathjax-config&quot;&gt;
-	// Fix &lt;code&gt; tags after MathJax finishes running. This is a
-	// hack to overcome a shortcoming of Markdown. Discussion at
-	// https://github.com/mojombo/jekyll/issues/199
-	MathJax.Hub.Queue(() =&gt; {
-	  MathJax.Hub.getAllJax().map(v =&gt; v.SourceElement().parentNode.className += ' has-jax');
-	});
-&lt;/script&gt;
-</code></pre>
-
-<h2 id="博客更新">博客更新</h2>
-
-<p>新建新文档</p>
-
-<pre><code class="language-bash">$ hugo new post/first.md
-</code></pre>
-
-<p>发布</p>
-
-<pre><code class="language-bash">git add -A
-git commit -m &quot;update&quot;
-git push -u origin master
-</code></pre>
-
-<p>遇到的几个问题：</p>
-
-<p>1.在一次根目录下文件夹大删改后，成功生成静态网页也成功地<code>push</code>了，但收到<code>github</code>的邮件<code>Page build failed</code>（参考<a href="https://help.github.com/en/articles/troubleshooting-github-pages-builds">官方文档</a>），发现<code>public\content</code>中仍存在先前删除的文件夹。用一个简单粗暴的方法解决：把<code>public</code>文件夹清空，然后再生成网页。<br/>随后顺手在<code>stackoverflow</code>一搜，发现<a href="https://stackoverflow.com/questions/572549/difference-between-git-add-a-and-git-add">以下</a>要点</p>
-
-<blockquote>
-<p><em>This answer only applies to</em> <strong><em>Git version 1.x</em></strong>.<em>For Git version 2.x, see other answers.</em></p>
-
-<p><strong>Summary:</strong></p>
+<p>关键字均为小写，用做专门用途，类别包括：</p>
 
 <ul>
-<li><code>git add -A</code> stages <strong>all changes</strong></li>
-<li><code>git add .</code> stages new files and modifications, <strong>without deletions</strong></li>
-<li><code>git add -u</code> stages modifications and deletions, <strong>without new files</strong></li>
+<li>用于定义数据类型：<strong><code>class</code>，<code>interface</code>，<code>byte</code>，<code>boolean</code></strong></li>
+<li>用于定义数据类型值：<code>true</code>，<code>false</code>，<strong><code>null</code></strong></li>
+<li>用于定义流程控制</li>
+<li>用于定义访问权限修饰符</li>
+<li>用于定义类，函数，变量修饰符：<strong><code>abstract</code>，<code>final</code>，<code>static</code>，<code>synchronized</code></strong></li>
+<li>用于定义类与类之间关系：<strong><code>extends</code>，<code>implements</code></strong></li>
+<li>用于定义建立实例及引用实例，判断实例：<strong><code>new</code>，<code>thi</code>，<code>super</code>，<code>instanceof</code></strong></li>
+<li>用于异常处理：<strong><code>try</code>，<code>catch</code>，<code>finally</code>，<code>throw</code>，<code>throws</code></strong></li>
+<li>用于包：<strong><code>package</code>，<code>import</code></strong></li>
+<li>其他修饰符：<strong><code>native</code>，<code>strictfp</code>，<code>transient</code>，<code>volatile</code>，<code>assert</code></strong></li>
 </ul>
 
-<p><strong>Detail:</strong></p>
+<h3 id="2-1-2-保留字">2.1.2 保留字</h3>
 
-<p><code>git add -A</code> is equivalent to <code>git add .; git add -u</code>.</p>
+<p>现有Java版本尚未使用，但以后版本可能会作为关键字使用</p>
 
-<p>The important point about <code>git add .</code> is that it looks at the working tree and adds all those paths to the staged changes if they are either changed or are new and not ignored, it does not stage any &lsquo;rm&rsquo; actions.</p>
-
-<p><code>git add -u</code> looks at all the <em>already</em> tracked files and stages the changes to those files if they are different or if they have been removed. It does not add any new files, it only stages changes to already tracked files.</p>
-
-<p><code>git add -A</code> is a handy shortcut for doing both of those.</p>
-
-<p>You can test the differences out with something like this (note that for Git version 2.x your output for <code>git add .</code> <code>git status</code> <strong>will</strong> be different)</p>
-</blockquote>
-
-<p>遂推测构建失败的原因是之前贪图方便，使用以下语句更新导致</p>
-
-<pre><code class="language-bash">$ git add .
+<pre><code class="language-java">byValue cast future generic inner operator outer rest var goto const
 </code></pre>
 
-<p>2.<code>push</code>失败，<strong><em>unsolved</em></strong><br/>参考<a href="https://stackoverflow.com/questions/24114676/git-error-failed-to-push-some-refs-to">网页</a>，用其不推荐的：</p>
+<p><br/></p>
 
-<pre><code class="language-bash">$ git push -f origin master
+<h2 id="2-2-标识符">2.2 标识符</h2>
+
+<p>规则：由26个英文字符大小写、0-9、<code>_</code>或<strong><code>$</code></strong>组成，不可以以数字开头，严格区分大小写，不包含空格</p>
+
+<p>规范：</p>
+
+<ul>
+<li>包名：多单词组成时所有字母都小写，<code>xxxyyyzzz</code></li>
+<li>类名、接口名：多单词组成时，所有单词的首字母大写，<code>XxxYyyZzz</code></li>
+<li>变量名、方法名：多单词组成时，第一个单词首字母小写，第二个单词开始每个单词首字母大写，<code>xxxYyyZzz</code></li>
+<li>常量名：所有字母都大写。多单词时每个单词用下划线连接，<code>XXX_YYY_ZZZ</code></li>
+</ul>
+
+<p>规范不一定要遵守，但遵守有利于增强代码可读性</p>
+
+<p><br/></p>
+
+<h2 id="2-3-变量">2.3 变量</h2>
+
+<p>先声明，后使用，注意作用域(<code>{}</code>内)</p>
+
+<p><em><center>补充：程序的执行过程图，学到面向对象时再回顾并理解 -2019.4.28</center></em></p>
+
+<h3 id="2-3-1-基本数据类型">2.3.1 基本数据类型</h3>
+
+<p><table>
+<tr>
+<th rowspan="4">基本数据类型</th>
+<th>数值型&gt;整数类型</th>
+<th>byte,short,int,long</th>
+</tr><tr>
+<th>数值型&gt;浮点类型</th>
+<th>float,double</th>
+</tr><tr>
+<th>字符型</th>
+<th>char</th>
+</tr><tr>
+<th>布尔型</th>
+<th>boolean</th>
+</tr><tr>
+<th rowspan="3">引用数据类型</th>
+<th>类（字符串）</th>
+<th>class</th>
+</tr><tr>
+<th>数组</th>
+<th>[ ]</th>
+</tr><tr>
+<th>接口</th>
+<th>interface</th>
+<tr></table>
+<em><center>补充：变量的分类，学到面向对象时再回顾并理解 -2019.4.28</center></em></p>
+
+<ul>
+<li>Java各整数类型有固定的表数范围和字段长度，不受具体OS的影响，以保证Java程序的可移植性</li>
+<li><code>byte</code>类型占用1 B=8 bit的存储空间，范围-128~127</li>
+<li>整型常量默认为 int型，声明long型常量须后<strong>加<code>l</code>或<code>L</code></strong><br/>eg.<code>long l1=123456789L;</code></li>
+<li>浮点型常量默认为double型，声明float型常量，须后<strong>加<code>f</code>或<code>F</code></strong></li>
+<li>boolean类型数据只允许取值true和false，无null，<strong>不可以0或非 0 的整数替代false和true，这点和C语言不同</strong></li>
+</ul>
+
+<h4 id="字符型-2-byte">字符型（2 byte）</h4>
+
+<p>可以表示一个英文/中文/标点符号等字符</p>
+
+<pre><code class="language-jade">char c='我';
 </code></pre>
 
-<p>语句解决了这个问题，后续顺利<code>push</code>，但原因未知</p>
+<p>允许转义字符，也可以直接用<strong>Unicode</strong>值表示字符常量<code>'\uXXXX'</code>，用十六进制数表示，并且可运算</p>
 
-<p>3.在<code>github</code>设置了密匙，仍然每次<code>push</code>都需要登录，<strong><em>solved</em></strong></p>
-
-<p>4.在斜体内无法再双星号加粗，网页上表示失效</p>
-
-<p>解决：结合粗体和斜体显示即可,但<code>*</code>内套用<code>_</code>需要在前后多加一个空格，影响显示</p>
-
-<pre><code class="language-markdown">_a**b**c_,__a*b*c__，**a _b_ c**，*a __b__ c*
+<pre><code class="language-java">char c='\u000a';//表示'\n'
 </code></pre>
 
-<p>显示：<em>a<strong>b</strong>c</em>,<strong>a*b*c</strong>，<strong>a <em>b</em> c</strong>，<em>a <strong>b</strong> c</em></p>
+<ul>
+<li><strong>ASCII 码</strong><br/>规定了128个字符的编码，只占用了一个字节的后面7位，最前面的1位统一规定为0，不能表示所有字符，并且相同的编码表示的字符不一样。</li>
+<li><strong>Unicode</strong><br/>将世界上所有的符号都纳入其中，每一个符号都给予一个独一无二的编码，没有乱码的问题<br/>缺点：1.Unicode 只是一个符号集，它只规定了符号的二进制代码，却没有规定这个二进制代码应该如何存储<br/>2.无法区别 Unicode 和 ASCII：计算机无法区分三个字节表示一个符号还是分别表示三个符号<br/></li>
+<li><strong>UTF-8 <code>8-bit Unicode Transformation Format</code></strong><br/>UTF-8 是在互联网上使用最广的一种 Unicode 的实现方式。UTF-8是一种针对Unicode的可变长度字符编码（1-6 个字节），也是一种前缀码。它可以用来表示Unicode标准中的任何字符，且其编码中的第一个字节仍与ASCII兼容</li>
+</ul>
 
-<p>粗体内叠用斜体同理</p>
+<p><br/></p>
 
-<p>5.这段的<code>markdown</code>语法疯狂出错，在<code>Typora</code>上显示正常的有序列表，在网页上就乱了，<strong><em>unsolved</em></strong></p>
+<h3 id="2-3-2-基本数据类型转换">2.3.2 基本数据类型转换</h3>
 
-<p>单行字使用<code>&lt;br/&gt;</code>进行换行即可，但代码块和引用处理方法未知</p>
+<p><br/></p>
 
-<p><br/><br/></p>
+<hr />
 
-<h2 id="使用-ssh-密钥登录-github">使用 SSH 密钥登录 GitHub</h2>
+<p><br/></p>
 
-<p><a href="https://github.com/waylau/github-help">参考链接</a></p>
+<h2 id="2-4-运算符">2.4 运算符</h2>
 
-<p>设置了<code>SSH</code>密匙后，每次<code>push</code>仍然需要输入密码，原因是初加仓库地址时用了 HTTPS 格式，改为 SSH 格式的地址即可</p>
+<p><br/></p>
 
-<p>在本地项目的目录里运行命令行/git<em>（此情况下，在<code>\public</code>目录下）</em></p>
+<hr />
 
-<pre><code class="language-bash">#列出你已经存在的远程库
-$ git remote -v
-$ git remote set-url origin git@github.com:USERNAME/REPOSITORY2.git
-#验证
-$ git remote -v
-</code></pre>
+<p><br/></p>
 
-<p>从此更新便捷</p>
+<h2 id="2-5-程序流程控制">2.5 程序流程控制</h2>
 
-<h2 id="主题更换">主题更换</h2>
+<p><br/></p>
 
-<p>下载主题到<code>\themes</code>文件夹中</p>
+<hr />
 
-<pre><code class="language-bash">$ git clone https://github.com/~~~~.git themes/~~~~
-</code></pre>
+<p><br/></p>
 
-<p>然后把<code>\exampleSite</code> 中的<code>config.toml</code>、<code>content</code>和<code>static</code>（等文件）覆盖根目录下该文件，修改<code>baseURL</code>等参数，<code>theme = &quot;[主题名]&quot;</code></p>
+<h2 id="2-6-数组">2.6 数组</h2>
 
-<p><em>该主题下载后<code>\exampleSite</code>有几篇示例文章，需要删除？</em></p>
-
-<p><a href="https://github.com/orianna-zzo/AllinOne">AllinOne主题</a><br/><br/></p>
-
-<p>本地调试，即改即看，一直改一直爽，更方便摸索主体设置</p>
-
-<pre><code class="language-bash">$ hugo server -w
-</code></pre>
+<p><br/></p>
 
 <hr />
 
@@ -549,13 +534,13 @@ $ git remote -v
   <li class="pr-0"><a href="https://moritzmelon.github.io/tags/"><i class="fas fa-tags"></i></a></li>
   <div class="tags-sm">
     
-      <li><a href="https://moritzmelon.github.io/tags/blog" role="button">blog </a></li>
+      <li><a href="https://moritzmelon.github.io/tags/study" role="button">study </a></li>
       
     
-      <li><a href="https://moritzmelon.github.io/tags/unsolved" role="button">unsolved </a></li>
+      <li><a href="https://moritzmelon.github.io/tags/java" role="button">java </a></li>
       
     
-      <li><a href="https://moritzmelon.github.io/tags/fiddle" role="button">fiddle </a></li>
+      <li><a href="https://moritzmelon.github.io/tags/newb" role="button">newb </a></li>
       
     
   </div>
@@ -571,23 +556,16 @@ $ git remote -v
           <div class="row pt-3">
             <div class="col-md-6">
               
-                <a href=https://moritzmelon.github.io/blog/2018-08/hugo-template-primer/ class="post-meta">Previous
+                <a href=https://moritzmelon.github.io/blog/2019-04/vs2010-setting/ class="post-meta">Previous
                   <div class="pt-2 pb-5 d-flex">
                     <i class="fas fa-angle-left text-grey font-weight-bold mr-2 active-color"></i>
-                    <span>(Hu)go Template Primer</span>
+                    <span>VS2010 Setting</span>
                   </div>
                 </a>
               
             </div>
             
             <div class="col-md-6 text-right" >
-              
-                <a href=https://moritzmelon.github.io/blog/2019-04/unsolved_001-setting-series-in-blog/ class="post-meta">Next
-                  <div class="pt-2 pb-5 flex-reverse">
-                    <i class="fas fa-angle-right text-grey font-weight-bold ml-2 active-color"></i>
-                    <span>unsolved_001 Setting Series in Blog</span>
-                  </div>
-                </a>
               
             </div>
           </div>
@@ -633,8 +611,82 @@ $ git remote -v
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#latex-%e6%94%af%e6%8c%81">
-												 $\LaTeX $支持
+						 					<a class="nav-link" href="#2-1-%e5%85%b3%e9%94%ae%e5%ad%97">
+												 2.1 关键字
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#2-1-1-%e5%85%b3%e9%94%ae%e5%ad%97">
+												 2.1.1 关键字
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#2-1-2-%e4%bf%9d%e7%95%99%e5%ad%97">
+												 2.1.2 保留字
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#2-2-%e6%a0%87%e8%af%86%e7%ac%a6">
+												 2.2 标识符
 											</a>
 										</li>
 						 
@@ -655,8 +707,112 @@ $ git remote -v
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#%e5%8d%9a%e5%ae%a2%e6%9b%b4%e6%96%b0">
-												 博客更新
+						 					<a class="nav-link" href="#2-3-%e5%8f%98%e9%87%8f">
+												 2.3 变量
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#2-3-1-%e5%9f%ba%e6%9c%ac%e6%95%b0%e6%8d%ae%e7%b1%bb%e5%9e%8b">
+												 2.3.1 基本数据类型
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e5%ad%97%e7%ac%a6%e5%9e%8b-2-byte">
+												 字符型（2 byte）
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#2-3-2-%e5%9f%ba%e6%9c%ac%e6%95%b0%e6%8d%ae%e7%b1%bb%e5%9e%8b%e8%bd%ac%e6%8d%a2">
+												 2.3.2 基本数据类型转换
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#2-4-%e8%bf%90%e7%ae%97%e7%ac%a6">
+												 2.4 运算符
 											</a>
 										</li>
 						 
@@ -677,8 +833,8 @@ $ git remote -v
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#%e4%bd%bf%e7%94%a8-ssh-%e5%af%86%e9%92%a5%e7%99%bb%e5%bd%95-github">
-												 使用 SSH 密钥登录 GitHub
+						 					<a class="nav-link" href="#2-5-%e7%a8%8b%e5%ba%8f%e6%b5%81%e7%a8%8b%e6%8e%a7%e5%88%b6">
+												 2.5 程序流程控制
 											</a>
 										</li>
 						 
@@ -699,8 +855,8 @@ $ git remote -v
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#%e4%b8%bb%e9%a2%98%e6%9b%b4%e6%8d%a2">
-												 主题更换
+						 					<a class="nav-link" href="#2-6-%e6%95%b0%e7%bb%84">
+												 2.6 数组
 											</a>
 										</li>
 						 
