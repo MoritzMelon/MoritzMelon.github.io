@@ -97,11 +97,6 @@
   </url>
   
   <url>
-    <loc>https://moritzmelon.github.io/blog/2019-04/unsolved001-setting-series-in-blog/</loc>
-    <lastmod>2019-04-26T20:58:44+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://moritzmelon.github.io/tags/blog/</loc>
     <lastmod>2019-04-26T20:58:44+08:00</lastmod>
     <priority>0</priority>
@@ -117,6 +112,11 @@
     <loc>https://moritzmelon.github.io/tags/unsolved/</loc>
     <lastmod>2019-04-26T20:58:44+08:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://moritzmelon.github.io/blog/2019-04/unsolved_001-setting-series-in-blog/</loc>
+    <lastmod>2019-04-26T20:58:44+08:00</lastmod>
   </url>
   
   <url>

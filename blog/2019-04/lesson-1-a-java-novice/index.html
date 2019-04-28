@@ -7,10 +7,10 @@
   <meta name="MobileOptimized" content="320">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1" />
   <meta name="author" content="Melon">
-  <meta name="description" content="You must unlearn what you have learned. &ndash;Master Yoda 配置编译环境 环境变量设">
+  <meta name="description" content="Start to learn Java&hellip;">
   
   <meta property="og:title" content="Lesson 1: A Java Novice" />
-<meta property="og:description" content="You must unlearn what you have learned. &ndash;Master Yoda 配置编译环境 环境变量设" />
+<meta property="og:description" content="Start to learn Java&hellip;" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://moritzmelon.github.io/blog/2019-04/lesson-1-a-java-novice/" />
 <meta property="article:published_time" content="2019-04-27T10:26:04&#43;08:00"/>
@@ -155,7 +155,7 @@
 
         
         <div class="carousel-item active">
-          <div class="view" style="background-image: url('https://moritzmelon.github.io/img/header-slides/candle_book_compass_zodiac_signs_lettering_harry_potter_fantasy_witch_dark_horror_1920x1200.jpg'); background-repeat: no-repeat; background-size: cover;">
+          <div class="view" style="background-image: url('https://moritzmelon.github.io/img/header-slides/candle_book_compass_zodiac_signs_lettering_harry_potter_fantasy_witch_dark_horror_1920x12001.jpg'); background-repeat: no-repeat; background-size: cover;">
 
             
             <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
@@ -214,45 +214,7 @@
 
         
         <div class="carousel-item">
-          <div class="view" style="background-image: url('https://moritzmelon.github.io/img/header-slides//raw_1515847341.jpg'); background-repeat: no-repeat; background-size: cover;">
-
-            
-            <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
-
-            
-
-            </div>
-            
-
-          </div>
-        </div>
-        
-      
-    
-      
-
-        
-        <div class="carousel-item">
           <div class="view" style="background-image: url('https://moritzmelon.github.io/img/header-slides//v2-13263c01e9f1f9093b423b204e24d90f_r%20-%20%e5%89%af%e6%9c%ac.jpg'); background-repeat: no-repeat; background-size: cover;">
-
-            
-            <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
-
-            
-
-            </div>
-            
-
-          </div>
-        </div>
-        
-      
-    
-      
-
-        
-        <div class="carousel-item">
-          <div class="view" style="background-image: url('https://moritzmelon.github.io/img/header-slides//v2-2c57eb9f545a81c6647853d131f49422_r.jpg'); background-repeat: no-repeat; background-size: cover;">
 
             
             <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
@@ -388,6 +350,10 @@
     
   </ul>
   
+    <div class="view">
+      <img src="https://moritzmelon.github.io/images/blog/2018-08/A%20Java%20Novice.jpg" />
+    </div>
+  
 
 </div>
 
@@ -406,7 +372,7 @@
 
 <h3 id="环境变量设置">环境变量设置</h3>
 
-<p>直接解压软件包是不行的，需要设置环境变量。</p>
+<p>下载eclipse和JDK，但直接解压软件包是不行的，需要设置环境变量</p>
 
 <ol>
 <li>变量名<code>JAVA_HOME</code>：<code>C:\Program Files (x86)\Java\jdk1.6.0_45</code>，即jdk的具体安装路径</li>
@@ -417,19 +383,12 @@
 
 <p><br/></p>
 
-<h3 id="问题">问题：</h3>
+<h3 id="问题">问题</h3>
 
 <ol>
-<li><code>eclipse no java virtual machine was found after searching the following locations</code></li>
+<li><code>eclipse no java virtual machine was found after searching the following locations</code><br/>解决：环境变量配置失败，重新配置</li>
+<li><code>eclipse failed to load the jni shared library</code><br/>解决：<a href="https://stackoverflow.com/questions/19894100/eclipse-failed-to-load-the-jni-shared-library">参考网址</a>，原因应该是安装了64位的JDK，eclipse是32位的，变量<code>JAVA_HOME</code>的内容改成32位JDK即解决</li>
 </ol>
-
-<p>解决：环境变量配置失败，重新配置</p>
-
-<ol>
-<li><code>eclipse failed to load the jni shared library</code></li>
-</ol>
-
-<p>解决：<a href="https://stackoverflow.com/questions/19894100/eclipse-failed-to-load-the-jni-shared-library">参考网址</a>，原因应该是安装了64位的JDK，eclipse是32位的，变量<code>JAVA_HOME</code>的内容改成32位JDK即解决</p>
 
 <p><br/></p>
 
@@ -447,9 +406,11 @@
 <li><code>exit</code>：退出 dos 命令行</li>
 </ul>
 
-<p><br/><br/></p>
+<p><br/></p>
 
 <hr />
+
+<p><br/></p>
 
 <h2 id="java特点">Java特点</h2>
 
@@ -468,9 +429,11 @@
 <li><p>JDK中包含了JRE，JRE中包含了JVM，JVM运行于操作系统之上，它依赖于操作系统</p></li>
 </ul>
 
-<p><br/><br/></p>
+<p><br/></p>
 
 <hr />
+
+<p><br/></p>
 
 <h2 id="helloworld">HelloWorld</h2>
 
@@ -506,6 +469,12 @@ class HelloWorld{//类声明
 
 <p><br/></p>
 
+<h3 id="eclipse编写并运行java程序">eclipse编写并运行Java程序</h3>
+
+<p><em><center>待填 -2019.4.27</center></em></p>
+
+<p><br/></p>
+
 <h3 id="特有的文档注释">特有的文档注释</h3>
 
 <p>格式：</p>
@@ -526,15 +495,11 @@ class HelloWorld{//类声明
 
 <p><br/></p>
 
-<h3 id="eclipse">eclipse</h3>
-
-<p><em><center>待填 -2019.4.27</center></em></p>
-
-<p><br/><br/></p>
-
 <hr />
 
-<h2 id="尾">尾</h2>
+<p><br/></p>
+
+<h2 id="其他">其他</h2>
 
 <p><em>Java库常用包<code>package</code>有<code>java.lang</code>,<code>java.io</code>和<code>java.sql</code></em></p>
 
@@ -588,10 +553,10 @@ class HelloWorld{//类声明
           <div class="row pt-3">
             <div class="col-md-6">
               
-                <a href=https://moritzmelon.github.io/blog/2019-04/unsolved001-setting-series-in-blog/ class="post-meta">Previous
+                <a href=https://moritzmelon.github.io/blog/2019-04/unsolved_001-setting-series-in-blog/ class="post-meta">Previous
                   <div class="pt-2 pb-5 d-flex">
                     <i class="fas fa-angle-left text-grey font-weight-bold mr-2 active-color"></i>
-                    <span>Unsolved[001] Setting Series in Blog</span>
+                    <span>unsolved_001 Setting Series in Blog</span>
                   </div>
                 </a>
               
@@ -701,7 +666,7 @@ class HelloWorld{//类声明
 
 										<li class="nav-item">
 						 					<a class="nav-link" href="#%e9%97%ae%e9%a2%98">
-												 问题：
+												 问题
 											</a>
 										</li>
 						 
@@ -822,6 +787,32 @@ class HelloWorld{//类声明
 								
 
 										<li class="nav-item">
+						 					<a class="nav-link" href="#eclipse%e7%bc%96%e5%86%99%e5%b9%b6%e8%bf%90%e8%a1%8cjava%e7%a8%8b%e5%ba%8f">
+												 eclipse编写并运行Java程序
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
 						 					<a class="nav-link" href="#%e7%89%b9%e6%9c%89%e7%9a%84%e6%96%87%e6%a1%a3%e6%b3%a8%e9%87%8a">
 												 特有的文档注释
 											</a>
@@ -843,37 +834,11 @@ class HelloWorld{//类声明
 								
 									<ul class="nav">
 								
-									<ul class="nav">
-								
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#eclipse">
-												 eclipse
-											</a>
-										</li>
-						 
-								
-								
-									</ul>
-								
-									</ul>
-								
-							
-						
-				 
-						
-						
-							
-								
-								
-									<ul class="nav">
-								
-								
-
-										<li class="nav-item">
-						 					<a class="nav-link" href="#%e5%b0%be">
-												 尾
+						 					<a class="nav-link" href="#%e5%85%b6%e4%bb%96">
+												 其他
 											</a>
 										</li>
 						 
