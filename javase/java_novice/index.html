@@ -7,23 +7,24 @@
   <meta name="MobileOptimized" content="320">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1" />
   <meta name="author" content="Melon">
-  <meta name="description" content="Hugo uses the excellent Go html/template library for its template engine. It is an extremely lightweight engine that provides a very small amount of logic. In our experience that it is just the right amount of logic to be able to create a good static website. If you have used other template systems from different languages or frameworks you will find a lot of similarities in Go templates.">
+  <meta name="description" content="Start to learn Java&hellip;">
   
-  <meta property="og:title" content="(Hu)go Template Primer" />
-<meta property="og:description" content="Hugo uses the excellent Go html/template library for its template engine. It is an extremely lightweight engine that provides a very small amount of logic. In our experience that it is just the right amount of logic to be able to create a good static website. If you have used other template systems from different languages or frameworks you will find a lot of similarities in Go templates." />
+  <meta property="og:title" content="Lesson 1: A Java Novice" />
+<meta property="og:description" content="Start to learn Java&hellip;" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://moritzmelon.github.io/blog/2018-08/hugo-template-primer/" />
-<meta property="article:published_time" content="2018-08-12T23:03:12&#43;08:00"/>
-<meta property="article:modified_time" content="2018-08-12T23:03:12&#43;08:00"/>
+<meta property="og:url" content="https://moritzmelon.github.io/javase/java_novice/" />
+<meta property="article:published_time" content="2019-04-27T10:26:04&#43;08:00"/>
+<meta property="article:modified_time" content="2019-04-27T10:26:04&#43;08:00"/>
+
 
 
   <title>
   
-       (Hu)go Template Primer | Melon 
+       Lesson 1: A Java Novice | Melon 
   
   </title>
 
-  <link rel="canonical" href="https://moritzmelon.github.io/blog/2018-08/hugo-template-primer/">
+  <link rel="canonical" href="https://moritzmelon.github.io/javase/java_novice/">
 
   
   
@@ -117,11 +118,6 @@
              
             <li class="nav-item ">
               <a class="nav-link" href="https://moritzmelon.github.io/javase/" >Java SE  </a>
-            </li>
-          
-             
-            <li class="nav-item ">
-              <a class="nav-link" href="https://moritzmelon.github.io/android/" >Android  </a>
             </li>
           
              
@@ -353,21 +349,29 @@
   <ul class="post-meta li-x">
     
       
-        <li><a href="https://moritzmelon.github.io/categories/testcategories"><i class="fas fa-folder-open pr-1" aria-hidden="true"></i> TestCategories </a></li>
+        <li><a href="https://moritzmelon.github.io/categories/java"><i class="fas fa-folder-open pr-1" aria-hidden="true"></i> Java </a></li>
       
     
     
+      
+        <li><a href="https://moritzmelon.github.io/series/learning-java"><i class="fas fa-bookmark pr-1" aria-hidden="true"></i>Learning Java</a></li>
+      
+    
   </ul>
 
-  <div class="px-4 post-heading">(Hu)go Template Primer</div>
+  <div class="px-4 post-heading">Lesson 1: A Java Novice</div>
 
   <ul class="post-meta li-x mt-1">
     
-      <li>Aug 12, 2018</li>
+      <li>Apr 27, 2019</li>
     
 
     
   </ul>
+  
+    <div class="view">
+      <img src="https://moritzmelon.github.io/images/blog/2018-08/A%20Java%20Novice.jpg" />
+    </div>
   
 
 </div>
@@ -376,341 +380,181 @@
           <div class="post-content markdown">
             
 
-<p>Hugo uses the excellent <a href="https://golang.org/">Go</a> <a href="https://golang.org/pkg/html/template/">html/template</a> library for
-its template engine. It is an extremely lightweight engine that provides a very
-small amount of logic. In our experience that it is just the right amount of
-logic to be able to create a good static website. If you have used other
-template systems from different languages or frameworks you will find a lot of
-similarities in Go templates.</p>
+<blockquote>
+<p><center>You must unlearn what you have learned.</center>
+<em><p align="right">&ndash;Master Yoda</p></em></p>
+</blockquote>
 
-<p>This document is a brief primer on using Go templates. The <a href="https://golang.org/pkg/html/template/">Go docs</a>
-provide more details.</p>
+<p><br/></p>
 
-<h2 id="introduction-to-go-templates">Introduction to Go Templates</h2>
+<h2 id="配置编译环境">配置编译环境</h2>
 
-<p>Go templates provide an extremely simple template language. It adheres to the
-belief that only the most basic of logic belongs in the template or view layer.
-One consequence of this simplicity is that Go templates parse very quickly.</p>
+<h3 id="环境变量设置">环境变量设置</h3>
 
-<p>A unique characteristic of Go templates is they are content aware. Variables and
-content will be sanitized depending on the context of where they are used. More
-details can be found in the <a href="https://golang.org/pkg/html/template/">Go docs</a>.</p>
+<p>下载eclipse和JDK，但直接解压软件包是不行的，需要设置环境变量</p>
 
-<h2 id="basic-syntax">Basic Syntax</h2>
+<ol>
+<li>变量名<code>JAVA_HOME</code>：<code>C:\Program Files (x86)\Java\jdk1.6.0_45</code>，即jdk的具体安装路径</li>
+<li><code>CLASSPATH</code>：<code>.;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar;</code>，开头<code>.</code>的含义是当前目录下</li>
+<li><code>Path</code>最后加上<code>;%JAVA_HOME%\bin</code></li>
+<li>检测：windows运行命令行，输入<code>java -version</code>检测是否配置成功</li>
+</ol>
 
-<p>Golang templates are HTML files with the addition of variables and
-functions.</p>
+<p><br/></p>
 
-<p><strong>Go variables and functions are accessible within {{ }}</strong></p>
+<h3 id="问题">问题</h3>
 
-<p>Accessing a predefined variable &ldquo;foo&rdquo;:</p>
+<ol>
+<li><code>eclipse no java virtual machine was found after searching the following locations</code><br/>解决：环境变量配置失败，重新配置</li>
+<li><code>eclipse failed to load the jni shared library</code><br/>解决：<a href="https://stackoverflow.com/questions/19894100/eclipse-failed-to-load-the-jni-shared-library">参考网址</a>，原因应该是安装了64位的JDK，eclipse是32位的，变量<code>JAVA_HOME</code>的内容改成32位JDK即解决</li>
+</ol>
 
-<pre><code>{{ foo }}
-</code></pre>
+<p><br/></p>
 
-<p><strong>Parameters are separated using spaces</strong></p>
-
-<p>Calling the add function with input of 1, 2:</p>
-
-<pre><code>{{ add 1 2 }}
-</code></pre>
-
-<p><strong>Methods and fields are accessed via dot notation</strong></p>
-
-<p>Accessing the Page Parameter &ldquo;bar&rdquo;</p>
-
-<pre><code>{{ .Params.bar }}
-</code></pre>
-
-<p><strong>Parentheses can be used to group items together</strong></p>
-
-<pre><code>{{ if or (isset .Params &quot;alt&quot;) (isset .Params &quot;caption&quot;) }} Caption {{ end }}
-</code></pre>
-
-<h2 id="variables">Variables</h2>
-
-<p>Each Go template has a struct (object) made available to it. In hugo each
-template is passed either a page or a node struct depending on which type of
-page you are rendering. More details are available on the
-<a href="https://moritzmelon.github.io/layout/variables">variables</a> page.</p>
-
-<p>A variable is accessed by referencing the variable name.</p>
-
-<pre><code>&lt;title&gt;{{ .Title }}&lt;/title&gt;
-</code></pre>
-
-<p>Variables can also be defined and referenced.</p>
-
-<pre><code>{{ $address := &quot;123 Main St.&quot;}}
-{{ $address }}
-</code></pre>
-
-<h2 id="functions">Functions</h2>
-
-<p>Go template ship with a few functions which provide basic functionality. The Go
-template system also provides a mechanism for applications to extend the
-available functions with their own. <a href="https://moritzmelon.github.io/layout/functions">Hugo template
-functions</a> provide some additional functionality we believe
-are useful for building websites. Functions are called by using their name
-followed by the required parameters separated by spaces. Template
-functions cannot be added without recompiling hugo.</p>
-
-<p><strong>Example:</strong></p>
-
-<pre><code>{{ add 1 2 }}
-</code></pre>
-
-<h2 id="includes">Includes</h2>
-
-<p>When including another template you will pass to it the data it will be
-able to access. To pass along the current context please remember to
-include a trailing dot. The templates location will always be starting at
-the /layout/ directory within Hugo.</p>
-
-<p><strong>Example:</strong></p>
-
-<pre><code>{{ template &quot;chrome/header.html&quot; . }}
-</code></pre>
-
-<h2 id="logic">Logic</h2>
-
-<p>Go templates provide the most basic iteration and conditional logic.</p>
-
-<h3 id="iteration">Iteration</h3>
-
-<p>Just like in Go, the Go templates make heavy use of range to iterate over
-a map, array or slice. The following are different examples of how to use
-range.</p>
-
-<p><strong>Example 1: Using Context</strong></p>
-
-<pre><code>{{ range array }}
-    {{ . }}
-{{ end }}
-</code></pre>
-
-<p><strong>Example 2: Declaring value variable name</strong></p>
-
-<pre><code>{{range $element := array}}
-    {{ $element }}
-{{ end }}
-</code></pre>
-
-<p><strong>Example 2: Declaring key and value variable name</strong></p>
-
-<pre><code>{{range $index, $element := array}}
-    {{ $index }}
-    {{ $element }}
-{{ end }}
-</code></pre>
-
-<h3 id="conditionals">Conditionals</h3>
-
-<p>If, else, with, or, &amp; and provide the framework for handling conditional
-logic in Go Templates. Like range, each statement is closed with <code>end</code>.</p>
-
-<p>Go Templates treat the following values as false:</p>
+<h3 id="常用的dos命令">*常用的DOS命令</h3>
 
 <ul>
-<li>false</li>
-<li>0</li>
-<li>any array, slice, map, or string of length zero</li>
+<li><code>dir</code>：directory，列出当前目录下的文件以及文件夹</li>
+<li><code>md</code>：Make Directory，创建目录</li>
+<li><code>rd</code>：Remove Directory，删除目录</li>
+<li><code>cd</code>：Change Directory，进入指定目录</li>
+<li><code>cd..</code>：退回到上一级目录</li>
+<li><code>cd\</code>：退回到根目录</li>
+<li><code>del</code>：delete，删除文件</li>
+<li><code>ren</code>：rename，重命名</li>
+<li><code>exit</code>：退出 dos 命令行</li>
 </ul>
 
-<p><strong>Example 1: If</strong></p>
+<p><br/></p>
 
-<pre><code>{{ if isset .Params &quot;title&quot; }}&lt;h4&gt;{{ index .Params &quot;title&quot; }}&lt;/h4&gt;{{ end }}
+<hr />
+
+<p><br/></p>
+
+<h2 id="java特点">Java特点</h2>
+
+<p>与C++对比：舍弃指针（以引用取代）、运算符重载、多重继承等特点，增加垃圾回收功能*(interesting!)*，（JDK 1.5引入）泛型编程（Generic Programming）、类型安全的枚举、不定长参数和自动装/拆箱。</p>
+
+<ul>
+<li>强制面向对象</li>
+<li>分布式：Java语言支持Internet应用的开发，在基本的Java应用编程接口中有一个网络应用编程接口（java net），它提供了用于网络应用编程的类库，包括URL、URLConnection、Socket、ServerSocket等。Java的RMI（远程方法激活）机制也是开发分布式应用的重要手段。<strong><em>目前未能理解该段内容含义。 -2019.4.27</em></strong></li>
+
+<li><p>健壮的！：强类型机制、异常处理、垃圾的自动收集（<code>Garbage Collection</code>，两种核心机制之一，程序运行过程中自动进行，无法被人为精确控制和干预）等</p></li>
+
+<li><p>解释型，跨平台性：字节码格式和Java虚拟机<code>Java Virtual Machine</code>（核心机制之一）</p></li>
+
+<li><p><strong>Java SE(Java Standard Edition)标准版</strong>：支持面向桌面级应用（如Windows下的应用程序）的Java平台</p></li>
+
+<li><p>JDK中包含了JRE，JRE中包含了JVM，JVM运行于操作系统之上，它依赖于操作系统</p></li>
+</ul>
+
+<p><br/></p>
+
+<hr />
+
+<p><br/></p>
+
+<h2 id="helloworld">HelloWorld</h2>
+
+<h3 id="命令行编写并运行java程序">命令行编写并运行Java程序</h3>
+
+<p>新建<code>HelloWorld.java</code>文件，在其中编写如下程序</p>
+
+<pre><code class="language-java">/**
+这是我的第一个Java程序
+@author Melon
+@version v1.0
+*/
+class HelloWorld{//类声明
+    public static void main(String[] args){//main方法，程序的入口，格式固定
+        System.out.println(&quot;Hello world!&quot;+'\t'+&quot;Hello Java!&quot;);//用+连接
+    }
+}
 </code></pre>
 
-<p><strong>Example 2: If -&gt; Else</strong></p>
+<p>一个源文件中，最多之能有一个类声明为<code>public</code>，且类名与原文件名相同</p>
 
-<pre><code>{{ if isset .Params &quot;alt&quot; }}
-    {{ index .Params &quot;alt&quot; }}
-{{else}}
-    {{ index .Params &quot;caption&quot; }}
-{{ end }}
+<p>命令行中执行如下指令，将源文件编译为<code>.class</code>字节码文件</p>
+
+<pre><code class="language-powershell">javac HelloWorld.java
 </code></pre>
 
-<p><strong>Example 3: And &amp; Or</strong></p>
+<p>执行如下命令以运行程序</p>
 
-<pre><code>{{ if and (or (isset .Params &quot;title&quot;) (isset .Params &quot;caption&quot;)) (isset .Params &quot;attr&quot;)}}
+<pre><code class="language-powershell">java HelloWorld
 </code></pre>
 
-<p><strong>Example 4: With</strong></p>
+<p>在控制台窗口输出一行&rdquo;Hello world!&rdquo;</p>
 
-<p>An alternative way of writing &ldquo;if&rdquo; and then referencing the same value
-is to use &ldquo;with&rdquo; instead. With rebinds the context <code>.</code> within its scope,
-and skips the block if the variable is absent.</p>
+<p><br/></p>
 
-<p>The first example above could be simplified as:</p>
+<h3 id="eclipse编写并运行java程序">eclipse编写并运行Java程序</h3>
 
-<pre><code>{{ with .Params.title }}&lt;h4&gt;{{ . }}&lt;/h4&gt;{{ end }}
+<p>一般步骤如下：</p>
+
+<ol>
+<li>菜单【File】→【New】→【Project】→【Java Project】</li>
+<li>不选【Use default location】并设置保存目录→【Finish】</li>
+<li>左边【Package Explorer】中【default packag】下找到后缀为<code>.java</code>的文件，【Run】→【Run As】→【Java Application】，输出显示在控制台窗格中</li>
+</ol>
+
+<p><br/></p>
+
+<h3 id="运行图形化应用程序">*运行图形化应用程序</h3>
+
+<h3 id="构建并运行applet">*构建并运行applet</h3>
+
+<p><em><center>以上待填 -2019.5.7</center></em></p>
+
+<p><br/></p>
+
+<h3 id="特有的文档注释">特有的文档注释</h3>
+
+<p>格式：</p>
+
+<pre><code class="language-java">/**
+*@author  指定java程序的作者
+*@version  指定源文件的版本
+*@param   方法的参数说明信息
+*/
 </code></pre>
 
-<p><strong>Example 5: If -&gt; Else If</strong></p>
+<p>注释内容可以被JDK提供的工具<code>javadoc</code> 所解析，生成一套以网页文件形式体现的该程序的说明文档，命令如下</p>
 
-<pre><code>{{ if isset .Params &quot;alt&quot; }}
-    {{ index .Params &quot;alt&quot; }}
-{{ else if isset .Params &quot;caption&quot; }}
-    {{ index .Params &quot;caption&quot; }}
-{{ end }}
+<pre><code class="language-basic">javadoc -d FILENAME -author -version HelloWorld.java
 </code></pre>
 
-<h2 id="pipes">Pipes</h2>
+<p>在<code>FILENAME</code>文件夹中打开<code>index.html</code>可以更直观查看到程序中使用的类、方法等，在程序更长更复杂的情况下提供一个便捷的审阅方法。</p>
 
-<p>One of the most powerful components of Go templates is the ability to
-stack actions one after another. This is done by using pipes. Borrowed
-from unix pipes, the concept is simple, each pipeline&rsquo;s output becomes the
-input of the following pipe.</p>
+<p><br/></p>
 
-<p>Because of the very simple syntax of Go templates, the pipe is essential
-to being able to chain together function calls. One limitation of the
-pipes is that they only can work with a single value and that value
-becomes the last parameter of the next pipeline.</p>
+<hr />
 
-<p>A few simple examples should help convey how to use the pipe.</p>
+<p><br/></p>
 
-<p><strong>Example 1 :</strong></p>
+<h2 id="其他">其他</h2>
 
-<pre><code>{{ if eq 1 1 }} Same {{ end }}
-</code></pre>
+<p><em>Java库常用包<code>package</code>有<code>java.lang</code>,<code>java.io</code>和<code>java.sql</code></em></p>
 
-<p>is the same as</p>
+<p><em>？：当运行—个Java程序时，传递参数的格式是<strong>Java类名参数1+参数2</strong></em></p>
 
-<pre><code>{{ eq 1 1 | if }} Same {{ end }}
-</code></pre>
+<p><br/><br/></p>
 
-<p>It does look odd to place the if at the end, but it does provide a good
-illustration of how to use the pipes.</p>
+<hr />
 
-<p><strong>Example 2 :</strong></p>
+<h2 id="appendix">Appendix</h2>
 
-<pre><code>{{ index .Params &quot;disqus_url&quot; | html }}
-</code></pre>
+<h3 id="java-7-0-platform">Java 7.0 Platform</h3>
 
-<p>Access the page parameter called &ldquo;disqus_url&rdquo; and escape the HTML.</p>
+<p><img name="Java7.0Platform" src="\images\blog\Java7.0Platform.jpg"></p>
 
-<p><strong>Example 3 :</strong></p>
+<p><br/><br/></p>
 
-<pre><code>{{ if or (or (isset .Params &quot;title&quot;) (isset .Params &quot;caption&quot;)) (isset .Params &quot;attr&quot;)}}
-Stuff Here
-{{ end }}
-</code></pre>
+<hr />
 
-<p>Could be rewritten as</p>
+<p>参考：</p>
 
-<pre><code>{{  isset .Params &quot;caption&quot; | or isset .Params &quot;title&quot; | or isset .Params &quot;attr&quot; | if }}
-Stuff Here
-{{ end }}
-</code></pre>
-
-<h2 id="context-aka-the-dot">Context (aka. the dot)</h2>
-
-<p>The most easily overlooked concept to understand about Go templates is that {{ . }}
-always refers to the current context. In the top level of your template this
-will be the data set made available to it. Inside of a iteration it will have
-the value of the current item. When inside of a loop the context has changed. .
-will no longer refer to the data available to the entire page. If you need to
-access this from within the loop you will likely want to set it to a variable
-instead of depending on the context.</p>
-
-<p><strong>Example:</strong></p>
-
-<pre><code>  {{ $title := .Site.Title }}
-  {{ range .Params.tags }}
-    &lt;li&gt; &lt;a href=&quot;{{ $baseurl }}/tags/{{ . | urlize }}&quot;&gt;{{ . }}&lt;/a&gt; - {{ $title }} &lt;/li&gt;
-  {{ end }}
-</code></pre>
-
-<p>Notice how once we have entered the loop the value of {{ . }} has changed. We
-have defined a variable outside of the loop so we have access to it from within
-the loop.</p>
-
-<h1 id="hugo-parameters">Hugo Parameters</h1>
-
-<p>Hugo provides the option of passing values to the template language
-through the site configuration (for sitewide values), or through the meta
-data of each specific piece of content. You can define any values of any
-type (supported by your front matter/config format) and use them however
-you want to inside of your templates.</p>
-
-<h2 id="using-content-page-parameters">Using Content (page) Parameters</h2>
-
-<p>In each piece of content you can provide variables to be used by the
-templates. This happens in the <a href="https://moritzmelon.github.io/content/front-matter">front matter</a>.</p>
-
-<p>An example of this is used in this documentation site. Most of the pages
-benefit from having the table of contents provided. Sometimes the TOC just
-doesn&rsquo;t make a lot of sense. We&rsquo;ve defined a variable in our front matter
-of some pages to turn off the TOC from being displayed.</p>
-
-<p>Here is the example front matter:</p>
-
-<pre><code>---
-title: &quot;Permalinks&quot;
-date: &quot;2013-11-18&quot;
-aliases:
-  - &quot;/doc/permalinks/&quot;
-groups: [&quot;extras&quot;]
-groups_weight: 30
-notoc: true
----
-</code></pre>
-
-<p>Here is the corresponding code inside of the template:</p>
-
-<pre><code>  {{ if not .Params.notoc }}
-    &lt;div id=&quot;toc&quot; class=&quot;well col-md-4 col-sm-6&quot;&gt;
-    {{ .TableOfContents }}
-    &lt;/div&gt;
-  {{ end }}
-</code></pre>
-
-<h2 id="using-site-config-parameters">Using Site (config) Parameters</h2>
-
-<p>In your top-level configuration file (eg, <code>config.yaml</code>) you can define site
-parameters, which are values which will be available to you in chrome.</p>
-
-<p>For instance, you might declare:</p>
-
-<pre><code class="language-yaml">params:
-  CopyrightHTML: &quot;Copyright &amp;#xA9; 2013 John Doe. All Rights Reserved.&quot;
-  TwitterUser: &quot;spf13&quot;
-  SidebarRecentLimit: 5
-</code></pre>
-
-<p>Within a footer layout, you might then declare a <code>&lt;footer&gt;</code> which is only
-provided if the <code>CopyrightHTML</code> parameter is provided, and if it is given,
-you would declare it to be HTML-safe, so that the HTML entity is not escaped
-again.  This would let you easily update just your top-level config file each
-January 1st, instead of hunting through your templates.</p>
-
-<pre><code>{{if .Site.Params.CopyrightHTML}}&lt;footer&gt;
-&lt;div class=&quot;text-center&quot;&gt;{{.Site.Params.CopyrightHTML | safeHtml}}&lt;/div&gt;
-&lt;/footer&gt;{{end}}
-</code></pre>
-
-<p>An alternative way of writing the &ldquo;if&rdquo; and then referencing the same value
-is to use &ldquo;with&rdquo; instead. With rebinds the context <code>.</code> within its scope,
-and skips the block if the variable is absent:</p>
-
-<pre><code>{{with .Site.Params.TwitterUser}}&lt;span class=&quot;twitter&quot;&gt;
-&lt;a href=&quot;https://twitter.com/{{.}}&quot; rel=&quot;author&quot;&gt;
-&lt;img src=&quot;/images/twitter.png&quot; width=&quot;48&quot; height=&quot;48&quot; title=&quot;Twitter: {{.}}&quot;
- alt=&quot;Twitter&quot;&gt;&lt;/a&gt;
-&lt;/span&gt;{{end}}
-</code></pre>
-
-<p>Finally, if you want to pull &ldquo;magic constants&rdquo; out of your layouts, you can do
-so, such as in this example:</p>
-
-<pre><code>&lt;nav class=&quot;recent&quot;&gt;
-  &lt;h1&gt;Recent Posts&lt;/h1&gt;
-  &lt;ul&gt;{{range first .Site.Params.SidebarRecentLimit .Site.Recent}}
-    &lt;li&gt;&lt;a href=&quot;{{.RelPermalink}}&quot;&gt;{{.Title}}&lt;/a&gt;&lt;/li&gt;
-  {{end}}&lt;/ul&gt;
-&lt;/nav&gt;
-</code></pre>
+<p><a href="https://book.douban.com/subject/26880667/">Cay S.Horstmann . Java核心技术·卷 I（原书第10版）[M] . 机械工业出版社</a></p>
 
           </div>
 
@@ -724,7 +568,13 @@ so, such as in this example:</p>
   <li class="pr-0"><a href="https://moritzmelon.github.io/tags/"><i class="fas fa-tags"></i></a></li>
   <div class="tags-sm">
     
-      <li><a href="https://moritzmelon.github.io/tags/testtag" role="button">TestTag </a></li>
+      <li><a href="https://moritzmelon.github.io/tags/study" role="button">study </a></li>
+      
+    
+      <li><a href="https://moritzmelon.github.io/tags/java" role="button">java </a></li>
+      
+    
+      <li><a href="https://moritzmelon.github.io/tags/newb" role="button">newb </a></li>
       
     
   </div>
@@ -744,10 +594,10 @@ so, such as in this example:</p>
             
             <div class="col-md-6 text-right" >
               
-                <a href=https://moritzmelon.github.io/blog/2019-04/building-my-first-blog/ class="post-meta">Next
+                <a href=https://moritzmelon.github.io/javase/lesson_2_java_programming_structure/ class="post-meta">Next
                   <div class="pt-2 pb-5 flex-reverse">
                     <i class="fas fa-angle-right text-grey font-weight-bold ml-2 active-color"></i>
-                    <span>Building My First Blog</span>
+                    <span>Lesson 2: Fundamental Programming Structures in Java</span>
                   </div>
                 </a>
               
@@ -792,13 +642,35 @@ so, such as in this example:</p>
 								
 									<ul class="nav">
 								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e9%85%8d%e7%bd%ae%e7%bc%96%e8%af%91%e7%8e%af%e5%a2%83">
+												 配置编译环境
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
 									<ul class="nav">
 								
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#introduction-to-go-templates">
-												 Introduction to Go Templates
+						 					<a class="nav-link" href="#%e7%8e%af%e5%a2%83%e5%8f%98%e9%87%8f%e8%ae%be%e7%bd%ae">
+												 环境变量设置
 											</a>
 										</li>
 						 
@@ -823,8 +695,8 @@ so, such as in this example:</p>
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#basic-syntax">
-												 Basic Syntax
+						 					<a class="nav-link" href="#%e9%97%ae%e9%a2%98">
+												 问题
 											</a>
 										</li>
 						 
@@ -849,8 +721,78 @@ so, such as in this example:</p>
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#variables">
-												 Variables
+						 					<a class="nav-link" href="#%e5%b8%b8%e7%94%a8%e7%9a%84dos%e5%91%bd%e4%bb%a4">
+												 *常用的DOS命令
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#java%e7%89%b9%e7%82%b9">
+												 Java特点
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#helloworld">
+												 HelloWorld
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e5%91%bd%e4%bb%a4%e8%a1%8c%e7%bc%96%e5%86%99%e5%b9%b6%e8%bf%90%e8%a1%8cjava%e7%a8%8b%e5%ba%8f">
+												 命令行编写并运行Java程序
 											</a>
 										</li>
 						 
@@ -875,8 +817,8 @@ so, such as in this example:</p>
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#functions">
-												 Functions
+						 					<a class="nav-link" href="#eclipse%e7%bc%96%e5%86%99%e5%b9%b6%e8%bf%90%e8%a1%8cjava%e7%a8%8b%e5%ba%8f">
+												 eclipse编写并运行Java程序
 											</a>
 										</li>
 						 
@@ -901,8 +843,8 @@ so, such as in this example:</p>
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#includes">
-												 Includes
+						 					<a class="nav-link" href="#%e8%bf%90%e8%a1%8c%e5%9b%be%e5%bd%a2%e5%8c%96%e5%ba%94%e7%94%a8%e7%a8%8b%e5%ba%8f">
+												 *运行图形化应用程序
 											</a>
 										</li>
 						 
@@ -927,94 +869,8 @@ so, such as in this example:</p>
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#logic">
-												 Logic
-											</a>
-										</li>
-						 
-								
-								
-									</ul>
-								
-									</ul>
-								
-							
-						
-				 
-						
-						
-							
-								
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-								
-
-										<li class="nav-item">
-						 					<a class="nav-link" href="#iteration">
-												 Iteration
-											</a>
-										</li>
-						 
-								
-								
-									</ul>
-								
-									</ul>
-								
-									</ul>
-								
-							
-						
-				 
-						
-						
-							
-								
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-								
-
-										<li class="nav-item">
-						 					<a class="nav-link" href="#conditionals">
-												 Conditionals
-											</a>
-										</li>
-						 
-								
-								
-									</ul>
-								
-									</ul>
-								
-									</ul>
-								
-							
-						
-				 
-						
-						
-							
-								
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-								
-
-										<li class="nav-item">
-						 					<a class="nav-link" href="#pipes">
-												 Pipes
+						 					<a class="nav-link" href="#%e6%9e%84%e5%bb%ba%e5%b9%b6%e8%bf%90%e8%a1%8capplet">
+												 *构建并运行applet
 											</a>
 										</li>
 						 
@@ -1039,8 +895,8 @@ so, such as in this example:</p>
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#context-aka-the-dot">
-												 Context (aka. the dot)
+						 					<a class="nav-link" href="#%e7%89%b9%e6%9c%89%e7%9a%84%e6%96%87%e6%a1%a3%e6%b3%a8%e9%87%8a">
+												 特有的文档注释
 											</a>
 										</li>
 						 
@@ -1063,8 +919,30 @@ so, such as in this example:</p>
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#hugo-parameters">
-												 Hugo Parameters
+						 					<a class="nav-link" href="#%e5%85%b6%e4%bb%96">
+												 其他
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#appendix">
+												 Appendix
 											</a>
 										</li>
 						 
@@ -1087,34 +965,8 @@ so, such as in this example:</p>
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#using-content-page-parameters">
-												 Using Content (page) Parameters
-											</a>
-										</li>
-						 
-								
-								
-									</ul>
-								
-									</ul>
-								
-							
-						
-				 
-						
-						
-							
-								
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-								
-
-										<li class="nav-item">
-						 					<a class="nav-link" href="#using-site-config-parameters">
-												 Using Site (config) Parameters
+						 					<a class="nav-link" href="#java-7-0-platform">
+												 Java 7.0 Platform
 											</a>
 										</li>
 						 
