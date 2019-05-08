@@ -9,7 +9,7 @@
   <meta name="author" content="Melon">
   <meta name="description" content="[Stay hungry. Stay foolish.]">
   
-  <meta property="og:title" content="A Silent Moment" />
+  <meta property="og:title" content="Silence" />
 <meta property="og:description" content="[Stay hungry. Stay foolish.]" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://moritzmelon.github.io/empty/" />
@@ -19,7 +19,7 @@
 
   <title>
   
-       A Silent Moment | Melon 
+       Silence | Melon 
   
   </title>
 
@@ -341,7 +341,7 @@
             <div class="div-x">
               <div class='post-heading'>
   
-      A Silent Moment
+      Silence
   
 </div>
 
@@ -367,7 +367,7 @@
 
 <p>$$We\ had\ everything\ before\ us,\ we\ had\ nothing\ before\ us\ ;$$</p>
 
-<p>$$We\ were\ all\ going\ direct\ to\ Heaven,\ we\ were\ all\ going\ direct\ the\ other\ way.​$$</p>
+<p>$$We\ were\ all\ going\ direct\ to\ Heaven,\ we\ were\ all\ going\ direct\ the\ other\ way.$$</p>
 
 <p align="right">- Charles Dickens,<I> A Tale of Two Cities</I></p>
 
@@ -436,7 +436,31 @@
 
 </footer>
 
-
+<script
+	async
+	src="//cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+></script>
+<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+	  tex2jax: {
+	    inlineMath: [['$','$'], ['\\(','\\)']],
+	    displayMath: [['$$','$$'], ['\\[','\\]']],
+	    processEscapes: true,
+	    processEnvironments: true,
+	    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+	    TeX: { equationNumbers: { autoNumber: "AMS" },
+	    extensions: ["AMSmath.js", "AMSsymbols.js"] }
+	  }
+	});
+</script>
+<script type="text/x-mathjax-config">
+	// Fix <code> tags after MathJax finishes running. This is a
+	// hack to overcome a shortcoming of Markdown. Discussion at
+	// https://github.com/mojombo/jekyll/issues/199
+	MathJax.Hub.Queue(() => {
+	  MathJax.Hub.getAllJax().map(v => v.SourceElement().parentNode.className += ' has-jax');
+	});
+</script>
     
 
 

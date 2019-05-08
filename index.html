@@ -698,9 +698,9 @@
               
                   <div class="post-wrapper white-bg post-card">
   
-  <a href="https://moritzmelon.github.io/blog/2019-04/lesson-2-java-programming-structure/">
+  <a href="https://moritzmelon.github.io/blog/2019-04/lesson-2-fundamental-programming-structures-in-java/">
     <div class="post-header text-center">
-      <div class="px-4 post-heading">Lesson 2: Java Programming Structure</div>
+      <div class="px-4 post-heading">Lesson 2: Fundamental Programming Structures in Java</div>
       <ul class="post-meta li-x mt-1">
         
           <li>Apr 28, 2019</li>
@@ -1065,7 +1065,31 @@
 
 </footer>
 
-
+<script
+	async
+	src="//cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+></script>
+<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+	  tex2jax: {
+	    inlineMath: [['$','$'], ['\\(','\\)']],
+	    displayMath: [['$$','$$'], ['\\[','\\]']],
+	    processEscapes: true,
+	    processEnvironments: true,
+	    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+	    TeX: { equationNumbers: { autoNumber: "AMS" },
+	    extensions: ["AMSmath.js", "AMSsymbols.js"] }
+	  }
+	});
+</script>
+<script type="text/x-mathjax-config">
+	// Fix <code> tags after MathJax finishes running. This is a
+	// hack to overcome a shortcoming of Markdown. Discussion at
+	// https://github.com/mojombo/jekyll/issues/199
+	MathJax.Hub.Queue(() => {
+	  MathJax.Hub.getAllJax().map(v => v.SourceElement().parentNode.className += ' has-jax');
+	});
+</script>
     
 
 

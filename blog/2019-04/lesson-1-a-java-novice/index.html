@@ -490,7 +490,21 @@ class HelloWorld{//类声明
 
 <h3 id="eclipse编写并运行java程序">eclipse编写并运行Java程序</h3>
 
-<p><em><center>待填 -2019.4.27</center></em></p>
+<p>一般步骤如下：</p>
+
+<ol>
+<li>菜单【File】→【New】→【Project】→【Java Project】</li>
+<li>不选【Use default location】并设置保存目录→【Finish】</li>
+<li>左边【Package Explorer】中【default packag】下找到后缀为<code>.java</code>的文件，【Run】→【Run As】→【Java Application】，输出显示在控制台窗格中</li>
+</ol>
+
+<p><br/></p>
+
+<h3 id="运行图形化应用程序">*运行图形化应用程序</h3>
+
+<h3 id="构建并运行applet">*构建并运行applet</h3>
+
+<p><em><center>以上待填 -2019.5.7</center></em></p>
 
 <p><br/></p>
 
@@ -537,6 +551,10 @@ class HelloWorld{//类声明
 <p><br/><br/></p>
 
 <hr />
+
+<p>参考：</p>
+
+<p><a href="https://book.douban.com/subject/26880667/">Cay S.Horstmann . Java核心技术·卷 I（原书第10版）[M] . 机械工业出版社</a></p>
 
           </div>
 
@@ -832,6 +850,58 @@ class HelloWorld{//类声明
 								
 
 										<li class="nav-item">
+						 					<a class="nav-link" href="#%e8%bf%90%e8%a1%8c%e5%9b%be%e5%bd%a2%e5%8c%96%e5%ba%94%e7%94%a8%e7%a8%8b%e5%ba%8f">
+												 *运行图形化应用程序
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e6%9e%84%e5%bb%ba%e5%b9%b6%e8%bf%90%e8%a1%8capplet">
+												 *构建并运行applet
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
 						 					<a class="nav-link" href="#%e7%89%b9%e6%9c%89%e7%9a%84%e6%96%87%e6%a1%a3%e6%b3%a8%e9%87%8a">
 												 特有的文档注释
 											</a>
@@ -975,7 +1045,31 @@ class HelloWorld{//类声明
 
 </footer>
 
-
+<script
+	async
+	src="//cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+></script>
+<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+	  tex2jax: {
+	    inlineMath: [['$','$'], ['\\(','\\)']],
+	    displayMath: [['$$','$$'], ['\\[','\\]']],
+	    processEscapes: true,
+	    processEnvironments: true,
+	    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+	    TeX: { equationNumbers: { autoNumber: "AMS" },
+	    extensions: ["AMSmath.js", "AMSsymbols.js"] }
+	  }
+	});
+</script>
+<script type="text/x-mathjax-config">
+	// Fix <code> tags after MathJax finishes running. This is a
+	// hack to overcome a shortcoming of Markdown. Discussion at
+	// https://github.com/mojombo/jekyll/issues/199
+	MathJax.Hub.Queue(() => {
+	  MathJax.Hub.getAllJax().map(v => v.SourceElement().parentNode.className += ' has-jax');
+	});
+</script>
     
 
 

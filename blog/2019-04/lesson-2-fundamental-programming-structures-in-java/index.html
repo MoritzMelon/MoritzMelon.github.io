@@ -9,10 +9,10 @@
   <meta name="author" content="Melon">
   <meta name="description" content="Basic Java &hellip;">
   
-  <meta property="og:title" content="Lesson 2: Java Programming Structure" />
+  <meta property="og:title" content="Lesson 2: Fundamental Programming Structures in Java" />
 <meta property="og:description" content="Basic Java &hellip;" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://moritzmelon.github.io/blog/2019-04/lesson-2-java-programming-structure/" />
+<meta property="og:url" content="https://moritzmelon.github.io/blog/2019-04/lesson-2-fundamental-programming-structures-in-java/" />
 <meta property="article:published_time" content="2019-04-28T18:26:04&#43;08:00"/>
 <meta property="article:modified_time" content="2019-04-28T18:26:04&#43;08:00"/>
 
@@ -20,11 +20,11 @@
 
   <title>
   
-       Lesson 2: Java Programming Structure | Melon 
+       Lesson 2: Fundamental Programming Structures in Java | Melon 
   
   </title>
 
-  <link rel="canonical" href="https://moritzmelon.github.io/blog/2019-04/lesson-2-java-programming-structure/">
+  <link rel="canonical" href="https://moritzmelon.github.io/blog/2019-04/lesson-2-fundamental-programming-structures-in-java/">
 
   
   
@@ -359,7 +359,7 @@
     
   </ul>
 
-  <div class="px-4 post-heading">Lesson 2: Java Programming Structure</div>
+  <div class="px-4 post-heading">Lesson 2: Fundamental Programming Structures in Java</div>
 
   <ul class="post-meta li-x mt-1">
     
@@ -388,27 +388,74 @@
 
 <h3 id="2-1-1-关键字">2.1.1 关键字</h3>
 
-<p>关键字均为小写，用做专门用途，类别包括：</p>
+<p>关键字均为小写，用做专门用途</p>
 
-<ul>
-<li>用于定义数据类型：<strong><code>class</code>，<code>interface</code>，<code>byte</code>，<code>boolean</code></strong></li>
-<li>用于定义数据类型值：<code>true</code>，<code>false</code>，<strong><code>null</code></strong></li>
-<li>用于定义流程控制</li>
-<li>用于定义访问权限修饰符</li>
-<li>用于定义类，函数，变量修饰符：<strong><code>abstract</code>，<code>final</code>，<code>static</code>，<code>synchronized</code></strong></li>
-<li>用于定义类与类之间关系：<strong><code>extends</code>，<code>implements</code></strong></li>
-<li>用于定义建立实例及引用实例，判断实例：<strong><code>new</code>，<code>thi</code>，<code>super</code>，<code>instanceof</code></strong></li>
-<li>用于异常处理：<strong><code>try</code>，<code>catch</code>，<code>finally</code>，<code>throw</code>，<code>throws</code></strong></li>
-<li>用于包：<strong><code>package</code>，<code>import</code></strong></li>
-<li>其他修饰符：<strong><code>native</code>，<code>strictfp</code>，<code>transient</code>，<code>volatile</code>，<code>assert</code></strong></li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>用途</th>
+<th>关键字</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>定义数据类型</td>
+<td><strong><code>class</code>，<code>interface</code>，<code>byte</code>，<code>boolean</code></strong></td>
+</tr>
+
+<tr>
+<td>定义数据类型值</td>
+<td><code>true</code>，<code>false</code>，<strong><code>null</code></strong></td>
+</tr>
+
+<tr>
+<td>用于定义流程控制</td>
+<td></td>
+</tr>
+
+<tr>
+<td>用于定义访问权限修饰符</td>
+<td></td>
+</tr>
+
+<tr>
+<td>用于定义类，函数，变量修饰符</td>
+<td><strong><code>abstract</code>，<code>final</code>，<code>static</code>，<code>synchronized</code></strong></td>
+</tr>
+
+<tr>
+<td>用于定义类与类之间关系</td>
+<td><strong><code>extends</code>，<code>implements</code></strong></td>
+</tr>
+
+<tr>
+<td>用于定义建立实例及引用实例，判断实例</td>
+<td><strong><code>new</code>，<code>thi</code>，<code>super</code>，<code>instanceof</code></strong></td>
+</tr>
+
+<tr>
+<td>用于异常处理</td>
+<td><strong><code>try</code>，<code>catch</code>，<code>finally</code>，<code>throw</code>，<code>throws</code></strong></td>
+</tr>
+
+<tr>
+<td>用于包</td>
+<td><strong><code>package</code>，<code>import</code></strong></td>
+</tr>
+
+<tr>
+<td>其他修饰符</td>
+<td><strong><code>native</code>，<code>strictfp</code>，<code>transient</code>，<code>volatile</code>，<code>assert</code></strong></td>
+</tr>
+</tbody>
+</table>
 
 <h3 id="2-1-2-保留字">2.1.2 保留字</h3>
 
 <p>现有Java版本尚未使用，但以后版本可能会作为关键字使用</p>
 
-<pre><code class="language-java">byValue cast future generic inner operator outer rest var goto const
-</code></pre>
+<p>例如：byValue,cast,future,generic,inner,operator,outer,rest,var,goto,const</p>
 
 <p><br/></p>
 
@@ -437,14 +484,16 @@
 
 <h3 id="2-3-1-基本数据类型">2.3.1 基本数据类型</h3>
 
-<p><table>
+<p>Java是一种强类型语言<code>strongly typed language</code>，意味着必须为每一个变量声明<code>declare</code>一种类型。C/C++区分变量的声明与定义，但Java中不进行区分</p>
+
+<table>
 <tr>
 <th rowspan="4">基本数据类型</th>
-<th>数值型&gt;整数类型</th>
-<th>byte,short,int,long</th>
+<th>数值型>整数类型</th>
+<th>byte,short,int,long（20亿）</th>
 </tr><tr>
-<th>数值型&gt;浮点类型</th>
-<th>float,double</th>
+<th>数值型>浮点类型</th>
+<th>float（6-7位）,double（15位）</th>
 </tr><tr>
 <th>字符型</th>
 <th>char</th>
@@ -462,14 +511,28 @@
 <th>接口</th>
 <th>interface</th>
 <tr></table>
-<em><center>补充：变量的分类，学到面向对象时再回顾并理解 -2019.4.28</center></em></p>
+
+<p><em><center>补充：变量的分类，学到面向对象时再回顾并理解 -2019.4.28</center></em></p>
+
+<p>注意：boolean类型数据只允许取值true和false，无null，<strong>不可以0或非 0 的整数替代false和true，这点和C语言不同</strong></p>
+
+<h4 id="整型">整型</h4>
 
 <ul>
 <li>Java各整数类型有固定的表数范围和字段长度，不受具体OS的影响，以保证Java程序的可移植性</li>
-<li><code>byte</code>类型占用1 B=8 bit的存储空间，范围-128~127</li>
-<li>整型常量默认为 int型，声明long型常量须后<strong>加<code>l</code>或<code>L</code></strong><br/>eg.<code>long l1=123456789L;</code></li>
+<li><code>byte</code>类型占用1 B=8 bit的存储空间，范围-128~127，和<code>short</code>类型主要用于底层文件处理或控制占用存储空间量的大数组等场合</li>
+<li>整型常量默认为 int型，声明long型常量须后<strong>加<code>l</code>或<code>L</code></strong><br/>e.g.<code>long l1=123456789L;</code></li>
+<li>十六进制有前缀<code>0X</code>或<code>0x</code>，八进制有易混淆的前缀<code>0</code>，Java7开始有二进制前缀<code>0b</code>或<code>0B</code>，并且可以在数字之间加入下划线以表数位划分</li>
+<li>没有<code>unsigned</code>形式</li>
+</ul>
+
+<h4 id="浮点类型">浮点类型</h4>
+
+<ul>
 <li>浮点型常量默认为double型，声明float型常量，须后<strong>加<code>f</code>或<code>F</code></strong></li>
-<li>boolean类型数据只允许取值true和false，无null，<strong>不可以0或非 0 的整数替代false和true，这点和C语言不同</strong></li>
+<li>可使用十六进制表示浮点数值，用<code>p</code>代替<code>e</code>来表示指数，尾数采用十六进制，指数采用十进制，基数为2（而不是10），e.g.<code>double d=0x1.0p-3;</code>，其中$0.125=2^{-3}$</li>
+<li>浮点数值计算遵循<strong>IEEE 754</strong>规范，用于表示溢出和出错情况的三个特殊浮点数值为：<br/><strong><center>正无穷大（e.g.一个正整数除以0的结果）</center></strong><br/><strong><center>负无穷大</center></strong><br/><strong><center>NaN（不是一个数字，e.g.0/0、负数平方根的结果）</center></strong><br/>并且有相应常量表示</li>
+<li>计算中不允许有任何舍入误差则该使用<code>BigDecimal</code>类，例如$2.0-1.1$的结果打印出来则是$0.899999999999$</li>
 </ul>
 
 <h4 id="字符型-2-byte">字符型（2 byte）</h4>
@@ -479,10 +542,14 @@
 <pre><code class="language-jade">char c='我';
 </code></pre>
 
-<p>允许转义字符，也可以直接用<strong>Unicode</strong>值表示字符常量<code>'\uXXXX'</code>，用十六进制数表示，并且可运算</p>
+<p>允许转义字符，也可以直接用<strong>Unicode</strong>值表示字符常量<code>'\uXXXX'</code>，用十六进制数表示，范围从<code>\u0000</code>到<code>\Uffff</code>，并且可运算</p>
 
 <pre><code class="language-java">char c='\u000a';//表示'\n'
 </code></pre>
+
+<p>但<code>\u0022+\u0022</code>表示的并不是字符串<code>&quot;+&quot;</code>，转移序列在解析前得到处理，即得到的结果为<code>&quot;&quot;+&quot;&quot;</code>，也就是一个空串。</p>
+
+<p>另外，注释中也会出现<code>\u</code>的转义</p>
 
 <ul>
 <li><strong>ASCII 码</strong><br/>规定了128个字符的编码，只占用了一个字节的后面7位，最前面的1位统一规定为0，不能表示所有字符，并且相同的编码表示的字符不一样。</li>
@@ -503,6 +570,9 @@
 <li>byte,short,char之间计算时转换为int类型</li>
 </ul>
 
+<pre><code class="language-java">float f1=f2+12.3;//错误！12.3默认为double型，损失精度
+</code></pre>
+
 <h4 id="2-强制类型转换">2.强制类型转换</h4>
 
 <p>可能造成精度降低或溢出</p>
@@ -521,21 +591,53 @@ int i = Integer.parseInt(a);
 
 <p>String类是一个典型的<strong>不可变类</strong>，String对象创建出来就不可能被改变。创建出的字符串将存放在数据区，保证每个字符串常量只有一个，不会产生多个副本。</p>
 
-<pre><code class="language-java">public class test {
-    static public void main(String[] args){
-        String str1=9999+&quot;&quot;;
-        System.out.println(3+4+str1);//79999
-        System.out.println(str1+3+4);//999934
-        System.out.println(3+4+str1+3+4);//7999934
-        char c='a';//97
-        str1=&quot;STR&quot;;
-        System.out.println(3+4+c+str1);//104STR
-        System.out.println(str1+3+4+c);//STR34a
-        System.out.println(3+4+c+str1+c+4);//104STR34a
-        System.out.println(str1==&quot;STR&quot;);//true
-    }   
+<pre><code class="language-java">String str1=9999+&quot;&quot;;
+System.out.println(3+4+str1);//79999
+System.out.println(str1+3+4);//999934
+System.out.println(3+4+str1+3+4);//7999934
+char c='a';//97
+str1=&quot;STR&quot;;
+System.out.println(3+4+c+str1);//104STR
+System.out.println(str1+3+4+c);//STR34a
+System.out.println(3+4+c+str1+c+4);//104STR34a
+System.out.println(str1==&quot;STR&quot;);//true
+</code></pre>
+
+<p><br/></p>
+
+<h4 id="4-进制和原码-反码-补码">4.进制和原码、反码、补码</h4>
+
+<p>二进制以<code>0b</code>或<code>0B</code>开头，八进制以<code>0</code>开头，十六进制以<code>0x</code>或<code>0X</code>开头且不区分字母大小写。</p>
+
+<p>正数的原码、反码、补码相同，最高位的符号位为0，负数：</p>
+
+<ul>
+<li>原码：正数最高位符号位改为1</li>
+<li>反码：各位除符号位取反</li>
+<li>补码：反码+1，负数在底层的存储格式，-1补码为11111111，-128补码为10000000</li>
+</ul>
+
+<p><br/></p>
+
+<h3 id="2-3-3-常量">2.3.3 常量</h3>
+
+<p>利用关键字<code>final</code>指示常量，表示这个变量只能被赋值一次，之后不可以再更改。<em>习惯上常量名使用全大写</em></p>
+
+<p>利用关键字<code>static final</code>设置类常量，可以在一个类中的<strong>多个方法</strong>中使用，定义位于main方法外部，示例：</p>
+
+<pre><code class="language-java">public class Cons{
+    public static final double PI=3.14159;
+    public static void main(String[] args){
+        /*
+        方法内容
+        */
+    }
 }
 </code></pre>
+
+<p>若声明为<code>public</code>，则其他类的方法也可以使用</p>
+
+<p><em><code>const</code>是保留的关键字，但不使用</em></p>
 
 <p><br/></p>
 
@@ -545,6 +647,8 @@ int i = Integer.parseInt(a);
 
 <h2 id="2-4-运算符">2.4 运算符</h2>
 
+<p>浮点运算截断问题</p>
+
 <p><br/></p>
 
 <hr />
@@ -552,6 +656,64 @@ int i = Integer.parseInt(a);
 <p><br/></p>
 
 <h2 id="2-5-程序流程控制">2.5 程序流程控制</h2>
+
+<p>控制流程结构与C++一致，只有少数例外情况：</p>
+
+<ol>
+<li>没有<code>goto</code>，但<code>break</code>可以带标签达到类似功能</li>
+<li>类似C#中foreach循环的变形for循环</li>
+</ol>
+
+<h3 id="块作用域">块作用域</h3>
+
+<p>C++中可以在嵌套的快<code>block</code>中重定义一个变量，但Java不允许这种做法</p>
+
+<h3 id="条件语句">条件语句</h3>
+
+<p>用法和C++类似</p>
+
+<p>注意：<code>else</code>与最邻近的<code>if</code>配对</p>
+
+<h3 id="循环">循环</h3>
+
+<p><code>while</code>和<code>do/while</code>用法C++类似</p>
+
+<h3 id="确定循环-for">确定循环<code>for</code></h3>
+
+<p>用法C++类似</p>
+
+<p><strong>注意：循环检测两个浮点数是否相等需要格外小心，由于舍入误差导致得不到精确值、循环无法结束</strong></p>
+
+<h3 id="通用for循环">通用for循环</h3>
+
+<p>即<code>for each</code>循环，Java SE 5.0新增</p>
+
+<h3 id="switch">switch</h3>
+
+<p>用法C++类似，可以使用枚举常量</p>
+
+<p>Java SE 7 开始，<code>case</code>标签可以是字符串字面量，例如<code>case &quot;yes&quot;:</code></p>
+
+<h3 id="中断控制流程语句">中断控制流程语句</h3>
+
+<p><code>goto</code>在Java中是保留字但并不使用，提供带标签的<code>break</code>语句用于跳出多种嵌套循环，标签放在希望跳出的最外层循环之前并紧跟冒号，事实上可以应用到任何语句包括<code>if</code>和块中：</p>
+
+<pre><code class="language-java">label:
+while(...){
+    for(..){
+        if(..){
+            break label;
+        }
+    }
+}
+//jump here!
+</code></pre>
+
+<p>for循环中运用<code>continue</code>即跳到for循环的“更新”部分（例如<code>i++</code>），带标签的continue将跳到与标签匹配的循环首部</p>
+
+<h3 id="biginteger和bigdecimal">BigInteger和BigDecimal</h3>
+
+<p>在<code>java.math</code>包中</p>
 
 <p><br/></p>
 
@@ -802,6 +964,66 @@ int i = Integer.parseInt(a);
 								
 
 										<li class="nav-item">
+						 					<a class="nav-link" href="#%e6%95%b4%e5%9e%8b">
+												 整型
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e6%b5%ae%e7%82%b9%e7%b1%bb%e5%9e%8b">
+												 浮点类型
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
 						 					<a class="nav-link" href="#%e5%ad%97%e7%ac%a6%e5%9e%8b-2-byte">
 												 字符型（2 byte）
 											</a>
@@ -941,6 +1163,62 @@ int i = Integer.parseInt(a);
 								
 									<ul class="nav">
 								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#4-%e8%bf%9b%e5%88%b6%e5%92%8c%e5%8e%9f%e7%a0%81-%e5%8f%8d%e7%a0%81-%e8%a1%a5%e7%a0%81">
+												 4.进制和原码、反码、补码
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#2-3-3-%e5%b8%b8%e9%87%8f">
+												 2.3.3 常量
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
 								
 
 										<li class="nav-item">
@@ -972,6 +1250,214 @@ int i = Integer.parseInt(a);
 										</li>
 						 
 								
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e5%9d%97%e4%bd%9c%e7%94%a8%e5%9f%9f">
+												 块作用域
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e6%9d%a1%e4%bb%b6%e8%af%ad%e5%8f%a5">
+												 条件语句
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e5%be%aa%e7%8e%af">
+												 循环
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e7%a1%ae%e5%ae%9a%e5%be%aa%e7%8e%af-for">
+												 确定循环for
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e9%80%9a%e7%94%a8for%e5%be%aa%e7%8e%af">
+												 通用for循环
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#switch">
+												 switch
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e4%b8%ad%e6%96%ad%e6%8e%a7%e5%88%b6%e6%b5%81%e7%a8%8b%e8%af%ad%e5%8f%a5">
+												 中断控制流程语句
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#biginteger%e5%92%8cbigdecimal">
+												 BigInteger和BigDecimal
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
 								
 									</ul>
 								
@@ -1059,7 +1545,31 @@ int i = Integer.parseInt(a);
 
 </footer>
 
-
+<script
+	async
+	src="//cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+></script>
+<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+	  tex2jax: {
+	    inlineMath: [['$','$'], ['\\(','\\)']],
+	    displayMath: [['$$','$$'], ['\\[','\\]']],
+	    processEscapes: true,
+	    processEnvironments: true,
+	    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+	    TeX: { equationNumbers: { autoNumber: "AMS" },
+	    extensions: ["AMSmath.js", "AMSsymbols.js"] }
+	  }
+	});
+</script>
+<script type="text/x-mathjax-config">
+	// Fix <code> tags after MathJax finishes running. This is a
+	// hack to overcome a shortcoming of Markdown. Discussion at
+	// https://github.com/mojombo/jekyll/issues/199
+	MathJax.Hub.Queue(() => {
+	  MathJax.Hub.getAllJax().map(v => v.SourceElement().parentNode.className += ' has-jax');
+	});
+</script>
     
 
 
