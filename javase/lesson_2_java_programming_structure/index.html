@@ -481,9 +481,11 @@
 
 <p><br/></p>
 
-<h2 id="2-3-变量">2.3 变量</h2>
+<hr />
 
-<p>先声明，后使用，注意作用域(<code>{}</code>内)</p>
+<h2 id="2-3-变量和常量">2.3 变量和常量</h2>
+
+<p>变量先声明，后使用，注意作用域(<code>{}</code>内)</p>
 
 <p><em><center>补充：程序的执行过程图，学到面向对象时再回顾并理解 -2019.4.28</center></em></p>
 
@@ -521,7 +523,9 @@
 
 <p>注意：boolean类型数据只允许取值true和false，无null，<strong>不可以0或非 0 的整数替代false和true，这点和C语言不同</strong></p>
 
-<h4 id="整型">整型</h4>
+<p><br/></p>
+
+<h5 id="整型"><strong>整型</strong></h5>
 
 <ul>
 <li>Java各整数类型有固定的表数范围和字段长度，不受具体OS的影响，以保证Java程序的可移植性</li>
@@ -531,7 +535,9 @@
 <li>没有<code>unsigned</code>形式</li>
 </ul>
 
-<h4 id="浮点类型">浮点类型</h4>
+<p><br/></p>
+
+<h5 id="浮点类型"><strong>浮点类型</strong></h5>
 
 <ul>
 <li>浮点型常量默认为double型，声明float型常量，须后<strong>加<code>f</code>或<code>F</code></strong></li>
@@ -540,7 +546,9 @@
 <li>计算中不允许有任何舍入误差则该使用<code>BigDecimal</code>类，例如$2.0-1.1$的结果打印出来则是$0.899999999999$</li>
 </ul>
 
-<h4 id="字符型-2-byte">字符型（2 byte）</h4>
+<p><br/></p>
+
+<h5 id="字符型-2-byte"><strong>字符型</strong>（2 byte）</h5>
 
 <p>可以表示一个英文/中文/标点符号等字符</p>
 
@@ -564,9 +572,21 @@
 
 <p><br/></p>
 
+<h3 id="string类">*String类</h3>
+
+<p>String类有多种函数可以使用，以下是一些例子：</p>
+
+<p><br/></p>
+
+<h3 id="biginteger和bigdecimal">*BigInteger和BigDecimal</h3>
+
+<p>在<code>java.math</code>包中</p>
+
+<p><br/></p>
+
 <h3 id="2-3-2-基本数据类型转换">2.3.2 基本数据类型转换</h3>
 
-<h4 id="1-自动类型转换">1.自动类型转换</h4>
+<h5 id="1-自动类型转换">1.<strong>自动类型转换</strong></h5>
 
 <p>$$char,byte,short,\Longrightarrow int\Longrightarrow long\Longrightarrow float\Longrightarrow double$$</p>
 
@@ -576,9 +596,10 @@
 </ul>
 
 <pre><code class="language-java">float f1=f2+12.3;//错误！12.3默认为double型，损失精度
+short s1=10;     //错误！整型赋给short
 </code></pre>
 
-<h4 id="2-强制类型转换">2.强制类型转换</h4>
+<h5 id="2-强制类型转换">2.<strong>强制类型转换</strong></h5>
 
 <p>可能造成精度降低或溢出</p>
 
@@ -590,11 +611,15 @@ int i = Integer.parseInt(a);
 
 <p><strong>boolean类型不可以转换为其它的数据类型</strong></p>
 
-<h4 id="3-string类运算">3.String类运算</h4>
+<p><br/></p>
+
+<h5 id="3-string类运算"><strong>3.String类运算</strong></h5>
 
 <p>值null可以赋值给任何<strong>引用类型</strong>（类、接口、数组）的变量，用以表示这个引用类型变量中保存的地址为空。</p>
 
 <p>String类是一个典型的<strong>不可变类</strong>，String对象创建出来就不可能被改变。创建出的字符串将存放在数据区，保证每个字符串常量只有一个，不会产生多个副本。</p>
+
+<p>String与其他数据类型只能做连接运算，结果均为String型</p>
 
 <pre><code class="language-java">String str1=9999+&quot;&quot;;
 System.out.println(3+4+str1);//79999
@@ -610,7 +635,7 @@ System.out.println(str1==&quot;STR&quot;);//true
 
 <p><br/></p>
 
-<h4 id="4-进制和原码-反码-补码">4.进制和原码、反码、补码</h4>
+<h5 id="4-进制和原码-反码-补码"><strong>4.进制和原码、反码、补码</strong></h5>
 
 <p>二进制以<code>0b</code>或<code>0B</code>开头，八进制以<code>0</code>开头，十六进制以<code>0x</code>或<code>0X</code>开头且不区分字母大小写。</p>
 
@@ -624,13 +649,15 @@ System.out.println(str1==&quot;STR&quot;);//true
 
 <p><br/></p>
 
+<hr />
+
 <h3 id="2-3-3-常量">2.3.3 常量</h3>
 
 <p>利用关键字<code>final</code>指示常量，表示这个变量只能被赋值一次，之后不可以再更改。<em>习惯上常量名使用全大写</em></p>
 
 <p>利用关键字<code>static final</code>设置类常量，可以在一个类中的<strong>多个方法</strong>中使用，定义位于main方法外部，示例：</p>
 
-<pre><code class="language-java">public class Cons{
+<pre><code class="language-java">public class TestConst{
     public static final double PI=3.14159;
     public static void main(String[] args){
         /*
@@ -647,8 +674,6 @@ System.out.println(str1==&quot;STR&quot;);//true
 <p><br/></p>
 
 <hr />
-
-<p><br/></p>
 
 <h2 id="2-4-运算符">2.4 运算符</h2>
 
@@ -674,7 +699,7 @@ int i=1;
 i*=0.1;//编译通过 且不改变i数据类型，结果为0
 </code></pre>
 
-<h3 id="比较运算法">比较运算法</h3>
+<h3 id="比较运算符">比较运算符</h3>
 
 <p>同样有<code>==,!=,&lt;,&gt;,&lt;=,&gt;=</code>，以及<code>instanceof</code><strong>检查是否是类的对象</strong>，e.g.<code>&quot;hello&quot;instanceof String</code>值为真。<em>多态的章节有更多拓展</em></p>
 
@@ -684,11 +709,220 @@ i*=0.1;//编译通过 且不改变i数据类型，结果为0
 
 <h3 id="位运算符">位运算符</h3>
 
+<p>位运算是直接对二进制进行的运算，节省内存空间，效率较高</p>
+
+<h5 id="1-和">1. &lt;&lt;　&gt;&gt;和&gt;&gt;&gt;</h5>
+
+<p>&gt;&gt;&gt;无符号右移（不存在&lt;&lt;&lt;）正数的无符号右移结果与右移一致</p>
+
+<pre><code class="language-java">int i=-31,i1,i2;
+i1=i&gt;&gt;2;          //-8
+i2=i&gt;&gt;&gt;2;         //1073741816
+</code></pre>
+
+<p>-31的二进制表示为</p>
+
+<p><strong>1111 1111 1111 1111 1111 1111 1110 0001</strong></p>
+
+<p>进行&gt;&gt;运算时，最高位补位的数字由原数最高位决定，在此情况下，-31二进制最高位数位1，因此用1来补两位：</p>
+
+<p><em>11</em> <strong>1111 1111 1111 1111 1111 1111 1110 00|<em>01</em></strong></p>
+
+<p>结果为-8：</p>
+
+<p><strong>1111 1111 1111 1111 1111 1111 1111 1000</strong></p>
+
+<p>而进行&gt;&gt;&gt;运算时，最高位用0来补位</p>
+
+<p><em>00</em> <strong>1111 1111 1111 1111 1111 1111 1110 00|<em>01</em></strong></p>
+
+<p>结果为1073741816</p>
+
+<p><br/></p>
+
+<h5 id="2-位与和位或">2. &amp;　| 位与和位或</h5>
+
+<pre><code class="language-java">int i=12&amp;5;  //4
+</code></pre>
+
+<p>12&amp;5=</p>
+
+<p>　0000 1100</p>
+
+<p>&amp; 0000 0101</p>
+
+<p>———————</p>
+
+<p>　0000 1000　=4</p>
+
+<p><br/></p>
+
+<h5 id="3-取反">3. ~ 取反</h5>
+
+<pre><code class="language-java">int i=~12; //-13
+</code></pre>
+
+<p>12:</p>
+
+<p>0000 0000 0000 0000 0000 0000 0000 1100</p>
+
+<p>1111 1111 1111 1111 1111 1111 1111 0011 　=-13</p>
+
+<p><br/></p>
+
+<h5 id="4-异或">4. ^ 异或</h5>
+
+<p>n\^m\^m=n，n\^m\^n=m，可应用于数值交换：</p>
+
+<pre><code class="language-java">/*实现m，n值互换*/
+m = m ^ n;
+n = m ^ n;
+m = m ^ n;
+</code></pre>
+
+<p><br/></p>
+
+<h5 id="5-运用">5. 运用</h5>
+
+<p>输出给定数的十六进制数：自动调用<code>Integer</code>类现成的方法</p>
+
+<pre><code class="language-java">int i = 60;
+int j1 = i&amp;15; //获取第一位，结果为12→c
+i &gt;&gt;= 4;
+int j2 = i&amp;15; //获取第二为，结果为3
+</code></pre>
+
+<p>过程如下：</p>
+
+<p>60&amp;15</p>
+
+<p>　0011 1100</p>
+
+<p>&amp; 0000 1111</p>
+
+<p>———————</p>
+
+<p>　0000 1100　=12</p>
+
+<p><em>一种简便的实现方法是调用封装的<code>Integer</code>类现成的方法，见Appendix</em></p>
+
 <p><br/></p>
 
 <hr />
 
+<h3 id="三元运算符">三元运算符</h3>
+
+<p>格式：<strong>_条件表达式_　?　_表达式1_　:　<em>表达式2</em></strong></p>
+
+<p>条件表达式值为true，运算后的结果是表达式1，反之结果为表达式2，其中表达式1和表达式2为<strong>同种类型</strong></p>
+
+<p>可以嵌套使用：</p>
+
+<pre><code class="language-java">String cmp=(i&gt;j) ? &quot;i&gt;j&quot;: (i==j) ? &quot;i=j&quot;:&quot;i&lt;j&quot;;
+</code></pre>
+
 <p><br/></p>
+
+<h3 id="运算符优先级和结合性">运算符优先级和结合性</h3>
+
+<p>只有单目运算符、三元运算符、赋值运算符是从右向左运算的</p>
+
+<p>以下运算符优先级由高到低排列</p>
+
+<table>
+<thead>
+<tr>
+<th>运算符</th>
+<th></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td></td>
+<td>.    ()    {}    ;    ,</td>
+</tr>
+
+<tr>
+<td>单目运算符<br/>R—&gt;L</td>
+<td>++    &ndash;    ~    !(data type)</td>
+</tr>
+
+<tr>
+<td></td>
+<td>&lowast;    /    %</td>
+</tr>
+
+<tr>
+<td></td>
+<td>+    -</td>
+</tr>
+
+<tr>
+<td>位移</td>
+<td>&lt;&lt;    &gt;&gt;    &gt;&gt;&gt;</td>
+</tr>
+
+<tr>
+<td>比较</td>
+<td>&lt;    &gt;    &lt;$=$    &gt;$=$    instanceof</td>
+</tr>
+
+<tr>
+<td>比较</td>
+<td>$==$    !$=$</td>
+</tr>
+
+<tr>
+<td>与</td>
+<td>&amp;</td>
+</tr>
+
+<tr>
+<td>异或</td>
+<td>^</td>
+</tr>
+
+<tr>
+<td>或</td>
+<td>|</td>
+</tr>
+
+<tr>
+<td>短路与</td>
+<td>&amp;&amp;</td>
+</tr>
+
+<tr>
+<td>短路或</td>
+<td>||</td>
+</tr>
+
+<tr>
+<td>三元运算符，R—&gt;L</td>
+<td>?:</td>
+</tr>
+
+<tr>
+<td>赋值运算符，R—&gt;L</td>
+<td>$=$   &lowast;$=$    /$=$    %$=$</td>
+</tr>
+
+<tr>
+<td></td>
+<td>+$=$    -$=$    &lt;&lt;$=$    &gt;&gt;$=$</td>
+</tr>
+
+<tr>
+<td></td>
+<td>&gt;&gt;&gt;$=$    &amp;$=$    ^$=$</td>
+</tr>
+</tbody>
+</table>
+
+<p><br/></p>
+
+<hr />
 
 <h2 id="2-5-程序流程控制">2.5 程序流程控制</h2>
 
@@ -699,42 +933,71 @@ i*=0.1;//编译通过 且不改变i数据类型，结果为0
 <li>类似C#中foreach循环的变形for循环</li>
 </ol>
 
-<h3 id="块作用域">块作用域</h3>
+<p><strong>块作用域</strong> ： C++中可以在嵌套的块<code>block</code>中重定义一个变量，但Java不允许这种做法</p>
 
-<p>C++中可以在嵌套的快<code>block</code>中重定义一个变量，但Java不允许这种做法</p>
+<p><br/></p>
 
-<h3 id="条件语句">条件语句</h3>
+<h3 id="顺序结构">顺序结构</h3>
+
+<p>Java中定义成员变量时采用合法的前向引用，即先声明，再使用</p>
+
+<p><br/></p>
+
+<h3 id="分支结构">分支结构</h3>
+
+<h5 id="条件语句"><strong>条件语句</strong></h5>
 
 <p>用法和C++类似</p>
 
 <p>注意：<code>else</code>与最邻近的<code>if</code>配对</p>
 
-<h3 id="循环">循环</h3>
+<h5 id="switch"><strong>switch</strong></h5>
 
-<p><code>while</code>和<code>do/while</code>用法C++类似</p>
-
-<h3 id="确定循环-for">确定循环<code>for</code></h3>
-
-<p>用法C++类似</p>
-
-<p><strong>注意：循环检测两个浮点数是否相等需要格外小心，由于舍入误差导致得不到精确值、循环无法结束</strong></p>
-
-<h3 id="通用for循环">通用for循环</h3>
-
-<p>即<code>for each</code>循环，Java SE 5.0新增</p>
-
-<h3 id="switch">switch</h3>
-
-<p>用法C++类似，可以使用枚举常量</p>
+<p>用法C++类似，可以使用枚举常量，即表达式的返回值必须是byte，short，char，int，枚举，String这几种类型之一</p>
 
 <p>Java SE 7 开始，<code>case</code>标签可以是字符串字面量，例如<code>case &quot;yes&quot;:</code></p>
 
-<h3 id="中断控制流程语句">中断控制流程语句</h3>
+<p>default位置可以灵活变动，但实际上仍然先判断完全部标签，没有匹配则再回到default语句往下执行（包括跟在default后的标签）</p>
+
+<h5 id="if-else和switch的选择"><strong>if-else和switch的选择</strong></h5>
+
+<p>如果判断的具体数值不多，而且符合byte、 short 、int、 char这四种类型，使用switch语句效率稍高。</p>
+
+<p><br/></p>
+
+<h3 id="循环结构">循环结构</h3>
+
+<p>循环语句包含四个部分：</p>
+
+<ul>
+<li><p>初始化部分（init_statement）</p></li>
+
+<li><p>循环条件部分（test_exp）</p></li>
+
+<li><p>循环体部分（body_statement）</p></li>
+
+<li><p>迭代部分（alter_statement）</p></li>
+</ul>
+
+<h5 id="循环"><strong>循环</strong></h5>
+
+<p><code>while</code>和<code>do/while</code>用法C++类似</p>
+
+<h5 id="确定循环-for"><strong>确定循环<code>for</code></strong></h5>
+
+<p>用法C++类似，无限循环可以写成<code>for(;;)</code></p>
+
+<p><strong>注意：循环检测两个浮点数是否相等需要格外小心，由于舍入误差导致得不到精确值、循环无法结束</strong></p>
+
+<h5 id="通用for循环"><strong>通用for循环</strong></h5>
+
+<p>即<code>for each</code>循环，Java SE 5.0（1.5？）新增，方便遍历集合、数组元素</p>
+
+<h5 id="中断控制流程语句"><strong>中断控制流程语句</strong></h5>
 
 <p><code>goto</code>在Java中是保留字但并不使用，提供带标签的<code>break</code>语句用于跳出多种嵌套循环，标签放在希望跳出的最外层循环之前并紧跟冒号，事实上可以应用到任何语句包括<code>if</code>和块中：</p>
 
-<pre><code class="language-java">label:
-while(...){
+<pre><code class="language-java">label:while(...){
     for(..){
         if(..){
             break label;
@@ -746,17 +1009,87 @@ while(...){
 
 <p>for循环中运用<code>continue</code>即跳到for循环的“更新”部分（例如<code>i++</code>），带标签的continue将跳到与标签匹配的循环首部</p>
 
-<h3 id="biginteger和bigdecimal">BigInteger和BigDecimal</h3>
-
-<p>在<code>java.math</code>包中</p>
+<p><br/></p>
 
 <p><br/></p>
 
 <hr />
 
+<h2 id="2-6-数组">2.6 数组</h2>
+
+<p>使用关键字new创建数组对象，声明数组时<strong>不能指定其长度</strong>(数组中元素的数)：</p>
+
+<pre><code class="language-java">int arr[5];  //非法！！！
+</code></pre>
+
+<p>动态初始化：数组声明，为数组元素分配空间与赋值的操作分开进行</p>
+
+<pre><code class="language-java">int[] arr = new int[3];
+arr[0] = 3;
+arr[1] = 9;
+arr[2] = 8;
+</code></pre>
+
+<p>静态初始化：在定义数组的同时就为数组元素分配空间并赋值</p>
+
+<pre><code class="language-java">int a1[] = new int[]{3, 9, 8};
+int[] a2 = {3,9,8};
+MyDate dates[] = {
+    new MyDate(22, 7, 1964),
+    new MyDate(1, 1, 2000),
+    new MyDate(22, 12, 1964)
+}
+</code></pre>
+
+<p>数组属引用类型，数组型数据是对象(object)，数组中的每个元素相当于该对象的成员变量，因此数组一经分配空间，其中的每个元素也被按照成员变量同样的方式被<strong>隐式初始化</strong></p>
+
+<p>其中，基本数据类型的默认初始化值各有不同，引用数据类型而言，默认初始化值为<strong><code>null</code></strong></p>
+
 <p><br/></p>
 
-<h2 id="2-6-数组">2.6 数组</h2>
+<p>数组一旦初始化，其长度是不可变的，e.g.<code>array.length</code> 指明数组的长度(元素个数)</p>
+
+<p><br/></p>
+
+<h5 id="多维数组"><strong>多维数组</strong></h5>
+
+<hr />
+
+<h2 id="appendix">Appendix</h2>
+
+<h3 id="输出十六进制数">输出十六进制数</h3>
+
+<p>输出给定数的十六进制数：自动调用<code>Integer</code>类现成的方法</p>
+
+<pre><code class="language-java">int i=60;
+String binary = Integer.toBinaryString(i); //111100
+string hex = Integer.toHexString(i);       //3c
+</code></pre>
+
+<p><br/></p>
+
+<h3 id="scanner类">Scanner类</h3>
+
+<p>在<code>util</code>包内，可以在API中查看更多方法</p>
+
+<pre><code class="language-java">import java.util.Scanner;   //导入包
+class Scan{
+    public static void main(String[] args){
+        Scanner s = new Scanner(System.in);
+        String str = s.next();   //从键盘获取一个字符串
+        System.out.println(str);
+    }
+}
+</code></pre>
+
+<p><br/></p>
+
+<h3 id="获取系统当前的毫秒数-时间">获取系统当前的毫秒数（时间）</h3>
+
+<pre><code class="language-java">long t = System.currentTimeMillis();
+</code></pre>
+
+<p>可以用来算出运行程序所花的时间</p>
 
 <p><br/></p>
 
@@ -947,8 +1280,8 @@ while(...){
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#2-3-%e5%8f%98%e9%87%8f">
-												 2.3 变量
+						 					<a class="nav-link" href="#2-3-%e5%8f%98%e9%87%8f%e5%92%8c%e5%b8%b8%e9%87%8f">
+												 2.3 变量和常量
 											</a>
 										</li>
 						 
@@ -994,19 +1327,15 @@ while(...){
 								
 									<ul class="nav">
 								
-									<ul class="nav">
-								
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#%e6%95%b4%e5%9e%8b">
-												 整型
+						 					<a class="nav-link" href="#string%e7%b1%bb">
+												 *String类
 											</a>
 										</li>
 						 
 								
-								
-									</ul>
 								
 									</ul>
 								
@@ -1024,49 +1353,15 @@ while(...){
 								
 									<ul class="nav">
 								
-									<ul class="nav">
-								
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#%e6%b5%ae%e7%82%b9%e7%b1%bb%e5%9e%8b">
-												 浮点类型
+						 					<a class="nav-link" href="#biginteger%e5%92%8cbigdecimal">
+												 *BigInteger和BigDecimal
 											</a>
 										</li>
 						 
 								
-								
-									</ul>
-								
-									</ul>
-								
-									</ul>
-								
-							
-						
-				 
-						
-						
-							
-								
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-								
-
-										<li class="nav-item">
-						 					<a class="nav-link" href="#%e5%ad%97%e7%ac%a6%e5%9e%8b-2-byte">
-												 字符型（2 byte）
-											</a>
-										</li>
-						 
-								
-								
-									</ul>
 								
 									</ul>
 								
@@ -1093,126 +1388,6 @@ while(...){
 										</li>
 						 
 								
-								
-									</ul>
-								
-									</ul>
-								
-							
-						
-				 
-						
-						
-							
-								
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-								
-
-										<li class="nav-item">
-						 					<a class="nav-link" href="#1-%e8%87%aa%e5%8a%a8%e7%b1%bb%e5%9e%8b%e8%bd%ac%e6%8d%a2">
-												 1.自动类型转换
-											</a>
-										</li>
-						 
-								
-								
-									</ul>
-								
-									</ul>
-								
-									</ul>
-								
-							
-						
-				 
-						
-						
-							
-								
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-								
-
-										<li class="nav-item">
-						 					<a class="nav-link" href="#2-%e5%bc%ba%e5%88%b6%e7%b1%bb%e5%9e%8b%e8%bd%ac%e6%8d%a2">
-												 2.强制类型转换
-											</a>
-										</li>
-						 
-								
-								
-									</ul>
-								
-									</ul>
-								
-									</ul>
-								
-							
-						
-				 
-						
-						
-							
-								
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-								
-
-										<li class="nav-item">
-						 					<a class="nav-link" href="#3-string%e7%b1%bb%e8%bf%90%e7%ae%97">
-												 3.String类运算
-											</a>
-										</li>
-						 
-								
-								
-									</ul>
-								
-									</ul>
-								
-									</ul>
-								
-							
-						
-				 
-						
-						
-							
-								
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-								
-
-										<li class="nav-item">
-						 					<a class="nav-link" href="#4-%e8%bf%9b%e5%88%b6%e5%92%8c%e5%8e%9f%e7%a0%81-%e5%8f%8d%e7%a0%81-%e8%a1%a5%e7%a0%81">
-												 4.进制和原码、反码、补码
-											</a>
-										</li>
-						 
-								
-								
-									</ul>
 								
 									</ul>
 								
@@ -1307,8 +1482,8 @@ while(...){
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#%e6%af%94%e8%be%83%e8%bf%90%e7%ae%97%e6%b3%95">
-												 比较运算法
+						 					<a class="nav-link" href="#%e6%af%94%e8%be%83%e8%bf%90%e7%ae%97%e7%ac%a6">
+												 比较运算符
 											</a>
 										</li>
 						 
@@ -1380,6 +1555,58 @@ while(...){
 								
 									<ul class="nav">
 								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e4%b8%89%e5%85%83%e8%bf%90%e7%ae%97%e7%ac%a6">
+												 三元运算符
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e8%bf%90%e7%ae%97%e7%ac%a6%e4%bc%98%e5%85%88%e7%ba%a7%e5%92%8c%e7%bb%93%e5%90%88%e6%80%a7">
+												 运算符优先级和结合性
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
 								
 
 										<li class="nav-item">
@@ -1407,8 +1634,8 @@ while(...){
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#%e5%9d%97%e4%bd%9c%e7%94%a8%e5%9f%9f">
-												 块作用域
+						 					<a class="nav-link" href="#%e9%a1%ba%e5%ba%8f%e7%bb%93%e6%9e%84">
+												 顺序结构
 											</a>
 										</li>
 						 
@@ -1433,8 +1660,8 @@ while(...){
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#%e6%9d%a1%e4%bb%b6%e8%af%ad%e5%8f%a5">
-												 条件语句
+						 					<a class="nav-link" href="#%e5%88%86%e6%94%af%e7%bb%93%e6%9e%84">
+												 分支结构
 											</a>
 										</li>
 						 
@@ -1459,138 +1686,8 @@ while(...){
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#%e5%be%aa%e7%8e%af">
-												 循环
-											</a>
-										</li>
-						 
-								
-								
-									</ul>
-								
-									</ul>
-								
-							
-						
-				 
-						
-						
-							
-								
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-								
-
-										<li class="nav-item">
-						 					<a class="nav-link" href="#%e7%a1%ae%e5%ae%9a%e5%be%aa%e7%8e%af-for">
-												 确定循环for
-											</a>
-										</li>
-						 
-								
-								
-									</ul>
-								
-									</ul>
-								
-							
-						
-				 
-						
-						
-							
-								
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-								
-
-										<li class="nav-item">
-						 					<a class="nav-link" href="#%e9%80%9a%e7%94%a8for%e5%be%aa%e7%8e%af">
-												 通用for循环
-											</a>
-										</li>
-						 
-								
-								
-									</ul>
-								
-									</ul>
-								
-							
-						
-				 
-						
-						
-							
-								
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-								
-
-										<li class="nav-item">
-						 					<a class="nav-link" href="#switch">
-												 switch
-											</a>
-										</li>
-						 
-								
-								
-									</ul>
-								
-									</ul>
-								
-							
-						
-				 
-						
-						
-							
-								
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-								
-
-										<li class="nav-item">
-						 					<a class="nav-link" href="#%e4%b8%ad%e6%96%ad%e6%8e%a7%e5%88%b6%e6%b5%81%e7%a8%8b%e8%af%ad%e5%8f%a5">
-												 中断控制流程语句
-											</a>
-										</li>
-						 
-								
-								
-									</ul>
-								
-									</ul>
-								
-							
-						
-				 
-						
-						
-							
-								
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-								
-
-										<li class="nav-item">
-						 					<a class="nav-link" href="#biginteger%e5%92%8cbigdecimal">
-												 BigInteger和BigDecimal
+						 					<a class="nav-link" href="#%e5%be%aa%e7%8e%af%e7%bb%93%e6%9e%84">
+												 循环结构
 											</a>
 										</li>
 						 
@@ -1619,6 +1716,106 @@ while(...){
 										</li>
 						 
 								
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#appendix">
+												 Appendix
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e8%be%93%e5%87%ba%e5%8d%81%e5%85%ad%e8%bf%9b%e5%88%b6%e6%95%b0">
+												 输出十六进制数
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#scanner%e7%b1%bb">
+												 Scanner类
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e8%8e%b7%e5%8f%96%e7%b3%bb%e7%bb%9f%e5%bd%93%e5%89%8d%e7%9a%84%e6%af%ab%e7%a7%92%e6%95%b0-%e6%97%b6%e9%97%b4">
+												 获取系统当前的毫秒数（时间）
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
 								
 									</ul>
 								
