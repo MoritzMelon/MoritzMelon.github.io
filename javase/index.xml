@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Java SE on Melon</title>
+    <title>Java Standard Edition: Study Notes on Melon</title>
     <link>https://moritzmelon.github.io/javase/</link>
-    <description>Recent content in Java SE on Melon</description>
+    <description>Recent content in Java Standard Edition: Study Notes on Melon</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 12 Aug 2018 23:03:12 +0800</lastBuildDate>

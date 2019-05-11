@@ -117,7 +117,7 @@
           
              
             <li class="nav-item ">
-              <a class="nav-link" href="https://moritzmelon.github.io/javase/" >Java SE  </a>
+              <a class="nav-link" href="https://moritzmelon.github.io/javase/" >JavaSE  </a>
             </li>
           
              
@@ -542,7 +542,7 @@
 <ul>
 <li>浮点型常量默认为double型，声明float型常量，须后<strong>加<code>f</code>或<code>F</code></strong></li>
 <li>可使用十六进制表示浮点数值，用<code>p</code>代替<code>e</code>来表示指数，尾数采用十六进制，指数采用十进制，基数为2（而不是10），e.g.<code>double d=0x1.0p-3;</code>，其中$0.125=2^{-3}$</li>
-<li>浮点数值计算遵循<strong>IEEE 754</strong>规范，用于表示溢出和出错情况的三个特殊浮点数值为：<br/><strong><center>正无穷大（e.g.一个正整数除以0的结果）</center></strong><br/><strong><center>负无穷大</center></strong><br/><strong><center>NaN（不是一个数字，e.g.0/0、负数平方根的结果）</center></strong><br/>并且有相应常量表示</li>
+<li>浮点数值计算遵循<strong>IEEE 754</strong>规范，用于表示溢出和出错情况的三个特殊浮点数值为：<br/><br/><strong><center>正无穷大（e.g.一个正整数除以0的结果）</center></strong><br/><strong><center>负无穷大</center></strong><br/><strong><center>NaN（不是一个数字，e.g.0/0、负数平方根的结果）</center></strong><br/>并且有相应常量表示</li>
 <li>计算中不允许有任何舍入误差则该使用<code>BigDecimal</code>类，例如$2.0-1.1$的结果打印出来则是$0.899999999999$</li>
 </ul>
 
@@ -574,7 +574,15 @@
 
 <h3 id="string类">*String类</h3>
 
-<p>String类有多种函数可以使用，以下是一些例子：</p>
+<p>String默认初始化值为<code>null</code>，参考以下程序</p>
+
+<pre><code class="language-java">String a[],b;
+a=new String[4];
+System.out.println(a[1]);  //输出结果为null
+System.out.println(b);     //编译不通过，证明定义数组时默认初始化
+</code></pre>
+
+<p>String类有多种函数可以使用</p>
 
 <p><br/></p>
 
@@ -677,7 +685,7 @@ System.out.println(str1==&quot;STR&quot;);//true
 
 <h2 id="2-4-运算符">2.4 运算符</h2>
 
-<p>*浮点运算截断问题</p>
+<p>*<em>浮点运算截断问题</em></p>
 
 <p>注意浮点运算时进行类型转换</p>
 
@@ -689,7 +697,7 @@ System.out.println(str1==&quot;STR&quot;);//true
 
 <p><code>=</code>支持连续赋值</p>
 
-<p><code>+=,-=,*=,/=,%=</code>用于<code>short</code>等类型的赋值</p>
+<p><code>+=,-=,*=,/=,%=</code>，不改变数据类型（常被用于<code>short</code>等类型的赋值）</p>
 
 <pre><code class="language-java">short s=10;
 s=s+3;//编译不通过
@@ -701,11 +709,17 @@ i*=0.1;//编译通过 且不改变i数据类型，结果为0
 
 <h3 id="比较运算符">比较运算符</h3>
 
-<p>同样有<code>==,!=,&lt;,&gt;,&lt;=,&gt;=</code>，以及<code>instanceof</code><strong>检查是否是类的对象</strong>，e.g.<code>&quot;hello&quot;instanceof String</code>值为真。<em>多态的章节有更多拓展</em></p>
+<p>同样有<code>==,!=,&lt;,&gt;,&lt;=,&gt;=</code>，以及<code>instanceof</code><strong>检查是否是类的对象</strong></p>
+
+<p>e.g.<code>&quot;hello&quot;　instanceof　String</code>值为真。<em>多态的章节有更多拓展</em></p>
+
+<hr />
 
 <h3 id="逻辑运算符">逻辑运算符</h3>
 
 <p><code>&amp;</code>逻辑与和<code>&amp;&amp;</code>短路与，<code>|</code>逻辑或 和<code>||</code>短路或，<code>！</code>逻辑非，<code>^</code>逻辑异或 ，用于连接布尔型表达式，短路意味着从左到右的表达式若可以确定整条表达式的值，则不再向右进行运算</p>
+
+<hr />
 
 <h3 id="位运算符">位运算符</h3>
 
@@ -772,7 +786,7 @@ i2=i&gt;&gt;&gt;2;         //1073741816
 
 <h5 id="4-异或">4. ^ 异或</h5>
 
-<p>n\^m\^m=n，n\^m\^n=m，可应用于数值交换：</p>
+<p>n^m ^m=n， n^m ^n=m，可应用于数值交换：</p>
 
 <pre><code class="language-java">/*实现m，n值互换*/
 m = m ^ n;
@@ -821,7 +835,7 @@ int j2 = i&amp;15; //获取第二为，结果为3
 <pre><code class="language-java">String cmp=(i&gt;j) ? &quot;i&gt;j&quot;: (i==j) ? &quot;i=j&quot;:&quot;i&lt;j&quot;;
 </code></pre>
 
-<p><br/></p>
+<hr />
 
 <h3 id="运算符优先级和结合性">运算符优先级和结合性</h3>
 
@@ -935,13 +949,11 @@ int j2 = i&amp;15; //获取第二为，结果为3
 
 <p><strong>块作用域</strong> ： C++中可以在嵌套的块<code>block</code>中重定义一个变量，但Java不允许这种做法</p>
 
-<p><br/></p>
-
 <h3 id="顺序结构">顺序结构</h3>
 
 <p>Java中定义成员变量时采用合法的前向引用，即先声明，再使用</p>
 
-<p><br/></p>
+<hr />
 
 <h3 id="分支结构">分支结构</h3>
 
@@ -963,7 +975,7 @@ int j2 = i&amp;15; //获取第二为，结果为3
 
 <p>如果判断的具体数值不多，而且符合byte、 short 、int、 char这四种类型，使用switch语句效率稍高。</p>
 
-<p><br/></p>
+<hr />
 
 <h3 id="循环结构">循环结构</h3>
 
@@ -1017,29 +1029,34 @@ int j2 = i&amp;15; //获取第二为，结果为3
 
 <h2 id="2-6-数组">2.6 数组</h2>
 
-<p>使用关键字new创建数组对象，声明数组时<strong>不能指定其长度</strong>(数组中元素的数)：</p>
+<h3 id="1-初始化和定义">1. 初始化和定义</h3>
+
+<p>使用关键字new创建数组对象，声明数组时<strong>不能指定其长度</strong>(数组中元素的数)</p>
+
+<p>有两种初始化数组的方式，一是<strong>动态初始化</strong>：数组声明，为数组元素分配空间与赋值的操作分开进行</p>
 
 <pre><code class="language-java">int arr[5];  //非法！！！
-</code></pre>
-
-<p>动态初始化：数组声明，为数组元素分配空间与赋值的操作分开进行</p>
-
-<pre><code class="language-java">int[] arr = new int[3];
+int[] arr = new int[3];
 arr[0] = 3;
 arr[1] = 9;
 arr[2] = 8;
 </code></pre>
 
-<p>静态初始化：在定义数组的同时就为数组元素分配空间并赋值</p>
+<p><strong>静态初始化</strong>：初始化和赋值同时进行</p>
 
 <pre><code class="language-java">int a1[] = new int[]{3, 9, 8};
-int[] a2 = {3,9,8};
+int a3[] = {3,9,8};
+int[] a2;
+a2 = new int[]{3,9,8};
 MyDate dates[] = {
-    new MyDate(22, 7, 1964),
-    new MyDate(1, 1, 2000),
-    new MyDate(22, 12, 1964)
-}
+        new MyDate(22, 7, 1964), //再new
+        new MyDate(1, 1, 2000),
+        new MyDate(22, 12, 1964)
+}；
+MyDate d1[]=new MyDate[3];
 </code></pre>
+
+<p>数组长度可以为变量（区别于C++）</p>
 
 <p>数组属引用类型，数组型数据是对象(object)，数组中的每个元素相当于该对象的成员变量，因此数组一经分配空间，其中的每个元素也被按照成员变量同样的方式被<strong>隐式初始化</strong></p>
 
@@ -1051,7 +1068,110 @@ MyDate dates[] = {
 
 <p><br/></p>
 
-<h5 id="多维数组"><strong>多维数组</strong></h5>
+<p>与C++不同，支持用数组给数组赋值：</p>
+
+<pre><code class="language-java">int[] arr1,arr2[];
+arr1 = new int[5];
+arr2 = new int[3][2];
+arr2[0]=arr1; //合法
+System.out.println(arr1);     //打印出的是地址
+System.out.println(arr2[0]);  //输出结果和上一行一样
+</code></pre>
+
+<p>这种做法实际上是把arr1指向堆空间<strong>地址</strong>值赋给arr2[0]，arr1元素的值改变会导致arr[2]的值同样改变，本质上指向的是同一段空间</p>
+
+<p>如果要真正实现数组的复制拷贝，可以调用<code>System.arraycopy()</code></p>
+
+<p><br/></p>
+
+<h3 id="2-默认初始化">2. 默认初始化</h3>
+
+<ol>
+<li>整数类型<code>byte, short, int, long</code>，值为<code>0</code></li>
+<li>浮点类型<code>float, double</code>，值为<code>0.0</code></li>
+<li><code>char</code>默认值为空格</li>
+<li><code>boolean</code>默认值为<strong><code>false</code></strong></li>
+<li>引用类型变量（e.g.String）值为<strong><code>null</code></strong>（打印结果也为<code>null</code>）</li>
+</ol>
+
+<p><br/></p>
+
+<h3 id="3-多维数组">3. 多维数组</h3>
+
+<p>以二维数组为例，即数组的数组</p>
+
+<p><strong>动态初始化</strong>的两种格式：</p>
+
+<pre><code class="language-java">int[][] arr1 = new int[3][2];
+</code></pre>
+
+<p>arr1的二维数组中有3个一维数组，分别叫arr1[0],arr1[1],arr1[2]，每个一维数组中有两个元素</p>
+
+<p>可以用<code>arr1.length</code>来获取数组大小（行数），在此例下结果为3（行）</p>
+
+<pre><code class="language-java">int[][] arr2 = new int[3][];
+arr2[0] = new int[3];
+arr2[1] = new int[1];
+arr2[2] = new int[2];
+</code></pre>
+
+<p>arr2的二维数组中有3个一维数组,每个一维数组都是默认初始化值<strong>null</strong>，对这个三个一维数组分别进行初始化</p>
+
+<p>第一步声明时：在内存中，变量名<code>arr2</code>压入栈，并在堆中new三个值为null的空间，把首元素地址赋值给arr2；</p>
+
+<p>对一维数组初始化时：在堆中new新的空间，并把新空间的首元素地址赋值给arr2[0]</p>
+
+<p>一些注意事项：</p>
+
+<pre><code class="language-java">int[][] arr3 = new int[][3]; //非法！没有指定（元素为数组的）数组的维度
+int[] arr5,arr6[];           //特殊写法，arr5为一维数组，arr6为二维数组
+</code></pre>
+
+<p><strong>静态初始化：</strong></p>
+
+<pre><code class="language-java">int[][] arr4 = new int[][]{{1},{2,3},{4,5,6}};
+</code></pre>
+
+<p><br/></p>
+
+<h3 id="4-数组的内存结构">4. 数组的内存结构</h3>
+
+<p>Java内存的基本结构中有：</p>
+
+<ul>
+<li>栈<code>stack</code>：存放局部变量、对象的引用</li>
+<li>堆<code>heap</code>：<code>new</code>出来的数组、对象等</li>
+<li>方法区：类、包、定义的方法，其中包含<strong>常量池</strong></li>
+<li>静态域：<code>static</code>修饰的静态变量</li>
+</ul>
+
+<p>以以下数组定义过程为例：</p>
+
+<pre><code class="language-java">int a[] = new int[4];  //动态初始化
+</code></pre>
+
+<p>新定义的变量名<code>a</code>压入栈中，在堆中开辟了一段空间（并默认初始化为0），把空间开始的地址值（四位十六进制数）赋给变量<code>a</code>。静态初始化同理。</p>
+
+<p>需要注意类的初始化：</p>
+
+<pre><code class="language-java">MyDate date[]=new MyDate[3];
+date[0] = new MyDate(1,1,2000); //此处new不可省略
+</code></pre>
+
+<p>变量名<code>date</code>压入栈中并把数组首元素地址值赋给它，但数组元素值仍然是<code>null</code>，需要开辟一个新的空间存放类的成员变量，并把新的空间的首地址值赋给<code>date[0]</code></p>
+
+<p>多维数组内存结构见上方有关多维数组的描述</p>
+
+<p><br/></p>
+
+<h3 id="5-数组常见异常-exception">5.数组常见异常<code>exception</code></h3>
+
+<ol>
+<li><strong>下标越界</strong>：下标范围为$0\to n-1$，其中$n=arr.length$，报错信息为<code>java.lang.ArrayIndexOutOfBoundsException</code></li>
+<li><strong>空指针异常</strong>：访问值为<code>null</code>的数组（指针）或者调用值为<code>null</code>的对象（例如空String）的方法，（即：引用没有指向实体，却在操作实体中的元素时），信息为<code>java.lang.NullPointerException</code></li>
+</ol>
+
+<p><br/></p>
 
 <hr />
 
@@ -1093,7 +1213,36 @@ class Scan{
 
 <p><br/></p>
 
+<h3 id="math类">Math类</h3>
+
+<p><code>Math.random()</code>：生成随机数，返回值类型double</p>
+
+<p><code>Math.round(double d)</code>：四舍五入取整，返回值类型long</p>
+
+<p><code>Math.sqrt(double a)</code>：正平方根，存在如下特殊情况：</p>
+
+<ul>
+<li>如果参数为 NaN 或小于 0，那么结果为 NaN</li>
+<li>如果参数为正无穷大，那么结果为正无穷大</li>
+<li>如果参数为正 0 或负 0，那么结果与参数相同</li>
+</ul>
+
+<p><br/></p>
+
+<h3 id="java-util-arrays-类"><code>java.util.Arrays</code>类</h3>
+
+<ul>
+<li><code>sort()</code>方法，调用方式为<code>Arrays .sort(　*array's name*　)</code></li>
+<li><code>equals()</code>：比较两个array是否相等。array拥有相同元素个数，且所有对应元素两两相等</li>
+<li><code>fill()</code>：将值填入array中</li>
+<li><code>sort()</code>：用来对array进行排序</li>
+<li><code>binarySearch()</code>：在排好序的array中寻找元素</li>
+<li>另外，<code>System</code>中有方法<code>arraycopy()</code>，可以实现array的复制。</li>
+</ul>
+
 <hr />
+
+<p><em>施工完成 -2019.5.11</em></p>
 
           </div>
 
@@ -1729,6 +1878,136 @@ class Scan{
 								
 									<ul class="nav">
 								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#1-%e5%88%9d%e5%a7%8b%e5%8c%96%e5%92%8c%e5%ae%9a%e4%b9%89">
+												 1. 初始化和定义
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#2-%e9%bb%98%e8%ae%a4%e5%88%9d%e5%a7%8b%e5%8c%96">
+												 2. 默认初始化
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#3-%e5%a4%9a%e7%bb%b4%e6%95%b0%e7%bb%84">
+												 3. 多维数组
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#4-%e6%95%b0%e7%bb%84%e7%9a%84%e5%86%85%e5%ad%98%e7%bb%93%e6%9e%84">
+												 4. 数组的内存结构
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#5-%e6%95%b0%e7%bb%84%e5%b8%b8%e8%a7%81%e5%bc%82%e5%b8%b8-exception">
+												 5.数组常见异常exception
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
 								
 
 										<li class="nav-item">
@@ -1810,6 +2089,58 @@ class Scan{
 										<li class="nav-item">
 						 					<a class="nav-link" href="#%e8%8e%b7%e5%8f%96%e7%b3%bb%e7%bb%9f%e5%bd%93%e5%89%8d%e7%9a%84%e6%af%ab%e7%a7%92%e6%95%b0-%e6%97%b6%e9%97%b4">
 												 获取系统当前的毫秒数（时间）
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#math%e7%b1%bb">
+												 Math类
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#java-util-arrays-%e7%b1%bb">
+												 java.util.Arrays类
 											</a>
 										</li>
 						 
