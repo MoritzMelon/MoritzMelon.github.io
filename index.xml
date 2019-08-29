@@ -21,6 +21,15 @@
     </item>
     
     <item>
+      <title>3.Activity</title>
+      <link>https://moritzmelon.github.io/android/3.activity/</link>
+      <pubDate>Tue, 20 Aug 2019 10:26:04 +0800</pubDate>
+      
+      <guid>https://moritzmelon.github.io/android/3.activity/</guid>
+      <description>Activity 生命周期 Activity实例在其生命周期内，有运行、暂停、停止和不存在四种状态。 用户可以与当前运行</description>
+    </item>
+    
+    <item>
       <title>2.GeoQuiz与MVC设计模式</title>
       <link>https://moritzmelon.github.io/android/2.geoquiz%E4%B8%8Emvc%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</link>
       <pubDate>Sat, 10 Aug 2019 10:26:04 +0800</pubDate>
@@ -90,15 +99,6 @@
       
       <guid>https://moritzmelon.github.io/blog/2019-04/vs2010-setting/</guid>
       <description>some settings like themes</description>
-    </item>
-    
-    <item>
-      <title>3.Activity</title>
-      <link>https://moritzmelon.github.io/android/3.activity/</link>
-      <pubDate>Sat, 27 Apr 2019 10:26:04 +0800</pubDate>
-      
-      <guid>https://moritzmelon.github.io/android/3.activity/</guid>
-      <description>Activity 生命周期 Activity实例在其生命周期内，有运行、暂停、停止和不存在四种状态。 用户可以与当前运行</description>
     </item>
     
     <item>
