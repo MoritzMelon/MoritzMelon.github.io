@@ -6,15 +6,24 @@
     <description>Recent content in Series on Melon</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 18 Jul 2019 10:26:04 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 27 Aug 2019 10:26:04 +0800</lastBuildDate>
     
 	<atom:link href="https://moritzmelon.github.io/series/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Learning Android</title>
+      <link>https://moritzmelon.github.io/series/learning-android/</link>
+      <pubDate>Tue, 27 Aug 2019 10:26:04 +0800</pubDate>
+      
+      <guid>https://moritzmelon.github.io/series/learning-android/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Learning Java</title>
       <link>https://moritzmelon.github.io/series/learning-java/</link>
-      <pubDate>Thu, 18 Jul 2019 10:26:04 +0800</pubDate>
+      <pubDate>Wed, 24 Jul 2019 10:26:04 +0800</pubDate>
       
       <guid>https://moritzmelon.github.io/series/learning-java/</guid>
       <description></description>

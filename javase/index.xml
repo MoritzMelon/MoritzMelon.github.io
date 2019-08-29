@@ -12,7 +12,16 @@
     
     
     <item>
-      <title>Lesson 3: Object and Class.md</title>
+      <title>Lesson 4: Inheritance</title>
+      <link>https://moritzmelon.github.io/javase/lesson_4_inheritance/</link>
+      <pubDate>Wed, 24 Jul 2019 10:26:04 +0800</pubDate>
+      
+      <guid>https://moritzmelon.github.io/javase/lesson_4_inheritance/</guid>
+      <description>Inheritance and reflection</description>
+    </item>
+    
+    <item>
+      <title>Lesson 3: Object and Class</title>
       <link>https://moritzmelon.github.io/javase/lesson_3_object_and_class/</link>
       <pubDate>Thu, 18 Jul 2019 10:26:04 +0800</pubDate>
       

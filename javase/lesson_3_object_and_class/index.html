@@ -9,7 +9,7 @@
   <meta name="author" content="Melon">
   <meta name="description" content="Objects and Classes">
   
-  <meta property="og:title" content="Lesson 3: Object and Class.md" />
+  <meta property="og:title" content="Lesson 3: Object and Class" />
 <meta property="og:description" content="Objects and Classes" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://moritzmelon.github.io/javase/lesson_3_object_and_class/" />
@@ -20,7 +20,7 @@
 
   <title>
   
-       Lesson 3: Object and Class.md | Melon 
+       Lesson 3: Object and Class | Melon 
   
   </title>
 
@@ -364,7 +364,7 @@
     
   </ul>
 
-  <div class="px-4 post-heading">Lesson 3: Object and Class.md</div>
+  <div class="px-4 post-heading">Lesson 3: Object and Class</div>
 
   <ul class="post-meta li-x mt-1">
     
@@ -556,6 +556,8 @@ Employee number03=new Employee(&quot;Tom&quot;,1333,1983,3,3);
 
 <p>注意所有方法中不要命名与实例域同名的变量。</p>
 
+<p><br></p>
+
 <h3 id="3-3-4-隐式参数与显式参数">3.3.4 隐式参数与显式参数</h3>
 
 <p>以<code>Employee</code>类中的一个方法为例：</p>
@@ -580,6 +582,8 @@ Employee number03=new Employee(&quot;Tom&quot;,1333,1983,3,3);
 
 <p>Java中所有方法都<strong>必须在类内部定义</strong>，哪个方法是否设置为内联(inline)是<strong>虚拟机</strong>的任务。</p>
 
+<p><br></p>
+
 <h3 id="3-3-5-封装的优点">3.3.5 封装的优点</h3>
 
 <p>如果没有任何方法可以改变某个实例域，则称为<strong>只读域</strong>。</p>
@@ -591,8 +595,6 @@ Employee number03=new Employee(&quot;Tom&quot;,1333,1983,3,3);
 <li>更改器方法可以执行错误检查</li>
 <li>域值出现错误只需调试方法</li>
 </ol>
-
-<p><br></p>
 
 <p><strong>注意！！</strong>：不要编写返回引用可变对象的对象器方法，例如，若<code>Employee</code>类中定义了如下访问器方法：</p>
 
@@ -608,9 +610,13 @@ Employee number03=new Employee(&quot;Tom&quot;,1333,1983,3,3);
 }
 </code></pre>
 
+<p><br></p>
+
 <h3 id="3-3-6-基于类的访问权限">3.3.6 基于类的访问权限</h3>
 
 <p>一个方法可以访问所属类的<strong>所有对象</strong>的私有数据。</p>
+
+<p><br></p>
 
 <h3 id="3-3-7-final实例域">3.3.7 final实例域</h3>
 
@@ -685,11 +691,7 @@ Employee number03=new Employee(&quot;Tom&quot;,1333,1983,3,3);
 <pre><code class="language-java">int x=Employee.getNext();
 </code></pre>
 
-<p><br></p>
-
 <p><strong>注</strong>：C++中用类名调用静态方法时，使用的是<code>::</code>运算符，例如<code>Math::PI</code></p>
-
-<p><br></p>
 
 <h3 id="4-工厂方法">4 工厂方法</h3>
 
@@ -708,7 +710,7 @@ Employee number03=new Employee(&quot;Tom&quot;,1333,1983,3,3);
 
 <p>每一个类都可以有一个main方法，可以为做对类进行单元测试的技巧。</p>
 
-<p>例如在<code>Employee</code>类中添加一个main方法，并且用<code>java Employee</code>来独立测试这个类，然后再执行语句<code>java test</code>运行程序，此时Employee类的main方法不会执行。</p>
+<p>例如在<code>Employee</code>类中添加一个main方法，并且用语句<code>java Employee</code>来独立测试这个类，然后再执行语句<code>java test</code>运行程序，此时Employee类的main方法不会执行。</p>
 
 <p><br></p>
 
@@ -727,7 +729,7 @@ Employee number03=new Employee(&quot;Tom&quot;,1333,1983,3,3);
 
 <p>“按……调用”(call by)专业术语用来描述各种程序设计语言中传参方式。</p>
 
-<p>Java总是<strong>安置调用</strong>，方法得到的是所有参数值的一个<strong>拷贝</strong>。</p>
+<p>Java总是<strong>按值调用</strong>，方法得到的是所有参数值的一个<strong>拷贝</strong>。</p>
 
 <p>当对象引用作为参数时：</p>
 
@@ -781,8 +783,6 @@ changSalary(tom);
 </ul>
 
 <p>其中返回类型不是签名的一部分。</p>
-
-<p><br></p>
 
 <h3 id="2-默认域初始化">2 默认域初始化</h3>
 
@@ -898,9 +898,17 @@ changSalary(tom);
 }
 </code></pre>
 
-<p><br></p>
-
 <h3 id="8-析构与finalize方法">8 析构与finalize方法</h3>
+
+<p>由于Java有自动的垃圾回收器，所以<strong>不支持析构器</strong>。</p>
+
+<p>在对象使用了内存之外的资源（如文件，或者系统资源的另一个对象的句柄），则需要对资源进行回收和再利用。</p>
+
+<p>为一个类添加<code>finalize</code>方法，将在垃圾回收器清除对象之前调用。</p>
+
+<p>详细操作暂不学习。</p>
+
+<p><br></p>
 
 <p><br></p>
 
@@ -908,11 +916,97 @@ changSalary(tom);
 
 <h2 id="3-7-包">3.7 包</h2>
 
+<p>标准Java类库分布在多个包(package)中。Java包具有层次结构，可以使用嵌套层次包。</p>
+
+<p>所有标准Java包都处于<code>java</code>和<code>javax</code>包层级中。</p>
+
+<p>不同包中的类，即使同名也不会产生冲突，保证类名的唯一性。</p>
+
+<h3 id="1-类的导入">1 类的导入</h3>
+
+<p>一个类可以访问<strong>所属包中的所有类</strong>，以及其他包中的<strong>公有类(public class)</strong>。</p>
+
+<p>访问另一个包中公有类的两种方式</p>
+
+<p>第一种，在类名前添加完整的包名：</p>
+
+<pre><code class="language-java">java.time.LocalDate today = java.time.LocalDate.now();
+</code></pre>
+
+<p>第二种，使用<code>import</code>语句，位于源文件顶部、<code>package</code>语句后面，例如：</p>
+
+<p>导入<code>java.util</code>包中所有类：</p>
+
+<pre><code class="language-java">import java.util.*;
+</code></pre>
+
+<p>其中，只能用星号<code>*</code>导入一个包，不能使用例如<code>java.*</code>导入以java为前缀的包。</p>
+
+<p>导入特定类：</p>
+
+<pre><code class="language-java">import java.time.LocalDate;
+</code></pre>
+
+<p>若使用了多个导入包中都包含的类时，可以增加一个特定的import语句来解决：</p>
+
+<pre><code class="language-java">import java.util.*;
+import java.sql.*;
+import java.util.Date;
+</code></pre>
+
+<p>若需要使用类名冲突的多个类，则采用最原始的方式，在类名前加上包名：</p>
+
+<pre><code>java.util.Date day1;
+java.sql.Date day2;
+</code></pre>
+
+<h3 id="2-静态导入">2 静态导入</h3>
+
+<p>导入System类的静态方法和静态域：</p>
+
+<pre><code class="language-java">import static java.lang.System.*;
+out.println(&quot;Hello!\n&quot;);//可以直接使用
+</code></pre>
+
+<p>导入特定方法或域：</p>
+
+<pre><code>import static java.lang.System.out;
+</code></pre>
+
+<h3 id="3-将类放入包中">3 将类放入包中</h3>
+
+<p>将包名放在源文件开头、定义类代码之前，可以把类放在特定包中，否则放入默认包(default package)：</p>
+
+<pre><code class="language-java">package com.corejava;
+
+public class Employee{
+    //...
+}
+</code></pre>
+
+<p>然后包中文件放到与完整包名匹配的子目录中。例如，<code>com.corejava</code>包中的所有源文件（<code>.java</code>文件和<code>.class</code>文件）放置在目录<code>com\corejava</code>中。</p>
+
+<h3 id="4-包作用域">4 包作用域</h3>
+
+<p>如果不把一个类定义为公有类，那么同一个包中的其他类都可以访问这个类。</p>
+
+<p>如果变量不显式地标记为private，那么默认为包可见。</p>
+
+<p><br></p>
+
 <p><br></p>
 
 <hr />
 
 <h2 id="3-8-类路径">3.8 类路径</h2>
+
+<p>类路径必须与包名匹配。</p>
+
+<p>类文件可以存储在JAR（Java归档）文件中，其中使用ZIP格式组织文件和子目录。</p>
+
+<p>使类被多个程序共享和设置类路径的具体方法见书。</p>
+
+<p><br></p>
 
 <p><br></p>
 
@@ -920,15 +1014,45 @@ changSalary(tom);
 
 <h2 id="3-9-文档注释">3.9 文档注释</h2>
 
+<p>javadoc工具可以由源文件生成一个HTML文档。</p>
+
+<p>javadoc实用程序(utility)从几个特征中抽取信息：</p>
+
+<ol>
+<li>包</li>
+<li>公有类与接口</li>
+<li>公有的和受保护的构造器、方法</li>
+<li>公有的和受保护的域</li>
+</ol>
+
+<p>注释以<code>/**....*/</code>为界定，中间包含自由格式文本(free-form text)，标记由<code>@</code>开始。</p>
+
+<p><br></p>
+
 <p><br></p>
 
 <hr />
 
 <h2 id="3-10-类设计技巧">3.10 类设计技巧</h2>
 
+<p>OOP设计中需要注意：</p>
+
+<ol>
+<li>数据处理：不破坏封装性，必须进行初始化，合理编写域访问器和域更改器</li>
+<li>类设计：分解类的职责，类名和方法名提现职责，优先使用不可变类</li>
+</ol>
+
+<p><br></p>
+
+<p><br></p>
+
+<p><br></p>
+
 <hr />
 
 <p><em>开始施工 -2019.5.13</em></p>
+
+<p><em>P1结束 -2019.7.24</em></p>
 
           </div>
 
@@ -974,6 +1098,13 @@ changSalary(tom);
             </div>
             
             <div class="col-md-6 text-right" >
+              
+                <a href=https://moritzmelon.github.io/javase/lesson_4_inheritance/ class="post-meta">Next
+                  <div class="pt-2 pb-5 flex-reverse">
+                    <i class="fas fa-angle-right text-grey font-weight-bold ml-2 active-color"></i>
+                    <span>Lesson 4: Inheritance</span>
+                  </div>
+                </a>
               
             </div>
           </div>
@@ -1889,6 +2020,110 @@ changSalary(tom);
 										</li>
 						 
 								
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#1-%e7%b1%bb%e7%9a%84%e5%af%bc%e5%85%a5">
+												 1 类的导入
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#2-%e9%9d%99%e6%80%81%e5%af%bc%e5%85%a5">
+												 2 静态导入
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#3-%e5%b0%86%e7%b1%bb%e6%94%be%e5%85%a5%e5%8c%85%e4%b8%ad">
+												 3 将类放入包中
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#4-%e5%8c%85%e4%bd%9c%e7%94%a8%e5%9f%9f">
+												 4 包作用域
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
 								
 									</ul>
 								

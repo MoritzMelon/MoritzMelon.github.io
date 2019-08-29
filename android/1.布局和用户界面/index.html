@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1" />
+  <meta name="author" content="Melon">
+  <meta name="description" content="布局和用户界面 文件app/res/layout/activity_quiz.xml定义了默认的act">
+  
+  <meta property="og:title" content="1.布局和用户界面" />
+<meta property="og:description" content="布局和用户界面 文件app/res/layout/activity_quiz.xml定义了默认的act" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://moritzmelon.github.io/android/1.%E5%B8%83%E5%B1%80%E5%92%8C%E7%94%A8%E6%88%B7%E7%95%8C%E9%9D%A2/" />
+<meta property="article:published_time" content="2019-07-30T10:26:04&#43;08:00"/>
+<meta property="article:modified_time" content="2019-07-30T10:26:04&#43;08:00"/>
+
+
+
+  <title>
+  
+       1.布局和用户界面 | Melon 
+  
+  </title>
+
+  <link rel="canonical" href="https://moritzmelon.github.io/android/1.%E5%B8%83%E5%B1%80%E5%92%8C%E7%94%A8%E6%88%B7%E7%95%8C%E9%9D%A2/">
+
+  
+  
+
+  
+  <link href="https://moritzmelon.github.io/css/vendors-extensions/fontawesome/all.min.css" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Ubuntu+Mono:400,400i,700,700i|Raleway:300,400,500,600">
+  <link href="https://moritzmelon.github.io/css/font.css" rel="stylesheet"> 
+    
+  
+  <link href="https://moritzmelon.github.io/css/vendors/bootstrap4/bootstrap.min.css" rel="stylesheet">
+  <link href="https://moritzmelon.github.io/css/vendors-extensions/mdb/mdb.min.css" rel="stylesheet"> 
+  <link href="https://moritzmelon.github.io/css/vendors/mdb/style.min.css" rel="stylesheet"> 
+  <link href="https://moritzmelon.github.io/css/main.css" rel="stylesheet">
+
+
+  
+  <link rel="shortcut icon"
+  
+      href="https://moritzmelon.github.io/img/start%20again.ico"
+  
+  >
+
+
+  
+  
+
+  <style type="text/css">
+      @media (min-width: 800px) and (max-width: 850px) {
+              .navbar:not(.top-nav-collapse) {
+                  background: #1C2331!important;
+              }
+          }
+  </style>
+
+
+  
+    
+    <link rel="stylesheet" href="https://moritzmelon.github.io/js/vendors/katex/katex.min.css">
+  
+  
+
+  
+    
+    <link rel="stylesheet" href="https://moritzmelon.github.io/css/vendors/highlight/github-gist.css">
+  
+
+</head>
+
+  <body class="bg-light" data-spy="scroll" data-target="#page-scrollspy" data-offset="90">
+  
+    
+    
+
+    
+      
+
+
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
+    <div class="container">
+
+      
+      <a class="navbar-brand" href="https://moritzmelon.github.io/">
+          
+        <img class="avatar" src="https://moritzmelon.github.io/img/start%20again.ico" style="width: 40px!important;height: auto;"  class="d-inline-block align-top" alt="" >
+        
+        <strong> Melon</strong>
+      </a>
+
+      
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        
+        <ul class="navbar-nav mr-auto ">
+          <li class="nav-item ">
+            <a class="nav-link" href="https://moritzmelon.github.io/">Home</a>
+          </li>
+             
+            <li class="nav-item ">
+              <a class="nav-link" href="https://moritzmelon.github.io/blog/" >Blog  </a>
+            </li>
+          
+             
+            <li class="nav-item ">
+              <a class="nav-link" href="https://moritzmelon.github.io/javase/" >JavaSE  </a>
+            </li>
+          
+             
+            <li class="nav-item ">
+              <a class="nav-link" href="https://moritzmelon.github.io/android/" >Android  </a>
+            </li>
+          
+             
+            <li class="nav-item ">
+              <a class="nav-link" href="https://moritzmelon.github.io/about/" >About  </a>
+            </li>
+          
+          
+        </ul>
+
+      </div>
+
+    </div>
+  </nav>
+  
+ 
+      
+ 
+
+
+
+
+
+
+<div id="site-header" class="carousel slide carousel-fade" data-ride="carousel" style="height: 18rem;" >  
+
+  
+  
+  
+
+  
+  <div class="carousel-inner" role="listbox">
+    
+      
+
+        
+        <div class="carousel-item active">
+          <div class="view" style="background-image: url('https://moritzmelon.github.io/img/header-slides/candle_book_compass_zodiac_signs_lettering_harry_potter_fantasy_witch_dark_horror_1920x12001.jpg'); background-repeat: no-repeat; background-size: cover;">
+
+            
+            <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+
+              
+              
+              
+
+            </div>
+            
+
+          </div>
+        </div>
+        
+      
+    
+      
+
+        
+        <div class="carousel-item">
+          <div class="view" style="background-image: url('https://moritzmelon.github.io/img/header-slides//library_books_shelf_1920x1200.jpg'); background-repeat: no-repeat; background-size: cover;">
+
+            
+            <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+
+            
+
+            </div>
+            
+
+          </div>
+        </div>
+        
+      
+    
+      
+
+        
+        <div class="carousel-item">
+          <div class="view" style="background-image: url('https://moritzmelon.github.io/img/header-slides//raw_1515691746.jpg'); background-repeat: no-repeat; background-size: cover;">
+
+            
+            <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+
+            
+
+            </div>
+            
+
+          </div>
+        </div>
+        
+      
+    
+      
+
+        
+        <div class="carousel-item">
+          <div class="view" style="background-image: url('https://moritzmelon.github.io/img/header-slides//v2-13263c01e9f1f9093b423b204e24d90f_r%20-%20%e5%89%af%e6%9c%ac.jpg'); background-repeat: no-repeat; background-size: cover;">
+
+            
+            <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+
+            
+
+            </div>
+            
+
+          </div>
+        </div>
+        
+      
+    
+      
+
+        
+        <div class="carousel-item">
+          <div class="view" style="background-image: url('https://moritzmelon.github.io/img/header-slides//v2-592141d992a51764a6568491887ecaaa_r.jpg'); background-repeat: no-repeat; background-size: cover;">
+
+            
+            <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+
+            
+
+            </div>
+            
+
+          </div>
+        </div>
+        
+      
+    
+      
+
+        
+        <div class="carousel-item">
+          <div class="view" style="background-image: url('https://moritzmelon.github.io/img/header-slides//wallhaven-435444.png'); background-repeat: no-repeat; background-size: cover;">
+
+            
+            <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+
+            
+
+            </div>
+            
+
+          </div>
+        </div>
+        
+      
+    
+
+  
+  </div>
+  
+
+  
+  <div class="carousel-content text-center white-text wow fadeIn">
+    <div class="row mx-0 headfont mt-3 pt-4">
+      
+      <div class="col-12 col-sm-5 align-middle">
+        <a href="https://moritzmelon.github.io/">
+          
+            <img class="pull-right avatar avatar-md" src="https://moritzmelon.github.io/img/1.jpg" alt="" >
+          
+        </a>
+      </div>
+      
+      <div class="col-12 col-sm-7 text-left pl-2">
+        <a href="https://moritzmelon.github.io/">
+          <h1 class="mb-2 h1" style="font-weight: 300;" >
+            <strong>Melon</strong>
+          </h1>
+        </a>
+        
+
+             
+        <div class="mt-2" style="font-size: 1rem; color: white;">
+            
+            
+
+            
+
+            
+
+            
+
+            
+    
+            
+    
+        
+            
+                <a href="mailto:2253970366@qq.com"><i class="far fa-envelope-open pr-1" aria-hidden="true"></i></a>
+            
+    
+            
+
+            
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  
+  
+  
+
+</div>
+  
+    
+
+    
+  
+  <main class="post-main-wrapper">
+    
+    
+    <div class="row">
+
+      
+
+      
+      <div class="col-md-10">
+      
+
+        
+        <div class="z-depth-1  post-wrapper white-bg single-post">
+
+          <div class="post-header text-center" >
+  <ul class="post-meta li-x">
+    
+      
+        <li><a href="https://moritzmelon.github.io/categories/android"><i class="fas fa-folder-open pr-1" aria-hidden="true"></i> Android </a></li>
+      
+    
+    
+      
+        <li><a href="https://moritzmelon.github.io/series/learning-android"><i class="fas fa-bookmark pr-1" aria-hidden="true"></i>Learning Android</a></li>
+      
+    
+  </ul>
+
+  <div class="px-4 post-heading">1.布局和用户界面</div>
+
+  <ul class="post-meta li-x mt-1">
+    
+      <li>Jul 30, 2019</li>
+    
+
+    
+  </ul>
+  
+
+</div>
+
+
+          <div class="post-content markdown">
+            
+
+<h1 id="布局和用户界面">布局和用户界面</h1>
+
+<p>文件<code>app/res/layout/activity_quiz.xml</code>定义了默认的activity布局。
+组件是用户界面的构造模块，并在xml文件里定义。组件和XML元素一一对应，元素的名称就是组件的类型。各元素均有一组XML属性。
+根元素（在这里是一个LinearLayout组件，继承自ViewGroup组件）组件必须指定Android XML资源文件的命名空间属性。</p>
+
+<h2 id="创建字符串资源">创建字符串资源</h2>
+
+<p>每个项目中，<code>app/res/values</code>目录下都包含一个默认字符串资源文件<code>string.xml</code>：</p>
+
+<pre><code class="language-xml">&lt;resources&gt;
+    &lt;string name=&quot;app_name&quot;&gt;GeoQuiz&lt;/string&gt;
+    &lt;string name=&quot;true_button&quot;&gt;True&lt;/string&gt;
+&lt;/resources&gt;
+</code></pre>
+
+<p>在此项目的任何XML文件中，只要引用到<code>@string/true_button</code>，就可以得到文本<code>True</code>。
+一个项目也可以有多个字符串文件，只要都放在此目录下，且含有一个<code>resources</code>根元素和多个<code>string</code>子元素，应用就能找到相应的字符串资源。</p>
+
+<h2 id="从布局xml到视图对象">从布局XML到视图对象</h2>
+
+<h3 id="获取用户界面">获取用户界面</h3>
+
+<p><code>app/java</code>目录是全部Java源代码的存放处，<code>QuizAcitivity.java</code>文件内有Activity的子类：</p>
+
+<pre><code class="language-java">package com.moritz.android.geoquiz
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+
+public class QuizAcitivity extends AppCompatAcitivity{
+
+    @override
+    protected void onCreate(Bundle savedInstanceState){
+        super.onCreate(savedInstanceState);//调用基类构造方法，基类是一个Activity的子类，作用为兼容旧版本系统
+        setContentView(R.layout.activity_quiz);
+    }   
+}
+</code></pre>
+
+<p>实例创建后，<code>onCreate(Bundle)</code>方法会被调用，并调用一下<code>Activity</code>方法获取用户界面：</p>
+
+<pre><code class="language-java">public void setContentView(int layoutResID)
+</code></pre>
+
+<h3 id="资源与资源id">资源与资源ID</h3>
+
+<p>布局是一种资源。资源是非代码形式的内容。项目的所有资源都在<code>app/res</code>的子目录下，例如布局资源文件存放在<code>res/layout/</code>，字符串资源文件存放在<code>res/values/</code>。在代码中获取相应的资源的方法则是使用资源ID。
+目录<code>app/build/generated/source/debug</code>下的<code>R.java</code>文件是项目编译过程中自动生成的、包含项目当前所有资源ID的文件，部分截取如下：</p>
+
+<pre><code class="language-java">public final class R{
+    //...
+    public static final class layout{
+        //...
+        public static final int activity_quiz\0x7f030017;//xml布局资源ID
+    }
+    public static final class string{
+        public static final int app_name=0x7f0a0010;
+        public static final int true_button=0x7f0a0012;
+    }
+}
+</code></pre>
+
+<p><code>activity_quiz.xml</code>布局的资源ID为<code>R.layout.activity_quiz</code>，是R的内部类layout里的一个整型常量名。
+布局文件中的组件并不会默认生成资源ID，如果需要在代码中需要与组件交互，则为该组件生成资源ID即可，在定义组件时为其添加<code>android:id</code>属性：</p>
+
+<pre><code class="language-xml">&lt;LinearLayout...&gt;
+    ...
+    &lt;Button
+        android:id=&quot;@+id/true_button&quot;
+        android:text:&quot;@string/true_button&quot;
+        ...
+    
+</code></pre>
+
+<p>android:id属性值前面有一个+标志，意为创建资源ID，而对字符串资源只是做引用。</p>
+
+<h2 id="组件的实际应用">组件的实际应用</h2>
+
+<h3 id="引用视图对象">引用视图对象</h3>
+
+<p>在<code>activity_quiz.xml</code>文件给Button生成资源ID后，就可以在QuizActicity中获取：</p>
+
+<pre><code class="language-java">import android.widget.Button
+
+public class QuizActivity extends AppCompatActivity{
+    private Button mTrueButton;//m前缀，约定俗成的成员变量名称
+    
+    @override
+    protected void onCreate(Bundle savedInstanceState){
+        //...
+        mTrueButton=(Button)findViewById(R.id.true_button);
+    }
+}
+</code></pre>
+
+<p>其中，调用了Activity方法：</p>
+
+<pre><code class="language-java">public View findViewById(int id)
+</code></pre>
+
+<p>以组件资源id为参数获取一个视图对象，并类型转换为Button。</p>
+
+<h3 id="设置监听器">设置监听器</h3>
+
+<p>Android应用属于典型的事件驱动类型。为响应某个事件而创建的对象叫做监听器(listener)，监听器会实现特定事件的监听器接口(listener interface)。</p>
+
+<p>//2019.7</p>
+
+<h2 id="toast">toast</h2>
+
+<p>Android的toast是用来通知客户的简短弹出消息。</p>
+
+<hr />
+
+          </div>
+
+          
+          <div class="row">
+            <div class="col-md-8">
+            
+              <div class="mb-5">
+                
+<div class="li-x div-x post-meta">
+  <li class="pr-0"><a href="https://moritzmelon.github.io/tags/"><i class="fas fa-tags"></i></a></li>
+  <div class="tags-sm">
+    
+      <li><a href="https://moritzmelon.github.io/tags/study" role="button">study </a></li>
+      
+    
+      <li><a href="https://moritzmelon.github.io/tags/android" role="button">Android </a></li>
+      
+    
+  </div>
+</div>
+              </div>
+            
+            </div>
+            
+          </div>
+          
+
+          
+          <div class="row pt-3">
+            <div class="col-md-6">
+              
+                <a href=https://moritzmelon.github.io/android/0.%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/ class="post-meta">Previous
+                  <div class="pt-2 pb-5 d-flex">
+                    <i class="fas fa-angle-left text-grey font-weight-bold mr-2 active-color"></i>
+                    <span>0.工具使用</span>
+                  </div>
+                </a>
+              
+            </div>
+            
+            <div class="col-md-6 text-right" >
+              
+                <a href=https://moritzmelon.github.io/android/2.geoquiz%E4%B8%8Emvc%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/ class="post-meta">Next
+                  <div class="pt-2 pb-5 flex-reverse">
+                    <i class="fas fa-angle-right text-grey font-weight-bold ml-2 active-color"></i>
+                    <span>2.GeoQuiz与MVC设计模式</span>
+                  </div>
+                </a>
+              
+            </div>
+          </div>
+
+          
+
+        </div>
+        
+
+      </div>
+      
+
+      
+	
+	
+	
+	
+		
+		
+		
+	
+
+		
+		<div class="col-md-2 pl-0">
+
+			
+			<div id="page-scrollspy" class="toc-nav">
+				
+				<ul class="nav nav-pills ml-0">
+					
+					<li class="nav-item pb-3 text-center">
+						<span class="font-weight-bold mb-2">- CATALOG - </span>
+					</li>
+
+					
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e5%b8%83%e5%b1%80%e5%92%8c%e7%94%a8%e6%88%b7%e7%95%8c%e9%9d%a2">
+												 布局和用户界面
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e5%88%9b%e5%bb%ba%e5%ad%97%e7%ac%a6%e4%b8%b2%e8%b5%84%e6%ba%90">
+												 创建字符串资源
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e4%bb%8e%e5%b8%83%e5%b1%80xml%e5%88%b0%e8%a7%86%e5%9b%be%e5%af%b9%e8%b1%a1">
+												 从布局XML到视图对象
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e8%8e%b7%e5%8f%96%e7%94%a8%e6%88%b7%e7%95%8c%e9%9d%a2">
+												 获取用户界面
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e8%b5%84%e6%ba%90%e4%b8%8e%e8%b5%84%e6%ba%90id">
+												 资源与资源ID
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e7%bb%84%e4%bb%b6%e7%9a%84%e5%ae%9e%e9%99%85%e5%ba%94%e7%94%a8">
+												 组件的实际应用
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e5%bc%95%e7%94%a8%e8%a7%86%e5%9b%be%e5%af%b9%e8%b1%a1">
+												 引用视图对象
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e8%ae%be%e7%bd%ae%e7%9b%91%e5%90%ac%e5%99%a8">
+												 设置监听器
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#toast">
+												 toast
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+
+				</ul>
+			</div>
+			
+
+		</div>
+		
+	
+
+    </div>
+    
+
+
+  </main>
+  
+
+
+    
+    
+
+<footer class="page-footer text-center font-small mt-4 wow fadeIn">
+
+
+  
+  <div class="pb-2 mt-5 pt-5">
+    
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+    
+        <a href="mailto:2253970366@qq.com"><i class="far fa-envelope-open mr-3" aria-hidden="true"></i></a>
+    
+
+    
+
+    
+
+  </div>
+  
+
+  
+  <div class="copyright py-4">
+    
+    <span>  2016 - 2019 &copy; | Theme <a href='https://github.com/orianna-zzo/AllinOne' target="_blank">AllinOne</a> by <a href='https://github.com/orianna-zzo' target="_blank">Orianna</a>  </span>
+  </div>
+  
+
+</footer>
+
+<script
+	async
+	src="//cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+></script>
+<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+	  tex2jax: {
+	    inlineMath: [['$','$'], ['\\(','\\)']],
+	    displayMath: [['$$','$$'], ['\\[','\\]']],
+	    processEscapes: true,
+	    processEnvironments: true,
+	    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+	    TeX: { equationNumbers: { autoNumber: "AMS" },
+	    extensions: ["AMSmath.js", "AMSsymbols.js"] }
+	  }
+	});
+</script>
+<script type="text/x-mathjax-config">
+	// Fix <code> tags after MathJax finishes running. This is a
+	// hack to overcome a shortcoming of Markdown. Discussion at
+	// https://github.com/mojombo/jekyll/issues/199
+	MathJax.Hub.Queue(() => {
+	  MathJax.Hub.getAllJax().map(v => v.SourceElement().parentNode.className += ' has-jax');
+	});
+</script>
+    
+
+
+
+
+
+
+<script type="text/javascript" src="https://moritzmelon.github.io/js/vendors/jquery/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="https://moritzmelon.github.io/js/vendors/jquery/jquery.smooth-scroll.min.js"></script>
+
+
+
+<script type="text/javascript" src="https://moritzmelon.github.io/js/vendors/popper.min.js"></script>
+<script type="text/javascript" src="https://moritzmelon.github.io/js/vendors/holder.min.js"></script>
+<script type="text/javascript" src="https://moritzmelon.github.io/js/vendors-extensions/bootstrap4/bootstrap.js" ></script>
+
+<script type="text/javascript" src="https://moritzmelon.github.io/js/vendors/mdb/mdb.min.js"></script>
+
+<script type="text/javascript" src="https://moritzmelon.github.io/js/main.js"></script>
+
+
+
+  
+  <script src="https://moritzmelon.github.io/js/vendors/highlight.pack.js"> </script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+ 
+  <script src="https://moritzmelon.github.io/js/vendors/katex/katex.min.js"> </script>
+  <script src="https://moritzmelon.github.io/js/vendors/katex/contrib/auto-render.min.js"></script>
+
+  <script>
+      document.addEventListener("DOMContentLoaded", function () {
+          renderMathInElement(document.body);
+      });
+  </script>
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+  
+  new WOW().init();
+</script>
+
+
+
+
+  </body>
+</html>

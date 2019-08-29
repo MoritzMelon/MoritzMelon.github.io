@@ -6,13 +6,58 @@
     <description>Recent content in study on Melon</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 18 Jul 2019 10:26:04 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 27 Aug 2019 10:26:04 +0800</lastBuildDate>
     
 	<atom:link href="https://moritzmelon.github.io/tags/study/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Lesson 3: Object and Class.md</title>
+      <title>4.UI fragment</title>
+      <link>https://moritzmelon.github.io/android/4.ui-fragment/</link>
+      <pubDate>Tue, 27 Aug 2019 10:26:04 +0800</pubDate>
+      
+      <guid>https://moritzmelon.github.io/android/4.ui-fragment/</guid>
+      <description>UI fragment与fragment管理器 fragment是一种控制器对象，管理用户界面的fragm</description>
+    </item>
+    
+    <item>
+      <title>2.GeoQuiz与MVC设计模式</title>
+      <link>https://moritzmelon.github.io/android/2.geoquiz%E4%B8%8Emvc%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</link>
+      <pubDate>Sat, 10 Aug 2019 10:26:04 +0800</pubDate>
+      
+      <guid>https://moritzmelon.github.io/android/2.geoquiz%E4%B8%8Emvc%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</guid>
+      <description>GeoQuiz与MVC设计模式 Android应用基于模型-视图-控制器(Model-View-Con</description>
+    </item>
+    
+    <item>
+      <title>1.布局和用户界面</title>
+      <link>https://moritzmelon.github.io/android/1.%E5%B8%83%E5%B1%80%E5%92%8C%E7%94%A8%E6%88%B7%E7%95%8C%E9%9D%A2/</link>
+      <pubDate>Tue, 30 Jul 2019 10:26:04 +0800</pubDate>
+      
+      <guid>https://moritzmelon.github.io/android/1.%E5%B8%83%E5%B1%80%E5%92%8C%E7%94%A8%E6%88%B7%E7%95%8C%E9%9D%A2/</guid>
+      <description>布局和用户界面 文件app/res/layout/activity_quiz.xml定义了默认的act</description>
+    </item>
+    
+    <item>
+      <title>0.工具使用</title>
+      <link>https://moritzmelon.github.io/android/0.%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/</link>
+      <pubDate>Sat, 27 Jul 2019 10:26:04 +0800</pubDate>
+      
+      <guid>https://moritzmelon.github.io/android/0.%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/</guid>
+      <description>工具使用 windows系统，版本： 参考教程版本： 应用运行 模拟器 创建Android虚拟设备(virtu</description>
+    </item>
+    
+    <item>
+      <title>Lesson 4: Inheritance</title>
+      <link>https://moritzmelon.github.io/javase/lesson_4_inheritance/</link>
+      <pubDate>Wed, 24 Jul 2019 10:26:04 +0800</pubDate>
+      
+      <guid>https://moritzmelon.github.io/javase/lesson_4_inheritance/</guid>
+      <description>Inheritance and reflection</description>
+    </item>
+    
+    <item>
+      <title>Lesson 3: Object and Class</title>
       <link>https://moritzmelon.github.io/javase/lesson_3_object_and_class/</link>
       <pubDate>Thu, 18 Jul 2019 10:26:04 +0800</pubDate>
       
@@ -27,6 +72,24 @@
       
       <guid>https://moritzmelon.github.io/javase/lesson_2_java_programming_structure/</guid>
       <description>Basic Java &amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>3.Activity</title>
+      <link>https://moritzmelon.github.io/android/3.activity/</link>
+      <pubDate>Sat, 27 Apr 2019 10:26:04 +0800</pubDate>
+      
+      <guid>https://moritzmelon.github.io/android/3.activity/</guid>
+      <description>Activity 生命周期 Activity实例在其生命周期内，有运行、暂停、停止和不存在四种状态。 用户可以与当前运行</description>
+    </item>
+    
+    <item>
+      <title>Lesson 0: STUDY PATH</title>
+      <link>https://moritzmelon.github.io/android/lesson_0/</link>
+      <pubDate>Sat, 27 Apr 2019 10:26:04 +0800</pubDate>
+      
+      <guid>https://moritzmelon.github.io/android/lesson_0/</guid>
+      <description>Start to learn Android</description>
     </item>
     
     <item>
