@@ -6,10 +6,28 @@
     <description>Recent content on Melon</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 27 Aug 2019 10:26:04 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 29 Aug 2019 10:26:04 +0800</lastBuildDate>
     
 	<atom:link href="https://moritzmelon.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>5.ConstraintLayout</title>
+      <link>https://moritzmelon.github.io/android/5.constraintlayout/</link>
+      <pubDate>Thu, 29 Aug 2019 10:26:04 +0800</pubDate>
+      
+      <guid>https://moritzmelon.github.io/android/5.constraintlayout/</guid>
+      <description>使用布局与组件创建用户界面 待施工</description>
+    </item>
+    
+    <item>
+      <title>6.fragment argument</title>
+      <link>https://moritzmelon.github.io/android/6.fragment-argument/</link>
+      <pubDate>Thu, 29 Aug 2019 10:26:04 +0800</pubDate>
+      
+      <guid>https://moritzmelon.github.io/android/6.fragment-argument/</guid>
+      <description>fragment argument 本章以CriminalIntent程序为例子，学习从CrimeListFragment中调用st</description>
+    </item>
     
     <item>
       <title>4.UI fragment</title>

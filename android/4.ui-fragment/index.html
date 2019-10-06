@@ -761,7 +761,7 @@ public class CrimeListActivity extends SingleFragmentActivity{
 <pre><code class="language-java">/* CrimeListFragment.java */
 
 public class CrimeListFragment extends Fragment {
-    private RecyclerView mCrimeRecyclerView;
+    private RecyclerView mCrimeRecyclerView;  //RecyclerView作为成员变量
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
@@ -853,12 +853,13 @@ public class CrimeListFragment extends Fragment{
 
 <pre><code class="language-java">/* CrimeListFragment.java */
 public class CrimeListFragment extends Fragment{
-    private CrimeAdapter mAdapter;
+    private CrimeAdapter mAdapter; //Adapter成员变量
     //...
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
         //...
         /*创建视图时关联Adapter*/
+        /*可以配置更为复杂的用户界面，在updateUI()中添加更多内容*/
         updateUI();
 
         return view;
@@ -880,7 +881,66 @@ public class CrimeListFragment extends Fragment{
 
 <p>此时RecyclerView视图列表项显示的是list_item_crime.xml中组件默认文本，接下来将list_item_crime组件与Java代码关联以显示实际crime数据。</p>
 
-<p>由于CrimeHolder会循环使用，分开处理视图创建和绑定会更方便高效：</p>
+<p>由于CrimeHolder会循环使用，分开处理视图创建（创建足够多的CH后停止创建）和绑定（循环使用的过程中不断重新绑定）会更方便高效。</p>
+
+<p>CrimeHolder中实例化组件，并创建bind(Crime)方法绑定Crime实例和视图</p>
+
+<pre><code class="language-java">/* CrimeListFragment.java */
+
+/*ViewHolder内部类，实例化并使用list_itme_crime布局*/
+private class CrimeHolder extends RecyclerView.ViewHolder{
+    private TextView mTitleTextView;
+    private TextView mDateTextView;
+
+    public CrimeHolder(LayoutInflater inflater,ViewGroup parent){
+        super(inflater.inflate(R.layout.list_itme_crime,parent,false));
+        mTitleTextView=(TextView)itemView.findViewById(R.id.crime_title);
+        mDateTextView=(TextView)itemView.findViewById(R.id.crime_date);
+    }
+
+    /*绑定Crime实例和view*/
+    /*此方法被adapter调用*/
+    public void bind(Crime crime){
+        mCrime=crime;
+        mTitleTextView.setText(mCrime.getTitle());
+        mDateTextView.setText(mCrime.getDate().toString());
+    }
+}
+</code></pre>
+
+<p>在CrimeAdapter中调用此方法：</p>
+
+<pre><code class="language-java">private class CrimeAdapter extends RecyclerView.Adapter&lt;CrimeHolder&gt;{
+    @Override
+    public void onBindViewHolder(CrimeHolder holder, int position) {
+        Crime crime=mCrimes.get(position);
+        holder.bind(crime);
+    }
+}
+</code></pre>
+
+<h3 id="相应点击">相应点击</h3>
+
+<p>列表项视图都关联着ViewHolder，所以设置其监听触摸事件，弹出toast信息：</p>
+
+<pre><code class="language-java">private class CrimeHolder extends RecyclerView.ViewHolder
+        implements View.OnClickListener{
+        //..
+        public CrimeHolder(LayoutInflater inflater,ViewGroup parent){
+            super(inflater.inflate(R.layout.list_itme_crime,parent,false));
+            itemView.setOnClickListener(this);
+            //..
+        }
+        //..
+        /*接口实现*/
+        @Override
+        public void onClick(View view){
+            Toast.makeText(getActivity(),
+                    mCrime.getTitle()+&quot;clicked!&quot;,Toast.LENGTH_SHORT)
+                    .show();
+        }
+}
+</code></pre>
 
           </div>
 
@@ -923,6 +983,13 @@ public class CrimeListFragment extends Fragment{
             </div>
             
             <div class="col-md-6 text-right" >
+              
+                <a href=https://moritzmelon.github.io/android/6.fragment-argument/ class="post-meta">Next
+                  <div class="pt-2 pb-5 flex-reverse">
+                    <i class="fas fa-angle-right text-grey font-weight-bold ml-2 active-color"></i>
+                    <span>6.fragment argument</span>
+                  </div>
+                </a>
               
             </div>
           </div>
@@ -1486,6 +1553,36 @@ public class CrimeListFragment extends Fragment{
 										<li class="nav-item">
 						 					<a class="nav-link" href="#%e7%bb%91%e5%ae%9a%e5%88%97%e8%a1%a8%e9%a1%b9">
 												 绑定列表项
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e7%9b%b8%e5%ba%94%e7%82%b9%e5%87%bb">
+												 相应点击
 											</a>
 										</li>
 						 
