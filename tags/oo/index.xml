@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>oo on Melon</title>
+    <link>https://moritzmelon.github.io/tags/oo/</link>
+    <description>Recent content in oo on Melon</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 24 Jul 2019 10:26:04 +0800</lastBuildDate>
+    
+	<atom:link href="https://moritzmelon.github.io/tags/oo/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Lesson 4: Inheritance</title>
+      <link>https://moritzmelon.github.io/javase/lesson_4_inheritance/</link>
+      <pubDate>Wed, 24 Jul 2019 10:26:04 +0800</pubDate>
+      
+      <guid>https://moritzmelon.github.io/javase/lesson_4_inheritance/</guid>
+      <description>Inheritance and reflection</description>
+    </item>
+    
+    <item>
+      <title>Lesson 3: Object and Class</title>
+      <link>https://moritzmelon.github.io/javase/lesson_3_object_and_class/</link>
+      <pubDate>Thu, 18 Jul 2019 10:26:04 +0800</pubDate>
+      
+      <guid>https://moritzmelon.github.io/javase/lesson_3_object_and_class/</guid>
+      <description>Objects and Classes</description>
+    </item>
+    
+  </channel>
+</rss>

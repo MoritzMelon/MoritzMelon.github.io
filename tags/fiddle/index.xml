@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>fiddle on Melon</title>
+    <link>https://moritzmelon.github.io/tags/fiddle/</link>
+    <description>Recent content in fiddle on Melon</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 28 Apr 2019 13:06:32 +0800</lastBuildDate>
+    
+	<atom:link href="https://moritzmelon.github.io/tags/fiddle/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>VS2010 Setting</title>
+      <link>https://moritzmelon.github.io/blog/2019-04/vs2010-setting/</link>
+      <pubDate>Sun, 28 Apr 2019 13:06:32 +0800</pubDate>
+      
+      <guid>https://moritzmelon.github.io/blog/2019-04/vs2010-setting/</guid>
+      <description>some settings like themes</description>
+    </item>
+    
+    <item>
+      <title>unsolved_001 Setting Series in Blog</title>
+      <link>https://moritzmelon.github.io/blog/2019-04/unsolved_001-setting-series-in-blog/</link>
+      <pubDate>Fri, 26 Apr 2019 20:58:44 +0800</pubDate>
+      
+      <guid>https://moritzmelon.github.io/blog/2019-04/unsolved_001-setting-series-in-blog/</guid>
+      <description>更改\data\series.toml出现的问题 按照主题的指引，修改了一下series.toml中的</description>
+    </item>
+    
+    <item>
+      <title>Building My First Blog</title>
+      <link>https://moritzmelon.github.io/blog/2019-04/building-my-first-blog/</link>
+      <pubDate>Wed, 24 Apr 2019 20:53:44 +0800</pubDate>
+      
+      <guid>https://moritzmelon.github.io/blog/2019-04/building-my-first-blog/</guid>
+      <description>Roll up sleeves then!</description>
+    </item>
+    
+  </channel>
+</rss>
